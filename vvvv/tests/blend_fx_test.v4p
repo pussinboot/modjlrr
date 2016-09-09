@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\tests\blend_fx_test.v4p" systemname="blend_fx_test" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\tests\blend_fx_test.v4p">
-   <BOUNDS type="Window" left="1815" top="9570" width="9000" height="5985">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\tests\blend_fx_test.v4p" systemname="blend_fx_test" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\tests\blend_fx_test.v4p">
+   <BOUNDS type="Window" left="1710" top="6120" width="9000" height="5985">
    </BOUNDS>
    <NODE systemname="UDP (Network Client)" nodename="UDP (Network Client)" componentmode="Hidden" id="11">
    <BOUNDS type="Node" left="2295" top="3600" width="1485" height="270">
@@ -147,31 +147,11 @@
    <NODE systemname="FormatValue (String)" nodename="FormatValue (String)" componentmode="Hidden" id="12">
    <BOUNDS type="Node" left="4350" top="1545" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="4" values="1,0.5,-0.27,2">
+   <PIN pinname="Input" visible="1" slicecount="8" values="3,0.447513812154696,-0.27,2,1,0.5,1,1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Characters after Comma" slicecount="1" values="5">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="13" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="480" top="285" width="1410" height="1545">
-   </BOUNDS>
-   <BOUNDS type="Node" left="480" top="285" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="4" visible="1" values="/blend/choose,/blend/progress,/blend/nothing,/blend/glitch/dir">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
@@ -195,11 +175,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="15" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="4710" top="330" width="870" height="915">
+   <BOUNDS type="Box" left="7275" top="2880" width="990" height="2550">
    </BOUNDS>
-   <BOUNDS type="Node" left="4710" top="330" width="0" height="0">
+   <BOUNDS type="Node" left="7275" top="2880" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="3,0.5,-0.27,3">
+   <PIN pinname="Y Input Value" slicecount="8" visible="1" values="3.03,0.5,0.73,0.06,0.66,5,1.48,1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -207,7 +187,7 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="4">
+   <PIN pinname="Rows" slicecount="1" values="8">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
@@ -249,7 +229,7 @@
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="1005" top="2475" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="text">
+   <PIN pinname="Input 2" visible="1" slicecount="8" values="/blend/choose,/blend/progress,/blend/nothing,/blend/glitch/dir,,,,/blend/choose">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -271,8 +251,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="22" srcpinname="Output String" dstnodeid="21" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="13" srcpinname="Output String" dstnodeid="21" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="21" srcpinname="Output" dstnodeid="6" dstpinname="Address">
    </LINK>
@@ -297,7 +275,7 @@
    </PIN>
    <PIN pinname="Slider Constraints" slicecount="1" values="scY">
    </PIN>
-   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.276243093922652">
+   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.386740331491713">
    </PIN>
    <PIN pinname="X Output Value" visible="1" pintype="Output">
    </PIN>
@@ -309,7 +287,7 @@
    </PIN>
    </NODE>
    <NODE systemname="SetSlice (Spreads)" nodename="SetSlice (Spreads)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="5955" top="1290" width="100" height="100">
+   <BOUNDS type="Node" left="6135" top="1290" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Spread" visible="1">
    </PIN>
@@ -322,10 +300,106 @@
    </NODE>
    <LINK srcnodeid="15" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Spread">
    </LINK>
-   <LINK srcnodeid="24" srcpinname="Output" dstnodeid="12" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="23" srcpinname="X Output Value" dstnodeid="24" dstpinname="Input">
    </LINK>
    <PACK Name="addonpack" Version="34.1.0">
+   </PACK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="25" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="5505" top="2865" width="1590" height="2625">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5505" top="2865" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="8" visible="1" values="/blend/choose,/blend/progress,|/blend/squares/smoothness&cr;&lf;|,|/blend/squares/scale&cr;&lf;|,|/blend/waves/amplitude&cr;&lf;|,|/blend/waves/waves&cr;&lf;|,|/blend/waves/color_separation&cr;&lf;|,/blend/glitch/dir">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Output String" dstnodeid="21" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="selector" filename="building_blocks\selector.v4p" nodename="building_blocks\selector.v4p" componentmode="Hidden" id="28">
+   <BOUNDS type="Node" left="2280" top="1155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="bangs" visible="1">
+   </PIN>
+   <PIN pinname="reset" visible="1">
+   </PIN>
+   <PIN pinname="idx" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="27" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1845" top="300" width="1560" height="570">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1845" top="300" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="4" values="0,0,0,0">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="4" values="0,0,0,0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="28" dstpinname="bangs">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3045" top="930" width="285" height="330">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3045" top="930" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="28" dstpinname="reset">
+   </LINK>
+   <NODE systemname="SetSlice (Spreads)" nodename="SetSlice (Spreads)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="5055" top="1020" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Output" dstnodeid="29" dstpinname="Spread">
+   </LINK>
+   <LINK srcnodeid="29" srcpinname="Output" dstnodeid="12" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="28" srcpinname="idx" dstnodeid="29" dstpinname="Input">
+   </LINK>
+   <PACK Name="opencv" Version="0.2.0">
    </PACK>
    </PATCH>
