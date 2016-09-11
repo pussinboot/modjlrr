@@ -283,9 +283,9 @@
    <LINK srcnodeid="16" srcpinname="Texture Out" dstnodeid="6" dstpinname="Input 4">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="20" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11760" top="900" width="2715" height="870">
+   <BOUNDS type="Box" left="12345" top="480" width="2715" height="870">
    </BOUNDS>
-   <BOUNDS type="Node" left="11760" top="900" width="0" height="0">
+   <BOUNDS type="Node" left="12345" top="480" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="-1" pintype="Input" values="0.5">
    </PIN>
@@ -303,7 +303,7 @@
    </PIN>
    <PIN pinname="Slider Constraints" slicecount="1" values="scY">
    </PIN>
-   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.685081546961326">
+   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.585635359116022">
    </PIN>
    <PIN pinname="X Output Value" visible="1" pintype="Output">
    </PIN>
@@ -805,9 +805,9 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|output res|">
    </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="55" dstpinname="XY">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="57" systemname="IOBox (String)">
    <BOUNDS type="Node" left="9345" top="5655" width="675" height="270">
    </BOUNDS>
@@ -1214,4 +1214,32 @@
    </LINK>
    <PACK Name="opencv" Version="0.2.0">
    </PACK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="70">
+   <BOUNDS type="Node" left="12090" top="2475" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Default" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="56" srcpinname="Y Output Value" dstnodeid="70" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="55" dstpinname="XY">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="71" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12795" top="1770" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12795" top="1770" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="71" srcpinname="Y Output Value" dstnodeid="70" dstpinname="Default">
+   </LINK>
    </PATCH>
