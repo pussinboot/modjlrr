@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\blend_fx.v4p" systemname="transition_fx" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\transition_fx.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="6330" top="5460" width="15825" height="12225">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\blend_fx.v4p" systemname="transition_fx" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\transition_fx.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="315" top="1305" width="15825" height="12225">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -96,7 +96,7 @@
    <PIN pinname="sizeXY" slicecount="2" visible="1" values="28.25,28.25">
    </PIN>
    </NODE>
-   <NODE systemname="osc_receiver" filename="..\building_blocks\osc_receiver.v4p" nodename="..\building_blocks\osc_receiver.v4p" componentmode="InAWindow" id="10">
+   <NODE systemname="osc_receiver" filename="..\building_blocks\osc_receiver.v4p" nodename="..\building_blocks\osc_receiver.v4p" componentmode="Hidden" id="10">
    <BOUNDS type="Node" left="5745" top="990" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Enable" visible="1">
@@ -107,8 +107,10 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="3615" top="6510" width="9000" height="6000">
+   <BOUNDS type="Window" left="4110" top="2490" width="12735" height="6000">
    </BOUNDS>
+   <PIN pinname="Default Value(s)" visible="1">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="11" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="4305" top="195" width="510" height="555">
@@ -183,9 +185,9 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
+   <PIN pinname="Y Input Value" visible="1" slicecount="8" values="0,0,1,0.09,1,5,0.33,0">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="14" dstpinname="Y Input Value">
-   </LINK>
    <NODE systemname="transition_waveScrawler (DX11.TextureFX)" filename="..\dx11\transition_waveScrawler.tfx" nodename="transition_waveScrawler (DX11.TextureFX)" componentmode="Hidden" id="15">
    <BOUNDS type="Node" left="2040" top="4170" width="100" height="100">
    </BOUNDS>
@@ -1241,5 +1243,41 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="71" srcpinname="Y Output Value" dstnodeid="70" dstpinname="Default">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="72" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="14280" top="2475" width="1035" height="1395">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14280" top="2475" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="8">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="8" values="0,0,1,0.09,1,5,0.33,0">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="73" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="14160" top="1965" width="1185" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14160" top="1965" width="1185" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ sane defaults|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="72" srcpinname="Y Output Value" dstnodeid="10" dstpinname="Default Value(s)">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Output" dstnodeid="14" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
