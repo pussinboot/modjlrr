@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sol_mt-4.v4p">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\col_choose.v4p" systemname="col_choose" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\col_choose.v4p">
    <NODE systemname="Button (3d Quad Multitouch)" filename="%VVVV%\addonpack\lib\nodes\modules\3d\Button (3d Quad Multitouch).v4p" nodename="Button (3d Quad Multitouch)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2730" top="2175" width="100" height="100">
    </BOUNDS>
@@ -70,7 +70,7 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Touched" dstnodeid="4" dstpinname="Switch">
    </LINK>
-   <NODE id="6" systemname="IOBox (Color)" componentmode="InABox">
+   <NODE id="6" systemname="IOBox (Color)" componentmode="InABox" nodename="IOBox (Color)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Input 1|">
    </PIN>
    <BOUNDS type="Box" left="3405" top="920" width="750" height="240">
@@ -80,7 +80,7 @@
    </NODE>
    <LINK srcnodeid="6" srcpinname="Color Output" dstnodeid="4" dstpinname="Input 1">
    </LINK>
-   <NODE id="7" systemname="IOBox (Color)" componentmode="InABox">
+   <NODE id="7" systemname="IOBox (Color)" componentmode="InABox" nodename="IOBox (Color)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Input 2|">
    </PIN>
    <BOUNDS type="Box" left="4305" top="920" width="750" height="240">
@@ -94,7 +94,7 @@
    </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="1" dstpinname="Color">
    </LINK>
-   <NODE id="8" systemname="IOBox (Node)" componentmode="InABox">
+   <NODE id="8" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
    <BOUNDS type="Box" left="1995" top="4170" width="750" height="240">
@@ -108,7 +108,7 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Input Value" dstnodeid="0" dstpinname="XY">
    </LINK>
-   <NODE id="9" systemname="IOBox (Value Advanced)" componentmode="InABox">
+   <NODE id="9" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Touched">
    </PIN>
    <BOUNDS type="Box" left="2895" top="4170" width="750" height="240">
@@ -120,7 +120,7 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Output" dstnodeid="2" dstpinname="TranslateX">
    </LINK>
-   <NODE id="11" systemname="IOBox (Value Advanced)" componentmode="InABox">
+   <NODE id="11" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="TranslateY">
    </PIN>
    <BOUNDS type="Box" left="1890" top="635" width="750" height="240">

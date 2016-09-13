@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sol_mt-2.v4p">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\mt_or_mouse.v4p" systemname="mt_or_mouse" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\mt_or_mouse.v4p">
    <NODE systemname="MouseStates (Mouse Join)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MouseStates (Mouse Join)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="8940" top="3435" width="100" height="100">
    </BOUNDS>
@@ -26,7 +26,7 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="WindowsTouch (Windows)" filename="WindowsTouch\WindowsTestHook.csproj" nodename="WindowsTouch (Windows)" componentmode="Hidden" id="3">
+   <NODE systemname="WindowsTouch (Windows)" filename="..\..\WindowsTouch\WindowsTestHook.csproj" nodename="WindowsTouch (Windows)" componentmode="Hidden" id="3">
    <BOUNDS type="Node" left="4965" top="1815" width="2775" height="270">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
@@ -62,6 +62,8 @@
    <PIN pinname="PositionXY" visible="1">
    </PIN>
    <PIN pinname="Device" visible="1">
+   </PIN>
+   <PIN pinname="Mouse Wheel" visible="1">
    </PIN>
    </NODE>
    <NODE componentmode="Hidden" id="6" nodename="Switch (Value Input)" systemname="Switch (Value Input)">
@@ -178,7 +180,7 @@
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <NODE id="17" systemname="IOBox (Value Advanced)" componentmode="InABox">
+   <NODE id="17" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Handle">
    </PIN>
    <BOUNDS type="Box" left="1500" top="500" width="750" height="240">
@@ -204,7 +206,7 @@
    </LINK>
    <LINK srcnodeid="11" srcpinname="Output" dstnodeid="10" dstpinname="Input Value">
    </LINK>
-   <NODE id="18" systemname="IOBox (Value Advanced)" componentmode="InABox">
+   <NODE id="18" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Test Switch|">
    </PIN>
    <BOUNDS type="Box" left="4110" top="500" width="750" height="240">

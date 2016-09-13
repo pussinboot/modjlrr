@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sol_mt-8.v4p">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\radio_fix.v4p" systemname="radio_fix" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\radio_fix.v4p">
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="0" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1500" top="2445" width="795" height="240">
    </BOUNDS>
@@ -44,7 +44,7 @@
    </LINK>
    <LINK srcnodeid="2" srcpinname="Up Edge" dstnodeid="1" dstpinname="Input 2">
    </LINK>
-   <NODE id="4" systemname="IOBox (Value Advanced)" componentmode="InABox">
+   <NODE id="4" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Input">
    </PIN>
    <BOUNDS type="Box" left="1770" top="500" width="750" height="240">

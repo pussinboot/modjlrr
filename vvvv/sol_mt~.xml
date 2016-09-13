@@ -23,7 +23,7 @@
    </PIN>
    <PIN pinname="Layer 7" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Layer 8" visible="1">
+   <PIN pinname="Layer 8" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
    <NODE systemname="Renderer (EX9)" nodename="Renderer (EX9)" componentmode="InAWindow" id="10">
@@ -333,7 +333,7 @@
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.0739644970414202">
+   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.522682445759369">
    </PIN>
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
@@ -1468,30 +1468,6 @@
    </NODE>
    <LINK srcnodeid="183" srcpinname="Input Value" dstnodeid="94" dstpinname="X">
    </LINK>
-   <NODE systemname="sol_mt-1" filename="sol_mt-1.v4p" nodename="sol_mt-1.v4p" componentmode="Hidden" id="185">
-   <BOUNDS type="Node" left="438" top="731" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="0" top="0" width="4675" height="4885">
-   </BOUNDS>
-   <BOUNDS type="Window" left="4350" top="2220" width="7635" height="5520">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|clip select buts|">
-   </PIN>
-   <PIN pinname="Index of Nearest" visible="1">
-   </PIN>
-   <PIN pinname="XY" visible="1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="185" srcpinname="Touched" dstnodeid="13" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="185" dstpinname="y offset">
-   </LINK>
-   <LINK srcnodeid="185" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 1">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="185" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="185" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="187">
    <BOUNDS type="Node" left="3975" top="5670" width="100" height="100">
    </BOUNDS>
@@ -1522,24 +1498,6 @@
    <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <NODE systemname="sol_mt-2" filename="sol_mt-2.v4p" nodename="sol_mt-2.v4p" componentmode="Hidden" id="215">
-   <BOUNDS type="Node" left="1725" top="4435" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="0" top="1183" width="11395" height="6505">
-   </BOUNDS>
-   <BOUNDS type="Window" left="4380" top="9210" width="11385" height="6495">
-   </BOUNDS>
-   <PIN pinname="cursor (if enabled)" visible="1">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|mt / mouse|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="10" srcpinname="Window Handle" dstnodeid="215" dstpinname="Handle">
-   </LINK>
-   <LINK srcnodeid="204" srcpinname="Y Output Value" dstnodeid="215" dstpinname="Test Switch">
-   </LINK>
-   <LINK srcnodeid="215" srcpinname="cursor (if enabled)" dstnodeid="7" dstpinname="Layer 8">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="216" systemname="IOBox (String)">
    <BOUNDS type="Node" left="7095" top="645" width="1305" height="270">
    </BOUNDS>
@@ -1554,48 +1512,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="sol_mt-3" filename="sol_mt-3.v4p" nodename="sol_mt-3.v4p" componentmode="Hidden" id="218">
-   <BOUNDS type="Node" left="3970" top="3169" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1115" top="569" width="5710" height="5200">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5070" top="3885" width="8085" height="6300">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|blend progress|">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="218" dstpinname="Color">
-   </LINK>
-   <LINK srcnodeid="218" srcpinname="Value Output" dstnodeid="69" dstpinname="X Input Value">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="218" dstpinname="Color 1">
-   </LINK>
-   <LINK srcnodeid="218" srcpinname="Layer 1" dstnodeid="7" dstpinname="Layer 4">
-   </LINK>
-   <LINK srcnodeid="218" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 5">
-   </LINK>
-   <NODE systemname="sol_mt-4" filename="sol_mt-4.v4p" nodename="sol_mt-4.v4p" componentmode="Hidden" id="219">
-   <BOUNDS type="Node" left="562" top="1110" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="0" top="0" width="5260" height="4585">
-   </BOUNDS>
-   <BOUNDS type="Window" left="915" top="1725" width="6210" height="5655">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|select col|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="219" srcpinname="Touched" dstnodeid="34" dstpinname="XY">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="219" dstpinname="TranslateY">
-   </LINK>
-   <LINK srcnodeid="219" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="219" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="219" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="220">
    <BOUNDS type="Node" left="5835" top="5655" width="100" height="100">
    </BOUNDS>
@@ -1616,7 +1532,81 @@
    </NODE>
    <LINK srcnodeid="226" srcpinname="Input Value" dstnodeid="121" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="sol_mt-5" filename="sol_mt-5.v4p" nodename="sol_mt-5.v4p" componentmode="Hidden" id="227">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="232" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="4920" top="7185" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4920" top="7185" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="/select_">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="232" srcpinname="Output String" dstnodeid="132" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="sol_mt-2" filename="sol_mt-2.v4p" nodename="sol_mt-2" componentmode="Hidden" id="215">
+   <BOUNDS type="Node" left="1725" top="4435" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="1183" width="11395" height="6505">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4380" top="9210" width="11385" height="6495">
+   </BOUNDS>
+   <PIN pinname="cursor (if enabled)" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|mt / mouse|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Window Handle" dstnodeid="215" dstpinname="Handle">
+   </LINK>
+   <LINK srcnodeid="204" srcpinname="Y Output Value" dstnodeid="215" dstpinname="Test Switch">
+   </LINK>
+   <LINK srcnodeid="215" srcpinname="cursor (if enabled)" dstnodeid="7" dstpinname="Layer 8">
+   </LINK>
+   <NODE systemname="sol_mt-3" filename="sol_mt-3.v4p" nodename="sol_mt-3" componentmode="Hidden" id="218">
+   <BOUNDS type="Node" left="3970" top="3169" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1115" top="569" width="5710" height="5200">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5070" top="3885" width="8085" height="6300">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|blend progress|">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="218" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="Value Output" dstnodeid="69" dstpinname="X Input Value">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="218" dstpinname="Color 1">
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 5">
+   </LINK>
+   <NODE systemname="sol_mt-4" filename="sol_mt-4.v4p" nodename="sol_mt-4" componentmode="Hidden" id="219">
+   <BOUNDS type="Node" left="562" top="1110" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="0" width="5260" height="4585">
+   </BOUNDS>
+   <BOUNDS type="Window" left="915" top="1725" width="6210" height="5655">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|select col|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="219" srcpinname="Touched" dstnodeid="34" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="219" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="219" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="219" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="219" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="sol_mt-5" filename="sol_mt-5.v4p" nodename="sol_mt-5" componentmode="Hidden" id="227">
    <BOUNDS type="Node" left="4171" top="2773" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="859" top="0" width="6625" height="5770">
@@ -1632,7 +1622,7 @@
    </LINK>
    <LINK srcnodeid="227" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 7">
    </LINK>
-   <NODE systemname="sol_mt-6" filename="sol_mt-6.v4p" nodename="sol_mt-6.v4p" componentmode="Hidden" id="228">
+   <NODE systemname="sol_mt-6" filename="sol_mt-6.v4p" nodename="sol_mt-6" componentmode="Hidden" id="228">
    <BOUNDS type="Node" left="4063" top="2296" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="706" top="0" width="6715" height="5665">
@@ -1648,7 +1638,7 @@
    </LINK>
    <LINK srcnodeid="228" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 6">
    </LINK>
-   <NODE systemname="sol_mt-7" filename="sol_mt-7.v4p" nodename="sol_mt-7.v4p" componentmode="Hidden" id="229">
+   <NODE systemname="sol_mt-7" filename="sol_mt-7.v4p" nodename="sol_mt-7" componentmode="Hidden" id="229">
    <BOUNDS type="Node" left="417" top="1525" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="0" width="7510" height="4630">
@@ -1666,32 +1656,40 @@
    </LINK>
    <LINK srcnodeid="229" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 3">
    </LINK>
-   <NODE systemname="sol_mt-8" filename="sol_mt-8.v4p" nodename="sol_mt-8.v4p" componentmode="Hidden" id="230">
+   <NODE systemname="sol_mt-8" filename="sub_modules\sol_mt-8.v4p" nodename="sub_modules\sol_mt-8.v4p" componentmode="Hidden" id="230">
    <BOUNDS type="Node" left="11820" top="1252" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="10135" top="0" width="3370" height="4465">
    </BOUNDS>
    <BOUNDS type="Window" left="-1" top="-1" width="3370" height="4465">
    </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|fix radio buts|">
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
    </NODE>
    <LINK srcnodeid="156" srcpinname="Y Output Value" dstnodeid="230" dstpinname="Input">
    </LINK>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="232" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="4920" top="7185" width="795" height="240">
+   <NODE systemname="sol_mt-1" filename="sub_modules\sol_mt-1.v4p" nodename="sub_modules\sol_mt-1.v4p" componentmode="Hidden" id="185">
+   <BOUNDS type="Node" left="438" top="731" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Node" left="4920" top="7185" width="0" height="0">
+   <BOUNDS type="Box" left="0" top="0" width="4675" height="4885">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="/select_">
+   <BOUNDS type="Window" left="4350" top="2220" width="7635" height="5520">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Default" slicecount="1" values="text">
+   <PIN pinname="Index of Nearest" visible="1">
    </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   <PIN pinname="XY" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="232" srcpinname="Output String" dstnodeid="132" dstpinname="Input 1">
+   <LINK srcnodeid="185" srcpinname="Touched" dstnodeid="13" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="185" dstpinname="y offset">
+   </LINK>
+   <LINK srcnodeid="185" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="185" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="185" dstpinname="Input 2">
    </LINK>
    </PATCH>

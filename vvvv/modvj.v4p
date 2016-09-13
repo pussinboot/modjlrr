@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p" scrollx="0" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
-   <BOUNDS type="Window" left="14325" top="2850" width="9000" height="7125">
+   <BOUNDS type="Window" left="225" top="8250" width="9000" height="7125">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2865" top="600" width="555" height="240">
