@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\clip_choose.v4p" systemname="clip_choose" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\clip_choose.v4p">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\clip_choose.v4p" systemname="clip_choose" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\clip_choose.v4p">
    <NODE systemname="Button (3d Quad Multitouch)" filename="%VVVV%\addonpack\lib\nodes\modules\3d\Button (3d Quad Multitouch).v4p" nodename="Button (3d Quad Multitouch)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="5145" top="2355" width="100" height="100">
    </BOUNDS>
@@ -45,7 +45,7 @@
    </PIN>
    <PIN pinname="Spread Count" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="0.68">
+   <PIN pinname="Width" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="4" systemname="IOBox (Value Advanced)">
@@ -53,7 +53,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2640" top="1830" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.16">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.24">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -69,7 +69,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Width" slicecount="1" values="0.43">
+   <PIN pinname="Width" slicecount="1" values="0.65">
    </PIN>
    <PIN pinname="Phase" slicecount="1" values="0.5">
    </PIN>
@@ -93,7 +93,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3600" top="1695" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.2">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.31">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -182,7 +182,7 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Touched" dstnodeid="14" dstpinname="Y Input Value">
    </LINK>
-   <BOUNDS type="Window" left="8220" top="7665" width="7635" height="5520">
+   <BOUNDS type="Window" left="5295" top="6660" width="7635" height="5520">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="16" systemname="IOBox (String)">
    <BOUNDS type="Node" left="2550" top="1185" width="750" height="270">
@@ -234,6 +234,4 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Index of Nearest" dstnodeid="19" dstpinname="Input Value">
    </LINK>
-   <PACK Name="opencv" Version="0.2.0">
-   </PACK>
    </PATCH>

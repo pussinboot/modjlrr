@@ -333,7 +333,7 @@
    </PIN>
    <PIN pinname="Show Slider" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.522682445759369">
+   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Y Input Value" visible="1" slicecount="1" values="0">
    </PIN>
@@ -1277,9 +1277,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="157" systemname="IOBox (String)">
-   <BOUNDS type="Node" left="11775" top="1230" width="1920" height="270">
+   <BOUNDS type="Node" left="11805" top="1230" width="1920" height="270">
    </BOUNDS>
-   <BOUNDS type="Box" left="11775" top="1230" width="1920" height="270">
+   <BOUNDS type="Box" left="11805" top="1230" width="1920" height="270">
    </BOUNDS>
    <PIN pinname="Input String" visible="0" slicecount="1" values="|/ help everything is gone|">
    </PIN>
@@ -1548,132 +1548,92 @@
    </NODE>
    <LINK srcnodeid="232" srcpinname="Output String" dstnodeid="132" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="sol_mt-2" filename="sol_mt-2.v4p" nodename="sol_mt-2" componentmode="Hidden" id="215">
-   <BOUNDS type="Node" left="1725" top="4435" width="0" height="0">
+   <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="233">
+   <BOUNDS type="Node" left="10905" top="4995" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="0" top="1183" width="11395" height="6505">
-   </BOUNDS>
-   <BOUNDS type="Window" left="4380" top="9210" width="11385" height="6495">
-   </BOUNDS>
-   <PIN pinname="cursor (if enabled)" visible="1">
+   <PIN pinname="Sampler State" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|mt / mouse|">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="10" srcpinname="Window Handle" dstnodeid="215" dstpinname="Handle">
-   </LINK>
-   <LINK srcnodeid="204" srcpinname="Y Output Value" dstnodeid="215" dstpinname="Test Switch">
-   </LINK>
-   <LINK srcnodeid="215" srcpinname="cursor (if enabled)" dstnodeid="7" dstpinname="Layer 8">
-   </LINK>
-   <NODE systemname="sol_mt-3" filename="sol_mt-3.v4p" nodename="sol_mt-3" componentmode="Hidden" id="218">
-   <BOUNDS type="Node" left="3970" top="3169" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1115" top="569" width="5710" height="5200">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5070" top="3885" width="8085" height="6300">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|blend progress|">
+   <PIN pinname="Transform" visible="1">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   </NODE>
-   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="218" dstpinname="Color">
-   </LINK>
-   <LINK srcnodeid="218" srcpinname="Value Output" dstnodeid="69" dstpinname="X Input Value">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="218" dstpinname="Color 1">
-   </LINK>
-   <LINK srcnodeid="218" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 5">
-   </LINK>
-   <NODE systemname="sol_mt-4" filename="sol_mt-4.v4p" nodename="sol_mt-4" componentmode="Hidden" id="219">
-   <BOUNDS type="Node" left="562" top="1110" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="0" top="0" width="5260" height="4585">
-   </BOUNDS>
-   <BOUNDS type="Window" left="915" top="1725" width="6210" height="5655">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|select col|">
+   <PIN pinname="Color" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="219" srcpinname="Touched" dstnodeid="34" dstpinname="XY">
-   </LINK>
-   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="219" dstpinname="TranslateY">
-   </LINK>
-   <LINK srcnodeid="219" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="219" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="219" dstpinname="Input 2">
-   </LINK>
-   <NODE systemname="sol_mt-5" filename="sol_mt-5.v4p" nodename="sol_mt-5" componentmode="Hidden" id="227">
-   <BOUNDS type="Node" left="4171" top="2773" width="0" height="0">
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="236">
+   <BOUNDS type="Node" left="10740" top="4545" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="859" top="0" width="6625" height="5770">
-   </BOUNDS>
-   <BOUNDS type="Window" left="4860" top="3405" width="8835" height="6405">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|glitch dir|">
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="-0.61">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" visible="1" values="1.97">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="0.74">
    </PIN>
    </NODE>
-   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="227" dstpinname="Color">
+   <LINK srcnodeid="236" srcpinname="Transform Out" dstnodeid="233" dstpinname="Transform">
    </LINK>
-   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="227" dstpinname="Mouse Over Color - Activated Color">
+   <LINK srcnodeid="233" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 4">
    </LINK>
-   <LINK srcnodeid="227" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 7">
-   </LINK>
-   <NODE systemname="sol_mt-6" filename="sol_mt-6.v4p" nodename="sol_mt-6" componentmode="Hidden" id="228">
-   <BOUNDS type="Node" left="4063" top="2296" width="0" height="0">
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="237" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11355" top="3735" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Box" left="706" top="0" width="6715" height="5665">
+   <BOUNDS type="Node" left="11355" top="3735" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Window" left="4710" top="2925" width="6870" height="5220">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|blend choose|">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.97">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="228" dstpinname="Color">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="228" dstpinname="Mouse Over Color - Activated Color">
-   </LINK>
-   <LINK srcnodeid="228" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 6">
-   </LINK>
-   <NODE systemname="sol_mt-7" filename="sol_mt-7.v4p" nodename="sol_mt-7" componentmode="Hidden" id="229">
-   <BOUNDS type="Node" left="417" top="1525" width="0" height="0">
+   <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="238">
+   <BOUNDS type="Node" left="11070" top="4035" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="0" top="0" width="7510" height="4630">
-   </BOUNDS>
-   <BOUNDS type="Window" left="1305" top="2175" width="7140" height="5565">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|layer choice|">
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="229" dstpinname="Color">
+   <LINK srcnodeid="237" srcpinname="Y Output Value" dstnodeid="238" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="229" dstpinname="Mouse Over Color - Activated Color">
+   <LINK srcnodeid="238" srcpinname="Output" dstnodeid="236" dstpinname="ScaleX">
    </LINK>
-   <LINK srcnodeid="229" srcpinname="Active" dstnodeid="49" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="229" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 3">
-   </LINK>
-   <NODE systemname="sol_mt-8" filename="sub_modules\sol_mt-8.v4p" nodename="sub_modules\sol_mt-8.v4p" componentmode="Hidden" id="230">
-   <BOUNDS type="Node" left="11820" top="1252" width="0" height="0">
+   <NODE nodename="IOBox (Color)" componentmode="InABox" id="239" systemname="IOBox (Color)">
+   <BOUNDS type="Box" left="5775" top="255" width="510" height="450">
    </BOUNDS>
-   <BOUNDS type="Box" left="10135" top="0" width="3370" height="4465">
+   <BOUNDS type="Node" left="5775" top="255" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Window" left="-1" top="-1" width="3370" height="4465">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.20850,0.20850,0.20850,1.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="156" srcpinname="Y Output Value" dstnodeid="230" dstpinname="Input">
+   <LINK srcnodeid="239" srcpinname="Color Output" dstnodeid="233" dstpinname="Color">
    </LINK>
-   <NODE systemname="sol_mt-1" filename="sub_modules\sol_mt-1.v4p" nodename="sub_modules\sol_mt-1.v4p" componentmode="Hidden" id="185">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="240" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="12465" top="4245" width="1230" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12465" top="4245" width="1230" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ blend choices|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="clip_choose" filename="sub_modules\sol_mt\clip_choose.v4p" nodename="sub_modules\sol_mt\clip_choose.v4p" componentmode="Hidden" id="185">
    <BOUNDS type="Node" left="438" top="731" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="0" top="0" width="4675" height="4885">
    </BOUNDS>
-   <BOUNDS type="Window" left="4350" top="2220" width="7635" height="5520">
+   <BOUNDS type="Window" left="5295" top="6660" width="7635" height="5520">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
@@ -1692,4 +1652,184 @@
    </LINK>
    <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="185" dstpinname="Input 2">
    </LINK>
+   <NODE systemname="col_choose" filename="sub_modules\sol_mt\col_choose.v4p" nodename="sub_modules\sol_mt\col_choose.v4p" componentmode="Hidden" id="219">
+   <BOUNDS type="Node" left="562" top="1110" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="0" width="5260" height="4585">
+   </BOUNDS>
+   <BOUNDS type="Window" left="915" top="1725" width="6210" height="5655">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="219" srcpinname="Touched" dstnodeid="34" dstpinname="XY">
+   </LINK>
+   <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="219" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="219" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="219" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="219" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="layer_choose" filename="sub_modules\sol_mt\layer_choose.v4p" nodename="sub_modules\sol_mt\layer_choose.v4p" componentmode="Hidden" id="229">
+   <BOUNDS type="Node" left="417" top="1525" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="0" width="7510" height="4630">
+   </BOUNDS>
+   <BOUNDS type="Window" left="1305" top="2175" width="7140" height="5565">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="229" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="229" dstpinname="Mouse Over Color - Activated Color">
+   </LINK>
+   <LINK srcnodeid="229" srcpinname="Active" dstnodeid="49" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="229" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 3">
+   </LINK>
+   <NODE systemname="radio_fix" filename="sub_modules\sol_mt\radio_fix.v4p" nodename="sub_modules\sol_mt\radio_fix.v4p" componentmode="Hidden" id="230">
+   <BOUNDS type="Node" left="11820" top="1252" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="10135" top="0" width="3370" height="4465">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="3370" height="4465">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="156" srcpinname="Y Output Value" dstnodeid="230" dstpinname="Input">
+   </LINK>
+   <NODE systemname="blend_choose" filename="sub_modules\sol_mt\blend_choose.v4p" nodename="sub_modules\sol_mt\blend_choose.v4p" componentmode="Hidden" id="228">
+   <BOUNDS type="Node" left="4453" top="2191" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1096" top="0" width="6715" height="5665">
+   </BOUNDS>
+   <BOUNDS type="Window" left="11820" top="16140" width="12960" height="5220">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="blend toggle" visible="1">
+   </PIN>
+   <PIN pinname="blend choice" visible="1">
+   </PIN>
+   <PIN pinname="Color" visible="1" slicecount="1" values="|0.58178,0.58178,0.58178,1.00000|">
+   </PIN>
+   <PIN pinname="Mouse Over Color - Activated Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="228" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 6">
+   </LINK>
+   <LINK srcnodeid="228" srcpinname="blend toggle" dstnodeid="238" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="glitch_dir" filename="sub_modules\sol_mt\glitch_dir.v4p" nodename="sub_modules\sol_mt\glitch_dir.v4p" componentmode="Hidden" id="227">
+   <BOUNDS type="Node" left="4336" top="2788" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1024" top="105" width="6625" height="5770">
+   </BOUNDS>
+   <BOUNDS type="Window" left="6165" top="4710" width="8835" height="6405">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="blend submenu" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="blend choice" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="227" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="227" dstpinname="Mouse Over Color - Activated Color">
+   </LINK>
+   <LINK srcnodeid="227" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 7">
+   </LINK>
+   <LINK srcnodeid="228" srcpinname="blend toggle" dstnodeid="227" dstpinname="blend submenu">
+   </LINK>
+   <LINK srcnodeid="228" srcpinname="blend choice" dstnodeid="227" dstpinname="blend choice">
+   </LINK>
+   <NODE systemname="blend_progress" filename="sub_modules\sol_mt\blend_progress.v4p" nodename="sub_modules\sol_mt\blend_progress.v4p" componentmode="Hidden" id="218">
+   <BOUNDS type="Node" left="4030" top="3184" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1175" top="584" width="5710" height="5200">
+   </BOUNDS>
+   <BOUNDS type="Window" left="5295" top="4815" width="8085" height="6300">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="218" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="Value Output" dstnodeid="69" dstpinname="X Input Value">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="218" dstpinname="Color 1">
+   </LINK>
+   <LINK srcnodeid="218" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 5">
+   </LINK>
+   <NODE systemname="mt_or_mouse" filename="sub_modules\sol_mt\mt_or_mouse.v4p" nodename="sub_modules\sol_mt\mt_or_mouse.v4p" componentmode="Hidden" id="215">
+   <BOUNDS type="Node" left="1725" top="4435" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="0" top="1183" width="11395" height="6505">
+   </BOUNDS>
+   <BOUNDS type="Window" left="4380" top="9210" width="11385" height="6495">
+   </BOUNDS>
+   <PIN pinname="cursor (if enabled)" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="10" srcpinname="Window Handle" dstnodeid="215" dstpinname="Handle">
+   </LINK>
+   <LINK srcnodeid="204" srcpinname="Y Output Value" dstnodeid="215" dstpinname="Test Switch">
+   </LINK>
+   <LINK srcnodeid="215" srcpinname="cursor (if enabled)" dstnodeid="7" dstpinname="Layer 8">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Color Output" dstnodeid="228" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="228" dstpinname="Mouse Over Color - Activated Color">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="242" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="4185" top="30" width="810" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4185" top="30" width="810" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ inactive|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="243" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5070" top="15" width="675" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5070" top="15" width="675" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ active|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="244" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="5940" top="15" width="1470" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="5940" top="15" width="1470" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ bg of extra thing|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
