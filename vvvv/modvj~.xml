@@ -583,6 +583,8 @@
    </PIN>
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="116" dstpinname="on beat or continuous">
    </LINK>
