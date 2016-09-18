@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sol_mt.v4p" scrollx="22890" scrolly="525" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sol_mt.v4p" scrollx="26610" scrolly="0" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
    <BOUNDS type="Window" left="210" top="645" width="19185" height="11730">
    </BOUNDS>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="7">
@@ -269,7 +269,7 @@
    </PIN>
    <PIN pinname="Arguments" visible="1" slicecount="1" values="testtt">
    </PIN>
-   <PIN pinname="Spread as Bundle" slicecount="1" values="1">
+   <PIN pinname="Spread as Bundle" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="61" systemname="IOBox (String)">
@@ -511,7 +511,7 @@
    </PIN>
    <PIN pinname="Arguments" visible="1" slicecount="1" values="testtt">
    </PIN>
-   <PIN pinname="Spread as Bundle" slicecount="1" values="1">
+   <PIN pinname="Spread as Bundle" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="97" systemname="IOBox (String)">
@@ -4012,4 +4012,18 @@
    </LINK>
    <LINK srcnodeid="404" srcpinname="Y Output Value" dstnodeid="391" dstpinname="Input">
    </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="406" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="35985" top="450" width="3210" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="35985" top="450" width="3360" height="960">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ will need to properly split an osc receiver&cr;&lf;in order to update looping vars, etc. to &cr;&lf;correct values on clip_change&cr;&lf;(call appropriate gui update function)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
    </PATCH>
