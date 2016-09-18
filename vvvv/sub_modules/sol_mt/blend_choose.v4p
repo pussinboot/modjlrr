@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\blend_choose.v4p" systemname="blend_choose" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\blend_choose.v4p">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\blend_choose.v4p" systemname="blend_choose" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\blend_choose.v4p">
    <NODE systemname="RadioButton (GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\Gui2d.dll" nodename="RadioButton (GUI)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2610" top="2310" width="100" height="100">
    </BOUNDS>
@@ -9,11 +9,11 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="Activated Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Activated Color" visible="1" slicecount="1" values="|0.58178,0.58178,0.58178,1.00000|">
    </PIN>
-   <PIN pinname="Color" visible="1" slicecount="1" values="|0.20000,0.20000,0.20000,1.00000|">
+   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
-   <PIN pinname="Mouse Over Color" visible="1" slicecount="1" values="|0.50000,0.50000,0.50000,1.00000|">
+   <PIN pinname="Mouse Over Color" visible="1" slicecount="1" values="|0.58178,0.58178,0.58178,1.00000|">
    </PIN>
    <PIN pinname="CountXY" visible="1" slicecount="2" values="1,1">
    </PIN>
@@ -152,35 +152,9 @@
    </LINK>
    <LINK srcnodeid="7" srcpinname="Output" dstnodeid="0" dstpinname="Mouse">
    </LINK>
-   <NODE id="10" systemname="IOBox (Color)" componentmode="InABox" nodename="IOBox (Color)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="Color">
-   </PIN>
-   <BOUNDS type="Box" left="2610" top="500" width="750" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="2610" top="500" width="750" height="240">
-   </BOUNDS>
-   <PIN pinname="Color Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="10" srcpinname="Color Output" dstnodeid="0" dstpinname="Color">
-   </LINK>
-   <NODE id="11" systemname="IOBox (Color)" componentmode="InABox" nodename="IOBox (Color)">
-   <PIN pinname="Descriptive Name" slicecount="1" values="|Mouse Over Color - Activated Color|">
-   </PIN>
-   <BOUNDS type="Box" left="3510" top="500" width="750" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="3510" top="500" width="750" height="240">
-   </BOUNDS>
-   <PIN pinname="Color Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="11" srcpinname="Color Output" dstnodeid="0" dstpinname="Mouse Over Color">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="Color Output" dstnodeid="0" dstpinname="Activated Color">
-   </LINK>
    <LINK srcnodeid="8" srcpinname="Input Value" dstnodeid="4" dstpinname="Rotate">
    </LINK>
-   <BOUNDS type="Window" left="11820" top="16140" width="12960" height="5220">
+   <BOUNDS type="Window" left="11295" top="9900" width="12960" height="5220">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -263,9 +237,9 @@
    <NODE systemname="Switch (Color Input)" nodename="Switch (Color Input)" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="7515" top="2085" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="|0.58178,0.58178,0.58178,1.00000|">
    </PIN>
-   <PIN pinname="Input 1" visible="1" slicecount="1" values="|0.58178,0.58178,0.58178,1.00000|">
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -408,8 +382,32 @@
    </NODE>
    <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Y Input Value">
    </LINK>
-   <LINK srcnodeid="10" srcpinname="Color Output" dstnodeid="18" dstpinname="Input 1">
+   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="1215" top="270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="inactive">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Input Value" dstnodeid="0" dstpinname="Color">
    </LINK>
-   <LINK srcnodeid="11" srcpinname="Color Output" dstnodeid="18" dstpinname="Input 2">
+   <LINK srcnodeid="24" srcpinname="Input Value" dstnodeid="18" dstpinname="Input 1">
    </LINK>
+   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="3195" top="270" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="active">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Input Value" dstnodeid="0" dstpinname="Mouse Over Color">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Input Value" dstnodeid="0" dstpinname="Activated Color">
+   </LINK>
+   <LINK srcnodeid="25" srcpinname="Input Value" dstnodeid="18" dstpinname="Input 2">
+   </LINK>
+   <PACK Name="opencv" Version="0.2.0">
+   </PACK>
    </PATCH>
