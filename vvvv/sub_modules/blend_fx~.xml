@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\blend_fx.v4p" systemname="transition_fx" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\transition_fx.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\blend_fx.v4p" systemname="transition_fx" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\transition_fx.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="315" top="1305" width="15825" height="12225">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
@@ -305,7 +305,7 @@
    </PIN>
    <PIN pinname="Slider Constraints" slicecount="1" values="scY">
    </PIN>
-   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.585635359116022">
+   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.0497237569060773">
    </PIN>
    <PIN pinname="X Output Value" visible="1" pintype="Output">
    </PIN>

@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\building_blocks\osc_receiver.v4p" systemname="osc_receiver" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\building_blocks\osc_receiver.v4p">
-   <BOUNDS type="Window" left="4110" top="2490" width="12735" height="6000">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\building_blocks\osc_receiver.v4p" systemname="osc_receiver" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\building_blocks\osc_receiver.v4p">
+   <BOUNDS type="Window" left="6090" top="5265" width="12735" height="6000">
    </BOUNDS>
    <NODE systemname="OSCDecoder (Network)" nodename="OSCDecoder (Network)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="2085" top="2850" width="100" height="100">
@@ -265,7 +265,7 @@
    </BOUNDS>
    <PIN pinname="Bang" visible="1">
    </PIN>
-   <PIN pinname="Simulate" slicecount="1" values="0">
+   <PIN pinname="Simulate" slicecount="1" visible="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="24">
@@ -345,5 +345,43 @@
    <LINK srcnodeid="31" srcpinname="Output" dstnodeid="30" dstpinname="Switch">
    </LINK>
    <LINK srcnodeid="27" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="32" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="10410" top="465" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10410" top="465" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="reset">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Simulate">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="34" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3765" top="2970" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3765" top="2970" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="OnReceive" dstnodeid="34" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
