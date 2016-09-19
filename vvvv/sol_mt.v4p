@@ -31,7 +31,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="495" top="5190" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="21180" top="4215" width="11835" height="6840">
+   <BOUNDS type="Window" left="21105" top="3180" width="15360" height="9990">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -1910,36 +1910,26 @@
    </LINK>
    <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="365" dstpinname="Input Value">
    </LINK>
-   <NODE systemname="sol_mt-8" filename="sol_mt-8.v4p" nodename="sol_mt-8.v4p" componentmode="Hidden" id="657">
-   <BOUNDS type="Node" left="10788" top="3155" width="0" height="0">
+   <NODE systemname="layer_control" filename="sub_modules\sol_mt\layer control\layer_control.v4p" nodename="sub_modules\sol_mt\layer control\layer_control.v4p" componentmode="Hidden" id="659">
+   <BOUNDS type="Node" left="10725" top="2970" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3778" top="1545" width="14020" height="12495">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5790" top="1935" width="14010" height="13200">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|layer control|">
-   </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Layer Switch" slicecount="1" values="0">
+   <PIN pinname="Descriptive Name" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <NODE systemname="sol_mt-8" filename="sol_mt-8.v4p" nodename="sol_mt-8.v4p" componentmode="Hidden" id="658">
-   <BOUNDS type="Node" left="10788" top="3575" width="0" height="0">
+   <LINK srcnodeid="659" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 3">
+   </LINK>
+   <NODE systemname="layer_control" filename="sub_modules\sol_mt\layer control\layer_control.v4p" nodename="sub_modules\sol_mt\layer control\layer_control.v4p" componentmode="Hidden" id="660">
+   <BOUNDS type="Node" left="10710" top="3360" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3778" top="1965" width="14020" height="12495">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5790" top="1935" width="14010" height="13200">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|layer control|">
-   </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="Layer Switch" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="657" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 3">
-   </LINK>
-   <LINK srcnodeid="658" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 4">
+   <LINK srcnodeid="660" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 4">
    </LINK>
    </PATCH>
