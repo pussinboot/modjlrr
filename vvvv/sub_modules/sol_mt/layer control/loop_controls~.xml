@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sol_mt-4.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\layer control\loop_controls.v4p" scrollx="0" scrolly="1590">
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="4410" top="6510" width="100" height="100">
    </BOUNDS>
@@ -261,7 +261,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Font" slicecount="1" values="ProggyClean">
+   <PIN pinname="Font" slicecount="1" visible="1" values="Arial">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="75">
    </PIN>
@@ -363,7 +363,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Font" slicecount="1" values="ProggyClean">
+   <PIN pinname="Font" slicecount="1" visible="1" values="ProggyClean">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="75">
    </PIN>
@@ -508,40 +508,6 @@
    <PIN pinname="Input 1" visible="1" slicecount="1" values="|0.58178,0.58178,0.58178,1.00000|">
    </PIN>
    <PIN pinname="Input 2" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="42" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8190" top="2265" width="810" height="525">
-   </BOUNDS>
-   <BOUNDS type="Node" left="8190" top="2265" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Columns" slicecount="1" values="2">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="43" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="9045" top="2280" width="1020" height="510">
-   </BOUNDS>
-   <BOUNDS type="Node" left="9045" top="2280" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Columns" slicecount="1" values="2">
    </PIN>
    </NODE>
    <NODE systemname="UDP (Network Client)" nodename="UDP (Network Client)" componentmode="Hidden" id="44">
@@ -1210,8 +1176,6 @@
    </LINK>
    <LINK srcnodeid="32" srcpinname="Output String" dstnodeid="28" dstpinname="Text">
    </LINK>
-   <LINK srcnodeid="4" srcpinname="Value Output" dstnodeid="42" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="14" srcpinname="Transform Out" dstnodeid="29" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="29" dstpinname="ScaleX">
@@ -1227,8 +1191,6 @@
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="84" srcpinname="Y Output Value" dstnodeid="78" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="12" srcpinname="Touched" dstnodeid="43" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="67" srcpinname="Output String" dstnodeid="71" dstpinname="Input 1">
    </LINK>
@@ -1290,7 +1252,7 @@
    </LINK>
    <LINK srcnodeid="12" srcpinname="Touched" dstnodeid="68" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="-1" top="-1" width="16095" height="12915">
+   <BOUNDS type="Window" left="17130" top="7860" width="16095" height="12915">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="86" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6615" top="11850" width="480" height="480">
@@ -1306,6 +1268,8 @@
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|tog out|">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="2">
    </PIN>
    </NODE>
    <LINK srcnodeid="4" srcpinname="Value Output" dstnodeid="86" dstpinname="Y Input Value">
@@ -1325,6 +1289,10 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|but out|">
    </PIN>
+   <PIN pinname="Rows" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Columns" slicecount="1" values="2">
+   </PIN>
    </NODE>
    <LINK srcnodeid="12" srcpinname="Touched" dstnodeid="87" dstpinname="Y Input Value">
    </LINK>
@@ -1332,4 +1300,20 @@
    </PACK>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="88" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="10665" top="450" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="10665" top="450" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Arial">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="font">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="88" srcpinname="Output Enum" dstnodeid="28" dstpinname="Font">
+   </LINK>
+   <LINK srcnodeid="88" srcpinname="Output Enum" dstnodeid="21" dstpinname="Font">
+   </LINK>
    </PATCH>

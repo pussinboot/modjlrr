@@ -1565,7 +1565,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.61">
+   <PIN pinname="TranslateY" slicecount="1" values="-0.38">
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" visible="1" values="1.97">
    </PIN>
@@ -1704,12 +1704,12 @@
    </NODE>
    <LINK srcnodeid="156" srcpinname="Y Output Value" dstnodeid="230" dstpinname="Input">
    </LINK>
-   <NODE systemname="blend_choose" filename="sub_modules\sol_mt\blend_choose.v4p" nodename="sub_modules\sol_mt\blend_choose.v4p" componentmode="InAWindow" id="228">
+   <NODE systemname="blend_choose" filename="sub_modules\sol_mt\blend_choose.v4p" nodename="sub_modules\sol_mt\blend_choose.v4p" componentmode="Hidden" id="228">
    <BOUNDS type="Node" left="4243" top="2206" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="886" top="15" width="6715" height="5665">
    </BOUNDS>
-   <BOUNDS type="Window" left="16830" top="12540" width="12960" height="5145">
+   <BOUNDS type="Window" left="10305" top="12840" width="12960" height="5145">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
@@ -2352,14 +2352,20 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <NODE systemname="fx_choose" filename="sub_modules\sol_mt\fx_choose.v4p" nodename="sub_modules\sol_mt\fx_choose.v4p" componentmode="InAWindow" id="710">
-   <BOUNDS type="Node" left="5685" top="6090" width="100" height="100">
+   <NODE systemname="fx_choose" filename="sub_modules\sol_mt\fx_choose.v4p" nodename="sub_modules\sol_mt\fx_choose.v4p" componentmode="Hidden" id="710">
+   <BOUNDS type="Node" left="5625" top="6315" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="21045" top="12210" width="13380" height="8445">
+   <BOUNDS type="Window" left="9375" top="11430" width="13380" height="8445">
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="font" visible="1">
+   </PIN>
+   <PIN pinname="blend choose" visible="1">
+   </PIN>
+   <PIN pinname="translate y out" visible="1">
+   </PIN>
+   <PIN pinname="selected layer" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="710" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 5">
@@ -2371,8 +2377,12 @@
    </PIN>
    <PIN pinname="Font" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="6240" top="10725" width="14625" height="8160">
+   <BOUNDS type="Window" left="6675" top="11160" width="17640" height="11220">
    </BOUNDS>
+   <PIN pinname="translate y" visible="1">
+   </PIN>
+   <PIN pinname="fx_choice" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="722" srcpinname="Output Node" dstnodeid="7" dstpinname="Layer 6">
    </LINK>
@@ -2389,5 +2399,11 @@
    <LINK srcnodeid="723" srcpinname="Output Enum" dstnodeid="710" dstpinname="font">
    </LINK>
    <LINK srcnodeid="723" srcpinname="Output Enum" dstnodeid="722" dstpinname="Font">
+   </LINK>
+   <LINK srcnodeid="228" srcpinname="blend toggle" dstnodeid="710" dstpinname="blend toggle">
+   </LINK>
+   <LINK srcnodeid="710" srcpinname="translate y out" dstnodeid="722" dstpinname="translate y">
+   </LINK>
+   <LINK srcnodeid="710" srcpinname="selected layer" dstnodeid="722" dstpinname="fx_choice">
    </LINK>
    </PATCH>

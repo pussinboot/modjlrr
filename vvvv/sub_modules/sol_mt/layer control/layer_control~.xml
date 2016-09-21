@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sol_mt-8.v4p">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\layer control\layer_control.v4p" scrollx="0" scrolly="-360">
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1615" top="10875" width="100" height="100">
    </BOUNDS>
@@ -26,6 +26,8 @@
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="2" systemname="IOBox (Value Advanced)">
@@ -131,7 +133,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" slicecount="3" values="0,0,0">
+   <PIN pinname="Y Input Value" slicecount="3" values="0,0,0" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
@@ -202,22 +204,6 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    <PIN pinname="Switch" visible="1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <NODE systemname="sol_mt-1" filename="sol_mt-1.v4p" nodename="sol_mt-1.v4p" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="1500" top="4952" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="-2817" top="1320" width="8635" height="7300">
-   </BOUNDS>
-   <BOUNDS type="Window" left="5745" top="4890" width="8625" height="7290">
-   </BOUNDS>
-   <PIN pinname="Color" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|top togs|">
-   </PIN>
-   <PIN pinname="Value Output" visible="1">
-   </PIN>
-   <PIN pinname="TranslateX" visible="1" slicecount="1" values="-0.66">
    </PIN>
    </NODE>
    <NODE id="15" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)" hiddenwhenlocked="0" managers="">
@@ -298,20 +284,6 @@
    <PIN pinname="ID" pintype="Output" visible="-1">
    </PIN>
    </NODE>
-   <NODE systemname="sol_mt-3" filename="sol_mt-3.v4p" nodename="sol_mt-3.v4p" componentmode="Hidden" id="16">
-   <BOUNDS type="Node" left="4340" top="5726" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="-712" top="1650" width="10105" height="11625">
-   </BOUNDS>
-   <BOUNDS type="Window" left="9990" top="5535" width="10095" height="11625">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|fft controls|">
-   </PIN>
-   <PIN pinname="layer" visible="1">
-   </PIN>
-   <PIN pinname="TranslateX" slicecount="1" visible="1" values="-0.66">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="17" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2890" top="5430" width="840" height="6780">
    </BOUNDS>
@@ -327,25 +299,7 @@
    </PIN>
    <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
-   </NODE>
-   <NODE systemname="sol_mt-4" filename="sol_mt-4.v4p" nodename="sol_mt-4.v4p" componentmode="Hidden" id="18">
-   <BOUNDS type="Node" left="9124" top="5534" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="1077" top="1695" width="16095" height="12915">
-   </BOUNDS>
-   <BOUNDS type="Window" left="-1" top="-1" width="16095" height="12915">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|loop controls|">
-   </PIN>
-   <PIN pinname="tog out" visible="1">
-   </PIN>
-   <PIN pinname="but out" visible="1">
-   </PIN>
-   <PIN pinname="TranslateX" visible="1" slicecount="1" values="-0.66">
-   </PIN>
-   <PIN pinname="TranslateY" visible="1" slicecount="1" values="0.9125">
-   </PIN>
-   <PIN pinname="layer" visible="1">
+   <PIN pinname="Y Input Value" slicecount="3" values="0,0,0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="19" systemname="IOBox (Value Advanced)">
@@ -365,6 +319,8 @@
    </PIN>
    <PIN pinname="Columns" slicecount="1" values="2">
    </PIN>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,0">
+   </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="20" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="11035" top="6135" width="1155" height="540">
@@ -380,6 +336,8 @@
    <PIN pinname="Behavior" slicecount="1" values="Bang">
    </PIN>
    <PIN pinname="Columns" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="0,0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="21" systemname="IOBox (String)">
@@ -442,26 +400,6 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="sol_mt-5" filename="sol_mt-5.v4p" nodename="sol_mt-5.v4p" componentmode="Hidden" id="25">
-   <BOUNDS type="Node" left="4409" top="8195" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="-1116" top="3165" width="11050" height="12165">
-   </BOUNDS>
-   <BOUNDS type="Window" left="-1" top="-1" width="11050" height="12165">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="playback">
-   </PIN>
-   <PIN pinname="top_tog_inp" slicecount="3" visible="1" values="0,0,0">
-   </PIN>
-   <PIN pinname="TranslateX" visible="1" slicecount="1" values="-0.66">
-   </PIN>
-   <PIN pinname="layer" slicecount="1" visible="1" values="/layer0">
-   </PIN>
-   <PIN pinname="but out" visible="1">
-   </PIN>
-   <PIN pinname="TranslateY" visible="1" slicecount="1" values="0.77">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="26" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="6130" top="8790" width="1410" height="510">
    </BOUNDS>
@@ -477,23 +415,7 @@
    </PIN>
    <PIN pinname="Columns" slicecount="1" values="3">
    </PIN>
-   </NODE>
-   <NODE systemname="sol_mt-6" filename="sol_mt-6.v4p" nodename="sol_mt-6.v4p" componentmode="Hidden" id="27">
-   <BOUNDS type="Node" left="8326" top="8195" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="2426" top="3195" width="11800" height="12270">
-   </BOUNDS>
-   <BOUNDS type="Window" left="-1" top="-1" width="11800" height="12270">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="speed">
-   </PIN>
-   <PIN pinname="layer" slicecount="1" visible="1" values="/layer0">
-   </PIN>
-   <PIN pinname="but out" visible="1">
-   </PIN>
-   <PIN pinname="TranslateX" slicecount="1" visible="1" values="-0.66">
-   </PIN>
-   <PIN pinname="top_tog_inp" visible="1">
+   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0,0">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="28" systemname="IOBox (Value Advanced)">
@@ -511,36 +433,12 @@
    </PIN>
    <PIN pinname="Columns" slicecount="1" values="4">
    </PIN>
-   </NODE>
-   <NODE systemname="sol_mt-7" filename="sol_mt-7.v4p" nodename="sol_mt-7.v4p" componentmode="Hidden" id="29">
-   <BOUNDS type="Node" left="4558" top="10668" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="-5414" top="3825" width="19945" height="14115">
-   </BOUNDS>
-   <BOUNDS type="Window" left="9810" top="2670" width="19935" height="14115">
-   </BOUNDS>
-   <PIN pinname="top_tog_ind" slicecount="3" visible="1" values="0,0,0">
-   </PIN>
-   <PIN pinname="layer" slicecount="1" visible="1" values="/layer0">
-   </PIN>
-   <PIN pinname="TranslateX" slicecount="1" visible="1" values="-0.66">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="|qp lp|">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0,0,0,0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="14" dstpinname="TranslateX">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="14" dstpinname="TranslateY">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 1">
-   </LINK>
    <LINK srcnodeid="3" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 2">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 3">
-   </LINK>
-   <LINK srcnodeid="29" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 4">
    </LINK>
    <NODE id="30" systemname="IOBox (Node)" componentmode="InABox">
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
@@ -568,48 +466,6 @@
    </LINK>
    <LINK srcnodeid="12" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="14" srcpinname="Value Output" dstnodeid="17" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Value Output" dstnodeid="16" dstpinname="top_tog_inp">
-   </LINK>
-   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="16" dstpinname="TranslateX">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="16" dstpinname="TranslateY">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="16" dstpinname="layer">
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="Layer" dstnodeid="3" dstpinname="Layer 1">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="Layer" dstnodeid="3" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Value Output" dstnodeid="25" dstpinname="top_tog_inp">
-   </LINK>
-   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="25" dstpinname="TranslateX">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="25" dstpinname="TranslateY">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="25" dstpinname="layer">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 1">
-   </LINK>
-   <LINK srcnodeid="27" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 2">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Value Output" dstnodeid="29" dstpinname="top_tog_ind">
-   </LINK>
-   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="29" dstpinname="TranslateX">
-   </LINK>
-   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="29" dstpinname="TranslateY">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="29" dstpinname="layer">
-   </LINK>
-   <LINK srcnodeid="29" srcpinname="extra buts" dstnodeid="8" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="but out" dstnodeid="26" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="16" srcpinname="Value Output" dstnodeid="15" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="29" srcpinname="pad buts" dstnodeid="7" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="22" srcpinname="Output" dstnodeid="21" dstpinname="Input String">
    </LINK>
    <LINK srcnodeid="31" srcpinname="Y Output Value" dstnodeid="22" dstpinname="Switch">
@@ -618,32 +474,214 @@
    </LINK>
    <LINK srcnodeid="24" srcpinname="Output String" dstnodeid="22" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="14" srcpinname="Value Output" dstnodeid="27" dstpinname="top_tog_inp">
-   </LINK>
-   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="27" dstpinname="TranslateX">
-   </LINK>
-   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="27" dstpinname="TranslateY">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="27" dstpinname="layer">
-   </LINK>
-   <LINK srcnodeid="14" srcpinname="Value Output" dstnodeid="18" dstpinname="top_tag_inp">
-   </LINK>
-   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="18" dstpinname="TranslateX">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="18" dstpinname="TranslateY">
-   </LINK>
-   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="18" dstpinname="layer">
-   </LINK>
-   <LINK srcnodeid="27" srcpinname="but out" dstnodeid="28" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="tog out" dstnodeid="19" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="18" srcpinname="but out" dstnodeid="20" dstpinname="Y Input Value">
-   </LINK>
    <BOUNDS type="Window" left="5790" top="1935" width="14010" height="13200">
    </BOUNDS>
    <PACK Name="opencv" Version="0.2.0">
    </PACK>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
+   <NODE systemname="top_tog" filename="top_tog.v4p" nodename="top_tog.v4p" componentmode="Hidden" id="32">
+   <BOUNDS type="Node" left="1485" top="4455" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Value Output" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" visible="1">
+   </PIN>
+   <PIN pinname="TranslateX" visible="1">
+   </PIN>
+   <PIN pinname="font" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="1" srcpinname="Y Output Value" dstnodeid="32" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="32" dstpinname="TranslateX">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="33" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="4485" top="510" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4485" top="510" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="ProggyCleanTT">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Output Enum" dstnodeid="32" dstpinname="font">
+   </LINK>
+   <NODE systemname="fft_controls" filename="fft_controls.v4p" nodename="fft_controls.v4p" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="4605" top="4740" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="font" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="top_tog_inp" visible="1">
+   </PIN>
+   <PIN pinname="TranslateX" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" visible="1">
+   </PIN>
+   <PIN pinname="layer" visible="1">
+   </PIN>
+   <PIN pinname="Value Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Output Enum" dstnodeid="34" dstpinname="font">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Layer" dstnodeid="3" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Value Output" dstnodeid="34" dstpinname="top_tog_inp">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="34" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="34" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="34" dstpinname="layer">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Value Output" dstnodeid="15" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="loop_controls" filename="loop_controls.v4p" nodename="loop_controls.v4p" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="8700" top="5145" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="17130" top="7860" width="16095" height="12915">
+   </BOUNDS>
+   <PIN pinname="but out" visible="1">
+   </PIN>
+   <PIN pinname="tog out" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="layer" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" visible="1">
+   </PIN>
+   <PIN pinname="TranslateX" visible="1">
+   </PIN>
+   <PIN pinname="top_tag_inp" visible="1">
+   </PIN>
+   <PIN pinname="font" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="35" srcpinname="but out" dstnodeid="20" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="tog out" dstnodeid="19" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="Layer" dstnodeid="3" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="35" dstpinname="layer">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Y Output Value" dstnodeid="35" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="35" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Value Output" dstnodeid="35" dstpinname="top_tag_inp">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output Enum" dstnodeid="35" dstpinname="font">
+   </LINK>
+   <NODE systemname="playback" filename="playback.v4p" nodename="playback.v4p" componentmode="Hidden" id="36">
+   <BOUNDS type="Node" left="4860" top="7920" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="but out" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" visible="1">
+   </PIN>
+   <PIN pinname="TranslateX" visible="1">
+   </PIN>
+   <PIN pinname="top_tog_inp" visible="1">
+   </PIN>
+   <PIN pinname="layer" visible="1">
+   </PIN>
+   <PIN pinname="font" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="36" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="36" srcpinname="but out" dstnodeid="26" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="36" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="36" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Value Output" dstnodeid="36" dstpinname="top_tog_inp">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="36" dstpinname="layer">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output Enum" dstnodeid="36" dstpinname="font">
+   </LINK>
+   <NODE systemname="speed" filename="speed.v4p" nodename="speed.v4p" componentmode="Hidden" id="37">
+   <BOUNDS type="Node" left="8670" top="7725" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Window" left="15615" top="9750" width="11790" height="12270">
+   </BOUNDS>
+   <PIN pinname="top_tog_inp" visible="1">
+   </PIN>
+   <PIN pinname="TranslateX" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" visible="1">
+   </PIN>
+   <PIN pinname="layer" visible="1">
+   </PIN>
+   <PIN pinname="font" visible="1">
+   </PIN>
+   <PIN pinname="but out" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="Value Output" dstnodeid="37" dstpinname="top_tog_inp">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="37" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Y Output Value" dstnodeid="37" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="37" dstpinname="layer">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output Enum" dstnodeid="37" dstpinname="font">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="but out" dstnodeid="28" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="37" srcpinname="Layer" dstnodeid="6" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="qp_lp" filename="qp_lp.v4p" nodename="qp_lp.v4p" componentmode="Hidden" id="38">
+   <BOUNDS type="Node" left="4770" top="10650" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="extra buts" visible="1">
+   </PIN>
+   <PIN pinname="pad buts" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" visible="1">
+   </PIN>
+   <PIN pinname="layer" visible="1">
+   </PIN>
+   <PIN pinname="font" visible="1">
+   </PIN>
+   <PIN pinname="TranslateX" visible="1">
+   </PIN>
+   <PIN pinname="top_tog_ind" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="extra buts" dstnodeid="8" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="pad buts" dstnodeid="7" dstpinname="Y Input Value">
+   </LINK>
+   <LINK srcnodeid="38" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="38" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="21" srcpinname="Output String" dstnodeid="38" dstpinname="layer">
+   </LINK>
+   <LINK srcnodeid="33" srcpinname="Output Enum" dstnodeid="38" dstpinname="font">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Y Output Value" dstnodeid="38" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Value Output" dstnodeid="38" dstpinname="top_tog_ind">
+   </LINK>
    </PATCH>

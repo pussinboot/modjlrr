@@ -575,7 +575,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="-0.4">
+   <PIN pinname="Input 2" slicecount="1" values="-0.37">
    </PIN>
    </NODE>
    <LINK srcnodeid="20" srcpinname="Y Output Value" dstnodeid="40" dstpinname="Input 1">
