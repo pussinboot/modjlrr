@@ -2359,27 +2359,35 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
+   <PIN pinname="font" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="710" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 5">
    </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="720" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="8865" top="5775" width="1590" height="270">
+   <NODE systemname="fx_params" filename="sub_modules\sol_mt\fx_params.v4p" nodename="sub_modules\sol_mt\fx_params.v4p" componentmode="InAWindow" id="722">
+   <BOUNDS type="Node" left="7395" top="6135" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Node" left="8865" top="5775" width="0" height="0">
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   <PIN pinname="Font" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="6240" top="10725" width="14625" height="8160">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Arial">
+   </NODE>
+   <LINK srcnodeid="722" srcpinname="Output Node" dstnodeid="7" dstpinname="Layer 6">
+   </LINK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="723" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="6360" top="5190" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6360" top="5190" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="ProggyCleanTT">
+   </PIN>
+   <PIN pinname="Output Enum" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="sol_mt-1" filename="sol_mt-1.v4p" nodename="sol_mt-1.v4p" componentmode="Hidden" id="721">
-   <BOUNDS type="Node" left="8421" top="7508" width="0" height="0">
-   </BOUNDS>
-   <BOUNDS type="Box" left="3961" top="4606" width="8920" height="5805">
-   </BOUNDS>
-   <BOUNDS type="Window" left="-1" top="-1" width="8920" height="5805">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="721" srcpinname="Output Node" dstnodeid="7" dstpinname="Layer 6">
+   <LINK srcnodeid="723" srcpinname="Output Enum" dstnodeid="710" dstpinname="font">
    </LINK>
-   <LINK srcnodeid="720" srcpinname="Output Enum" dstnodeid="721" dstpinname="Font">
+   <LINK srcnodeid="723" srcpinname="Output Enum" dstnodeid="722" dstpinname="Font">
    </LINK>
    </PATCH>

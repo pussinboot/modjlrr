@@ -81,7 +81,7 @@
    </BOUNDS>
    <PIN pinname="TranslateX" slicecount="1" visible="1" values="0.38">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" visible="1" values="-0.59">
+   <PIN pinname="TranslateY" slicecount="1" visible="1" values="-0.38">
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" visible="1" values="0.41">
    </PIN>
