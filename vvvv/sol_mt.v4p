@@ -31,7 +31,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="495" top="5190" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="24090" top="4395" width="23895" height="15510">
+   <BOUNDS type="Window" left="19230" top="4800" width="16845" height="10650">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -1933,6 +1933,10 @@
    </PIN>
    <PIN pinname="osc_addr" visible="1">
    </PIN>
+   <PIN pinname="on_off" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Window" left="3735" top="5520" width="14010" height="13200">
+   </BOUNDS>
    </NODE>
    <LINK srcnodeid="660" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 4">
    </LINK>
