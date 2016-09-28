@@ -217,7 +217,7 @@
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="18">
-   <BOUNDS type="Node" left="6150" top="1605" width="100" height="100">
+   <BOUNDS type="Node" left="5325" top="1995" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Receive String" slicecount="1" values="|mouse xy|">
    </PIN>
@@ -239,7 +239,7 @@
    <PACK Name="opencv" Version="0.2.0">
    </PACK>
    <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="20">
-   <BOUNDS type="Node" left="5295" top="1395" width="100" height="100">
+   <BOUNDS type="Node" left="6090" top="1350" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Filename" visible="1" slicecount="1" values="image.jpg">
    </PIN>

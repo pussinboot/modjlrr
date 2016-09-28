@@ -229,13 +229,11 @@
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="19">
    <BOUNDS type="Node" left="5925" top="3495" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   <PIN pinname="Input Value" visible="1">
    </PIN>
    <PIN pinname="Send String" slicecount="1" values="|selected clip|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Index of Nearest" dstnodeid="19" dstpinname="Input Value">
-   </LINK>
    <PACK Name="opencv" Version="0.2.0">
    </PACK>
    <NODE systemname="FileTexture (EX9.Texture)" nodename="FileTexture (EX9.Texture)" componentmode="Hidden" id="20">
