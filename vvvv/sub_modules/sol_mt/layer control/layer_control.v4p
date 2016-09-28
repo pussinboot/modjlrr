@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\layer control\layer_control.v4p" scrollx="0" scrolly="-360">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\layer control\layer_control.v4p" scrollx="675" scrolly="780">
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1615" top="10875" width="100" height="100">
    </BOUNDS>
@@ -472,7 +472,7 @@
    </LINK>
    <LINK srcnodeid="24" srcpinname="Output String" dstnodeid="22" dstpinname="Input 2">
    </LINK>
-   <BOUNDS type="Window" left="3735" top="5520" width="14010" height="13200">
+   <BOUNDS type="Window" left="15060" top="9480" width="14010" height="13200">
    </BOUNDS>
    <PACK Name="opencv" Version="0.2.0">
    </PACK>
@@ -491,9 +491,11 @@
    </PIN>
    <PIN pinname="font" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="7140" top="11580" width="13515" height="10545">
+   <BOUNDS type="Window" left="1530" top="7170" width="13515" height="10545">
    </BOUNDS>
    <PIN pinname="layer switch" visible="1">
+   </PIN>
+   <PIN pinname="clip select on" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="32" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 1">
@@ -675,9 +677,13 @@
    </PIN>
    <PIN pinname="top_tog_ind" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="3375" top="1260" width="19935" height="14115">
+   <BOUNDS type="Window" left="1740" top="1710" width="19935" height="19380">
    </BOUNDS>
    <PIN pinname="layer switch" visible="1">
+   </PIN>
+   <PIN pinname="filenames" visible="1" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="clip_select" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="38" srcpinname="extra buts" dstnodeid="8" dstpinname="Y Input Value">
@@ -923,5 +929,67 @@
    <LINK srcnodeid="31" srcpinname="Y Output Value" dstnodeid="32" dstpinname="layer switch">
    </LINK>
    <LINK srcnodeid="31" srcpinname="Y Output Value" dstnodeid="38" dstpinname="layer switch">
+   </LINK>
+   <NODE id="60" systemname="Select (String)" nodename="Select (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="11100" top="8025" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Select" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="58" systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden">
+   <BOUNDS type="Node" left="13620" top="7890" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="5" values="8,-1,-1,-1,-1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="57" nodename="IOBox (String)" componentmode="InABox" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="14130" top="7140" width="1215" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="14130" top="7140" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="update_thumbs">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <NODE id="56" systemname="Find (String)" nodename="Find (String)" componentmode="Hidden">
+   <BOUNDS type="Node" left="13770" top="7500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Substring" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="/sol_mt/update_thumbs">
+   </PIN>
+   <PIN pinname="Position" visible="1">
+   </PIN>
+   <PIN pinname="Occurence Mode" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="56" srcpinname="Count" dstnodeid="58" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="57" srcpinname="Output String" dstnodeid="56" dstpinname="Substring">
+   </LINK>
+   <LINK srcnodeid="58" srcpinname="Output" dstnodeid="60" dstpinname="Select">
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Output String" dstnodeid="56" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="41" srcpinname="Output String" dstnodeid="60" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="38" dstpinname="filenames">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="clip select on" dstnodeid="38" dstpinname="clip_select">
    </LINK>
    </PATCH>
