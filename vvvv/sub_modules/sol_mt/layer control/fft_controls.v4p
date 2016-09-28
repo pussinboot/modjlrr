@@ -29,13 +29,13 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateX" visible="1">
+   <PIN pinname="TranslateX" visible="1" slicecount="1" values="-0.66">
    </PIN>
    <PIN pinname="TranslateY" visible="1" slicecount="1" values="0.9125">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="0.49">
+   <PIN pinname="ScaleX" slicecount="1" values="0.53">
    </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="0.14">
+   <PIN pinname="ScaleY" slicecount="1" values="0.17">
    </PIN>
    </NODE>
    <NODE id="5" systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden">
@@ -55,7 +55,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Font" slicecount="1" values="ProggyClean" visible="1">
+   <PIN pinname="Font" slicecount="1" visible="1" values="ProggyClean">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="75">
    </PIN>
@@ -111,7 +111,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="2955" top="2715" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="3" visible="1" values="on,bucket,cont">
+   <PIN pinname="Input String" slicecount="3" visible="1" values="on,bckt,cont">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -131,7 +131,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4035" top="3315" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.35">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.31">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -143,7 +143,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="4305" top="3615" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.49">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.47">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -923,9 +923,9 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5295" top="485" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="43" srcpinname="Y Output Value" dstnodeid="4" dstpinname="TranslateX">
-   </LINK>
    <LINK srcnodeid="36" srcpinname="Output" dstnodeid="4" dstpinname="TranslateY">
    </LINK>
    <LINK srcnodeid="4" srcpinname="Transform Out" dstnodeid="35" dstpinname="Transform In">
@@ -958,7 +958,7 @@
    </LINK>
    <LINK srcnodeid="35" srcpinname="Value Output" dstnodeid="26" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="9990" top="5535" width="10095" height="11625">
+   <BOUNDS type="Window" left="9960" top="7125" width="10095" height="11625">
    </BOUNDS>
    <PACK Name="opencv" Version="0.2.0">
    </PACK>
@@ -975,5 +975,19 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="45" srcpinname="Output Enum" dstnodeid="6" dstpinname="Font">
+   </LINK>
+   <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="46">
+   <BOUNDS type="Node" left="5850" top="2205" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" slicecount="1" values="0.06">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="46" srcpinname="Output" dstnodeid="4" dstpinname="TranslateX">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Y Output Value" dstnodeid="46" dstpinname="Input 1">
    </LINK>
    </PATCH>

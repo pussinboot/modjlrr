@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sol_mt-6.v4p" scrollx="210" scrolly="150">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\layer control\speed.v4p" scrollx="210" scrolly="150">
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1965" top="2280" width="100" height="100">
    </BOUNDS>
@@ -147,7 +147,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Font" slicecount="1" values="ProggyClean">
+   <PIN pinname="Font" slicecount="1" values="ProggyClean" visible="1">
    </PIN>
    <PIN pinname="Size" slicecount="1" values="75">
    </PIN>
@@ -594,7 +594,7 @@
    </LINK>
    <LINK srcnodeid="27" srcpinname="OnChange" dstnodeid="34" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="-1" top="-1" width="11800" height="12270">
+   <BOUNDS type="Window" left="15615" top="9750" width="11790" height="12270">
    </BOUNDS>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="40" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="915" top="345" width="795" height="240">
@@ -616,4 +616,16 @@
    </PACK>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
+   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="41" systemname="IOBox (Enumerations)">
+   <BOUNDS type="Box" left="6795" top="435" width="1590" height="270">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6795" top="435" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="Arial">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="font">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="41" srcpinname="Output Enum" dstnodeid="12" dstpinname="Font">
+   </LINK>
    </PATCH>
