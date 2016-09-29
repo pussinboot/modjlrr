@@ -31,7 +31,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="495" top="5190" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="30780" top="16845" width="17880" height="10905">
+   <BOUNDS type="Window" left="30330" top="16740" width="17880" height="10905">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -943,7 +943,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Is NIL" visible="1">
    </PIN>
@@ -993,7 +993,7 @@
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Is NIL" visible="1">
    </PIN>
@@ -1869,7 +1869,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Window" left="3075" top="6195" width="21465" height="14895">
+   <BOUNDS type="Window" left="630" top="5355" width="21465" height="14895">
    </BOUNDS>
    <PIN pinname="osc_inputs" visible="1">
    </PIN>
@@ -1909,7 +1909,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="17805" top="10665" width="12735" height="6000">
+   <BOUNDS type="Window" left="14325" top="11550" width="12735" height="6000">
    </BOUNDS>
    <PIN pinname="reset" slicecount="1" values="0">
    </PIN>
