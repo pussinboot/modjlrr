@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sol_mt.v4p" scrollx="4110" scrolly="0" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sol_mt.v4p" scrollx="1695" scrolly="45" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
    <BOUNDS type="Window" left="0" top="405" width="21720" height="16335">
    </BOUNDS>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="7">
@@ -31,7 +31,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="495" top="5190" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="30765" top="9210" width="17895" height="10905">
+   <BOUNDS type="Window" left="30780" top="16845" width="17880" height="10905">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -1869,7 +1869,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Window" left="8835" top="7350" width="14010" height="14040">
+   <BOUNDS type="Window" left="3075" top="6195" width="21465" height="14895">
    </BOUNDS>
    <PIN pinname="osc_inputs" visible="1">
    </PIN>
@@ -1900,7 +1900,7 @@
    </NODE>
    <LINK srcnodeid="660" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 4">
    </LINK>
-   <NODE systemname="osc_receiver_just_pass_string" filename="building_blocks\osc_receiver_just_pass_string.v4p" nodename="building_blocks\osc_receiver_just_pass_string.v4p" componentmode="Hidden" id="661">
+   <NODE systemname="osc_receiver_just_pass_string" filename="building_blocks\osc_receiver_just_pass_string.v4p" nodename="building_blocks\osc_receiver_just_pass_string.v4p" componentmode="InAWindow" id="661">
    <BOUNDS type="Node" left="13365" top="4290" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Port" visible="1">
@@ -1914,6 +1914,8 @@
    <PIN pinname="reset" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Default Value(s)" visible="1">
+   </PIN>
+   <PIN pinname="Enable" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="662" systemname="IOBox (Value Advanced)">
@@ -1975,11 +1977,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="679" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="18945" top="1755" width="1005" height="900">
+   <BOUNDS type="Box" left="19065" top="1365" width="1395" height="930">
    </BOUNDS>
-   <BOUNDS type="Node" left="18945" top="1755" width="0" height="0">
+   <BOUNDS type="Node" left="19065" top="1365" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="2" visible="1" values="/loop/on_off,/loop/type">
+   <PIN pinname="Input String" slicecount="4" visible="1" values="/loop/on_off,/loop/type,/loop/cur_range,/cur_pos">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -1989,7 +1991,7 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
+   <PIN pinname="Rows" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -2023,9 +2025,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="676" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="18660" top="1140" width="720" height="240">
+   <BOUNDS type="Box" left="18330" top="1125" width="720" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="18660" top="1140" width="0" height="0">
+   <BOUNDS type="Node" left="18330" top="1125" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="1" visible="1" values="/layer1">
    </PIN>
@@ -2093,7 +2095,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="20625" top="1050" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="5" visible="1" values="|0,0,0,0,0,0,0,0|,0,0,0,0">
+   <PIN pinname="Input String" slicecount="9" visible="1" values="|0,0,0,0,0,0,0,0|,0,0,|0,1|,0,0,0,|0,1|,0">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -2101,7 +2103,7 @@
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="5">
+   <PIN pinname="Rows" slicecount="1" values="9">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>

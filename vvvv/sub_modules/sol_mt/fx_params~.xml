@@ -2099,7 +2099,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Input 3" slicecount="1" values="fft_distort/">
+   <PIN pinname="Input 3" slicecount="1" values="fx/fft_distort/">
    </PIN>
    <PIN pinname="Input 4" visible="1" slicecount="1" values="text">
    </PIN>
@@ -2109,7 +2109,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="3600" top="23520" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="/modvj/fx/">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="/modvj/">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
