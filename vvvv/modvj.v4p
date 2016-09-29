@@ -1542,28 +1542,32 @@
    </LINK>
    <LINK srcnodeid="197" srcpinname="Output" dstnodeid="181" dstpinname="osc_in">
    </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="200">
-   <BOUNDS type="Node" left="105" top="1185" width="100" height="100">
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="202">
+   <BOUNDS type="Node" left="435" top="1065" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="203">
+   <BOUNDS type="Node" left="2805" top="1140" width="100" height="100">
    </BOUNDS>
    <PIN pinname="SpoutSenderName" visible="1">
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="201">
-   <BOUNDS type="Node" left="2595" top="1155" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="201" dstpinname="SpoutSenderName">
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="203" dstpinname="SpoutSenderName">
+   <LINKPOINT x="2805" y="780">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="201" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
+   <LINK srcnodeid="203" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="200" dstpinname="SpoutSenderName">
+   <LINK srcnodeid="202" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
+   <LINKPOINT x="585" y="1650">
+   </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="200" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="202" dstpinname="SpoutSenderName">
    </LINK>
    </PATCH>
