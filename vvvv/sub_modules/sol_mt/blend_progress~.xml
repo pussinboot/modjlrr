@@ -69,13 +69,13 @@
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="375" top="1785" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="TranslateX" slicecount="1" values="0.75">
+   <PIN pinname="TranslateX" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.09">
+   <PIN pinname="TranslateY" slicecount="1" values="0.35">
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" values="0.78">
    </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="1">
+   <PIN pinname="ScaleY" slicecount="1" values="0.55">
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
