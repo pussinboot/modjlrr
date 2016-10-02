@@ -2673,6 +2673,8 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Characters after Comma" slicecount="1" values="4">
+   </PIN>
    </NODE>
    <LINK srcnodeid="195" srcpinname="Y Output Value" dstnodeid="175" dstpinname="Input">
    </LINK>

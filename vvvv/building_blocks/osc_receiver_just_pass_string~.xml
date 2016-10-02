@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\building_blocks\osc_receiver_just_pass_string.v4p" systemname="osc_receiver_just_pass_string" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\building_blocks\osc_receiver_just_pass_string.v4p" scrollx="1050" scrolly="15">
-   <BOUNDS type="Window" left="17805" top="10665" width="12735" height="6000">
+   <BOUNDS type="Window" left="14325" top="11550" width="12735" height="6000">
    </BOUNDS>
    <NODE systemname="OSCDecoder (Network)" nodename="OSCDecoder (Network)" componentmode="Hidden" id="2">
    <BOUNDS type="Node" left="2085" top="2850" width="100" height="100">
@@ -270,16 +270,6 @@
    </NODE>
    <LINK srcnodeid="32" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Simulate">
    </LINK>
-   <NODE systemname="AvoidNIL (String)" filename="%VVVV%\lib\nodes\modules\String\AvoidNIL (String).v4p" nodename="AvoidNIL (String)" componentmode="Hidden" id="39">
-   <BOUNDS type="Node" left="2100" top="3600" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Default" visible="1">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="41">
    <BOUNDS type="Node" left="10470" top="2370" width="100" height="100">
    </BOUNDS>
@@ -358,22 +348,16 @@
    </LINK>
    <LINK srcnodeid="31" srcpinname="Output" dstnodeid="43" dstpinname="Switch">
    </LINK>
-   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="39" dstpinname="Default">
-   </LINK>
-   <LINK srcnodeid="2" srcpinname="Arguments" dstnodeid="39" dstpinname="Input">
-   </LINK>
    <NODE systemname="S+H (String)" nodename="S+H (String)" componentmode="Hidden" id="46">
    <BOUNDS type="Node" left="2385" top="4260" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Set" visible="1" slicecount="9" values="0,0,0,0,2,0,0,0,0">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="9" values="|0,0,0,0,0,0,0,0|,0,0,|0,1|,0,0,0,|0,1|,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="39" srcpinname="Output" dstnodeid="46" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="47" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2580" top="4920" width="795" height="240">
    </BOUNDS>
@@ -409,5 +393,39 @@
    <LINK srcnodeid="2" srcpinname="Bin Sizes" dstnodeid="48" dstpinname="Bin Size">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Arguments" dstnodeid="48" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Sift (Value)" nodename="Sift (Value)" componentmode="Hidden" id="51">
+   <BOUNDS type="Node" left="5910" top="4620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filter" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Find" slicecount="1" values="All">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Input Index" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="2" srcpinname="OnReceive" dstnodeid="51" dstpinname="Input">
+   </LINK>
+   <NODE systemname="SetSlice (String)" nodename="SetSlice (String)" componentmode="Hidden" id="52">
+   <BOUNDS type="Node" left="7530" top="4725" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Spread" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Index" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="52" dstpinname="Spread">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Arguments" dstnodeid="52" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="51" srcpinname="Input Index" dstnodeid="52" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="52" srcpinname="Output" dstnodeid="46" dstpinname="Input">
    </LINK>
    </PATCH>
