@@ -78,7 +78,7 @@
    </LINK>
    <LINK srcnodeid="3" srcpinname="Input Value" dstnodeid="0" dstpinname="Is new">
    </LINK>
-   <BOUNDS type="Window" left="9375" top="11430" width="13380" height="8445">
+   <BOUNDS type="Window" left="1980" top="11655" width="13380" height="8445">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -507,7 +507,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="11085" top="105" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.11">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.35">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -555,7 +555,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Input 2" slicecount="1" values="-0.77">
+   <PIN pinname="Input 2" slicecount="1" values="-0.52">
    </PIN>
    </NODE>
    <LINK srcnodeid="36" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Input 1">

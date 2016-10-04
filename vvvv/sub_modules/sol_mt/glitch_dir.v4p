@@ -81,7 +81,7 @@
    </BOUNDS>
    <PIN pinname="TranslateX" slicecount="1" visible="1" values="0.38">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" visible="1" values="-0.38">
+   <PIN pinname="TranslateY" slicecount="1" visible="1" values="-0.44">
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" visible="1" values="0.41">
    </PIN>
@@ -239,7 +239,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1200" top="1215" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.41">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.38">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

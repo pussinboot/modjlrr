@@ -71,7 +71,7 @@
    </BOUNDS>
    <PIN pinname="TranslateX" slicecount="1" values="0.75">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.12">
+   <PIN pinname="TranslateY" slicecount="1" values="-0.12" visible="1">
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" values="0.87">
    </PIN>
@@ -188,4 +188,20 @@
    </PACK>
    <PACK Name="opencv" Version="0.2.0">
    </PACK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="645" top="390" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="645" top="390" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.01">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|translate y|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="14" srcpinname="Y Output Value" dstnodeid="4" dstpinname="TranslateY">
+   </LINK>
    </PATCH>
