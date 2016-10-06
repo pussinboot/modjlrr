@@ -213,7 +213,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5925" top="4635" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="23730" top="1635" width="6840" height="4530">
+   <BOUNDS type="Window" left="3870" top="13605" width="6840" height="4530">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1389,9 +1389,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="185" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="20400" top="180" width="1065" height="1230">
+   <BOUNDS type="Box" left="21075" top="345" width="1065" height="1230">
    </BOUNDS>
-   <BOUNDS type="Node" left="20400" top="180" width="0" height="0">
+   <BOUNDS type="Node" left="21075" top="345" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Input String" slicecount="5" visible="1" values="progress,hue,saturation,lightness,scale">
    </PIN>
@@ -1413,13 +1413,11 @@
    </BOUNDS>
    <PIN pinname="Select" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="5" values="progress,hue,saturation,lightness,scale">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="185" srcpinname="Output String" dstnodeid="184" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="186" srcpinname="Output String" dstnodeid="188" dstpinname="Input 1">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="189" systemname="IOBox (String)">
@@ -1542,32 +1540,58 @@
    </LINK>
    <LINK srcnodeid="197" srcpinname="Output" dstnodeid="181" dstpinname="osc_in">
    </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="202">
-   <BOUNDS type="Node" left="435" top="1065" width="100" height="100">
+   <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="206">
+   <BOUNDS type="Node" left="20145" top="1230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="207" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="20370" top="435" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="20370" top="435" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="on_off">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="207" srcpinname="Output String" dstnodeid="206" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="185" srcpinname="Output String" dstnodeid="206" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="206" srcpinname="Output" dstnodeid="184" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="208">
+   <BOUNDS type="Node" left="540" top="1125" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
    </PIN>
    <PIN pinname="SpoutSenderName" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="203">
-   <BOUNDS type="Node" left="2805" top="1140" width="100" height="100">
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="209">
+   <BOUNDS type="Node" left="2640" top="1050" width="100" height="100">
    </BOUNDS>
    <PIN pinname="SpoutSenderName" visible="1">
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="203" dstpinname="SpoutSenderName">
-   <LINKPOINT x="2805" y="780">
-   </LINKPOINT>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="209" dstpinname="SpoutSenderName">
    </LINK>
-   <LINK srcnodeid="203" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
+   <LINK srcnodeid="209" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="202" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
-   <LINKPOINT x="585" y="1650">
-   </LINKPOINT>
+   <LINK srcnodeid="208" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="202" dstpinname="SpoutSenderName">
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="208" dstpinname="SpoutSenderName">
    </LINK>
    </PATCH>

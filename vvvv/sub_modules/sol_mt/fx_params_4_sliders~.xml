@@ -29,9 +29,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="3">
-   <BOUNDS type="Node" left="5685" top="645" width="100" height="100">
+   <BOUNDS type="Node" left="4980" top="465" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="5685" top="645" width="780" height="240">
+   <BOUNDS type="Box" left="4980" top="465" width="780" height="240">
    </BOUNDS>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
@@ -157,9 +157,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="14" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="6615" top="660" width="795" height="240">
+   <BOUNDS type="Box" left="5910" top="480" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6615" top="660" width="0" height="0">
+   <BOUNDS type="Node" left="5910" top="480" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -187,9 +187,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="16" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="7635" top="660" width="795" height="240">
+   <BOUNDS type="Box" left="6930" top="480" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="7635" top="660" width="0" height="0">
+   <BOUNDS type="Node" left="6930" top="480" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -201,7 +201,7 @@
    </PIN>
    </NODE>
    <NODE systemname="GetSlice (Spreads)" nodename="GetSlice (Spreads)" componentmode="Hidden" id="17">
-   <BOUNDS type="Node" left="5775" top="2310" width="100" height="100">
+   <BOUNDS type="Node" left="5955" top="2265" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -211,7 +211,7 @@
    </PIN>
    </NODE>
    <NODE id="18" systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
-   <BOUNDS type="Node" left="4500" top="2790" width="100" height="100">
+   <BOUNDS type="Node" left="4560" top="2565" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1" pintype="Output">
    </PIN>
@@ -230,6 +230,10 @@
    <PIN pinname="Input 1" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" visible="1" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="Text (EX9)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Text (EX9)" componentmode="Hidden" id="20">
@@ -813,5 +817,41 @@
    <LINK srcnodeid="73" srcpinname="Output" dstnodeid="17" dstpinname="Index">
    </LINK>
    <LINK srcnodeid="73" srcpinname="Output" dstnodeid="48" dstpinname="Index">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="74" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="7920" top="375" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7920" top="375" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="all_fx">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE id="75" systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" hiddenwhenlocked="0" managers="">
+   <BOUNDS type="Node" left="6570" top="1620" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1" pintype="Output">
+   </PIN>
+   <PIN pinname="Input" visible="1" pintype="Input" slicecount="3" values="1,0,0">
+   </PIN>
+   <PIN pinname="Descriptive Name" pintype="Configuration" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="ID" pintype="Output" visible="-1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="74" srcpinname="Y Output Value" dstnodeid="75" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="75" srcpinname="Output" dstnodeid="19" dstpinname="Input 3">
    </LINK>
    </PATCH>

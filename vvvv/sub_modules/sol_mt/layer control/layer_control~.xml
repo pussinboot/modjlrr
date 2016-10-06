@@ -88,28 +88,6 @@
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="8" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="5305" top="8220" width="495" height="750">
-   </BOUNDS>
-   <BOUNDS type="Node" left="5305" top="8220" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Y Output Value" visible="1">
-   </PIN>
-   <PIN pinname="Y Input Value" slicecount="3" visible="1" values="0,0,0">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="9" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="2740" top="7755" width="795" height="240">
    </BOUNDS>
@@ -718,8 +696,6 @@
    <PIN pinname="qp/lp" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="38" srcpinname="extra buts" dstnodeid="8" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="38" srcpinname="pad buts" dstnodeid="7" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="38" srcpinname="Layer" dstnodeid="0" dstpinname="Layer 4">
@@ -2934,4 +2910,20 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="361" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5145" top="8400" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5145" top="8400" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="38" srcpinname="extra buts" dstnodeid="361" dstpinname="Y Input Value">
+   </LINK>
    </PATCH>
