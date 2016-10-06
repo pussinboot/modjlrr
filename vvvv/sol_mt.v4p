@@ -1,9 +1,9 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sol_mt.v4p" scrollx="1080" scrolly="0" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sol_mt.v4p" scrollx="0" scrolly="0" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
    <BOUNDS type="Window" left="225" top="420" width="27300" height="9030">
    </BOUNDS>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="7">
-   <BOUNDS type="Node" left="630" top="4740" width="100" height="100">
+   <BOUNDS type="Node" left="480" top="4530" width="4140" height="270">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
@@ -31,7 +31,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="495" top="5190" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="22695" top="6180" width="18810" height="13125">
+   <BOUNDS type="Window" left="25380" top="9165" width="19170" height="13125">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -1093,9 +1093,9 @@
    <LINK srcnodeid="25" srcpinname="Color Output" dstnodeid="218" dstpinname="Color 1">
    </LINK>
    <NODE systemname="mt_or_mouse" filename="sub_modules\sol_mt\mt_or_mouse.v4p" nodename="sub_modules\sol_mt\mt_or_mouse.v4p" componentmode="Hidden" id="215">
-   <BOUNDS type="Node" left="2115" top="5005" width="0" height="0">
+   <BOUNDS type="Node" left="2475" top="5350" width="0" height="0">
    </BOUNDS>
-   <BOUNDS type="Box" left="390" top="1753" width="11395" height="6505">
+   <BOUNDS type="Box" left="750" top="2098" width="11395" height="6505">
    </BOUNDS>
    <BOUNDS type="Window" left="4380" top="9210" width="11385" height="6495">
    </BOUNDS>
@@ -1156,10 +1156,8 @@
    </NODE>
    <PACK Name="opencv" Version="0.2.0">
    </PACK>
-   <LINK srcnodeid="215" srcpinname="cursor (if enabled)" dstnodeid="7" dstpinname="Layer 8">
-   </LINK>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="258">
-   <BOUNDS type="Node" left="3330" top="3885" width="100" height="100">
+   <BOUNDS type="Node" left="780" top="3555" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer Template Count" slicecount="1" values="4">
    </PIN>
@@ -1226,8 +1224,6 @@
    <PIN pinname="Layer Switch" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="659" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 3">
-   </LINK>
    <NODE systemname="layer_control" filename="sub_modules\sol_mt\layer control\layer_control.v4p" nodename="sub_modules\sol_mt\layer control\layer_control.v4p" componentmode="Hidden" id="660">
    <BOUNDS type="Node" left="9690" top="3420" width="100" height="100">
    </BOUNDS>
@@ -1483,6 +1479,8 @@
    </PIN>
    <PIN pinname="translate y" slicecount="1" values="-0.24">
    </PIN>
+   <PIN pinname="last_selected_layer" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="fx_params" filename="sub_modules\sol_mt\fx_params.v4p" nodename="sub_modules\sol_mt\fx_params.v4p" componentmode="Hidden" id="722">
    <BOUNDS type="Node" left="5565" top="7740" width="100" height="100">
@@ -1491,11 +1489,15 @@
    </PIN>
    <PIN pinname="Font" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="7020" top="495" width="16485" height="20670">
+   <BOUNDS type="Window" left="0" top="930" width="25440" height="20670">
    </BOUNDS>
    <PIN pinname="translate y" visible="1">
    </PIN>
    <PIN pinname="fx_choice" visible="1">
+   </PIN>
+   <PIN pinname="last_fx_choice" visible="1">
+   </PIN>
+   <PIN pinname="layer_selection" visible="1">
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="723" systemname="IOBox (Enumerations)">
@@ -1604,12 +1606,6 @@
    </LINK>
    <LINK srcnodeid="661" srcpinname="Output" dstnodeid="694" dstpinname="Input String">
    </LINK>
-   <LINK srcnodeid="710" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 7">
-   </LINK>
-   <LINK srcnodeid="722" srcpinname="Output Node" dstnodeid="7" dstpinname="Layer 6">
-   </LINK>
-   <LINK srcnodeid="258" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
-   </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="724" systemname="IOBox (String)">
    <BOUNDS type="Box" left="20670" top="4020" width="1845" height="2925">
    </BOUNDS>
@@ -1683,5 +1679,35 @@
    <LINK srcnodeid="728" srcpinname="Output String" dstnodeid="725" dstpinname="Input 3">
    </LINK>
    <LINK srcnodeid="725" srcpinname="Output" dstnodeid="661" dstpinname="Default Value(s)">
+   </LINK>
+   <LINK srcnodeid="710" srcpinname="last_selected_layer" dstnodeid="722" dstpinname="last_fx_choice">
+   </LINK>
+   <LINK srcnodeid="215" srcpinname="cursor (if enabled)" dstnodeid="7" dstpinname="Layer 8">
+   </LINK>
+   <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="731">
+   <BOUNDS type="Node" left="3690" top="7815" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="710" srcpinname="Layer" dstnodeid="731" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="722" srcpinname="Output Node" dstnodeid="731" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="722" srcpinname="layer_selection" dstnodeid="731" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="258" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="659" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="731" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 7">
    </LINK>
    </PATCH>
