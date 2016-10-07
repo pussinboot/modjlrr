@@ -517,7 +517,7 @@
    <NODE systemname="loop_controls" filename="loop_controls.v4p" nodename="loop_controls.v4p" componentmode="Hidden" id="35">
    <BOUNDS type="Node" left="5925" top="4440" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="2580" top="7170" width="21960" height="14025">
+   <BOUNDS type="Window" left="1980" top="4740" width="21960" height="14025">
    </BOUNDS>
    <PIN pinname="but out" visible="1">
    </PIN>
@@ -685,7 +685,7 @@
    </PIN>
    <PIN pinname="top_tog_ind" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="6510" top="3795" width="19935" height="19380">
+   <BOUNDS type="Window" left="1710" top="3750" width="26175" height="19380">
    </BOUNDS>
    <PIN pinname="layer switch" visible="1">
    </PIN>
@@ -694,6 +694,10 @@
    <PIN pinname="clip_select" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="qp/lp" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="osc_inp" visible="1" slicecount="1" values="|4114336,8159930,6744354,6683250,6204602,3457468,4328200,3829184|">
+   </PIN>
+   <PIN pinname="osc_addr" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="38" srcpinname="pad buts" dstnodeid="7" dstpinname="Y Input Value">
@@ -1015,8 +1019,6 @@
    </LINKPOINT>
    <LINKPOINT x="11115" y="3900">
    </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="38" dstpinname="filenames">
    </LINK>
    <NODE id="63" systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden">
    <BOUNDS type="Node" left="19005" top="1140" width="100" height="100">
@@ -2909,5 +2911,23 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="38" srcpinname="extra buts" dstnodeid="361" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="362">
+   <BOUNDS type="Node" left="7830" top="7245" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="60" srcpinname="Output" dstnodeid="362" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="46" srcpinname="Output" dstnodeid="362" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="43" srcpinname="Output" dstnodeid="38" dstpinname="osc_addr">
+   </LINK>
+   <LINK srcnodeid="362" srcpinname="Output" dstnodeid="38" dstpinname="osc_inp">
    </LINK>
    </PATCH>

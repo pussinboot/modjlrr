@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\layer control\layer_control-1.v4p">
+   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\layer control\layer_control-1.v4p">
    <NODE id="0" systemname="R (Value)" nodename="R (Value)" componentmode="Hidden">
    <BOUNDS type="Node" left="6030" top="6660" width="100" height="100">
    </BOUNDS>
@@ -189,7 +189,7 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-2.55">
+   <PIN pinname="TranslateY" slicecount="1" values="-1.05">
    </PIN>
    </NODE>
    <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="15">
@@ -667,7 +667,5 @@
    <BOUNDS type="Window" left="-1" top="-1" width="10540" height="14805">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
-   </PACK>
-   <PACK Name="opencv" Version="0.2.0">
    </PACK>
    </PATCH>
