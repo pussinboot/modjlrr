@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="10200" scrolly="0">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="6660" scrolly="4005">
    <NODE systemname="RadioButton (GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\Gui2d.dll" nodename="RadioButton (GUI)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="6555" top="8325" width="100" height="100">
    </BOUNDS>
@@ -1091,7 +1091,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="5554" top="16040" width="10455" height="8670">
    </BOUNDS>
-   <BOUNDS type="Window" left="14265" top="6780" width="11985" height="13200">
+   <BOUNDS type="Window" left="9930" top="3495" width="15915" height="13200">
    </BOUNDS>
    <PIN pinname="param texts" visible="1">
    </PIN>
@@ -1101,7 +1101,7 @@
    </PIN>
    <PIN pinname="value out" visible="1">
    </PIN>
-   <PIN pinname="all_progress" visible="1">
+   <PIN pinname="all_progress" visible="1" slicecount="12" values="0.243923686732293,0.511078200772425,0.673693991927288,0.789848128466475,0.534309028080262,0.325231582309725,0.569155269042019,0.773499433748584,0.307808461828847,0,0,0">
    </PIN>
    <PIN pinname="values - both" visible="1">
    </PIN>
@@ -1111,13 +1111,17 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="|fft distort|">
    </PIN>
-   <PIN pinname="index" slicecount="1" values="1">
+   <PIN pinname="index" slicecount="1" values="1" visible="1">
    </PIN>
    <PIN pinname="fx_choice" visible="1" slicecount="12" values="1,0,0,0,0,0,0,1,0,0,1,0">
    </PIN>
    <PIN pinname="all_fx" visible="1">
    </PIN>
-   <PIN pinname="all_enabled" visible="1">
+   <PIN pinname="all_enabled" visible="1" slicecount="12" values="0,0,0,0,0,0,0,0,0,0,0,0">
+   </PIN>
+   <PIN pinname="all_texts" visible="1">
+   </PIN>
+   <PIN pinname="this_text" slicecount="1" values="fft_distort">
    </PIN>
    </NODE>
    <LINK srcnodeid="41" srcpinname="Y Output Value" dstnodeid="187" dstpinname="layer_choice" linkstyle="VHV">
@@ -1220,8 +1224,6 @@
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="38" srcpinname="Value Output" dstnodeid="187" dstpinname="all_progress">
-   </LINK>
    <LINK srcnodeid="187" srcpinname="values - both" dstnodeid="192" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="187" srcpinname="values - layer 0" dstnodeid="199" dstpinname="Y Input Value">
@@ -2117,12 +2119,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Value Output" dstnodeid="313" dstpinname="Y Input Value">
-   </LINK>
-   <LINK srcnodeid="313" srcpinname="Y Output Value" dstnodeid="187" dstpinname="all_enabled" linkstyle="VHV">
-   <LINKPOINT x="12225" y="13763">
-   </LINKPOINT>
-   <LINKPOINT x="11070" y="13763">
-   </LINKPOINT>
    </LINK>
    <NODE systemname="Cons (String)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (String)" componentmode="Hidden" id="314">
    <BOUNDS type="Node" left="6285" top="22080" width="100" height="100">
@@ -3635,7 +3631,7 @@
    <LINK srcnodeid="448" srcpinname="Output" dstnodeid="372" dstpinname="Y Input Value">
    </LINK>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="449">
-   <BOUNDS type="Node" left="24975" top="7755" width="100" height="100">
+   <BOUNDS type="Node" left="25260" top="7620" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -3647,7 +3643,7 @@
    <LINK srcnodeid="438" srcpinname="Y Output Value" dstnodeid="449" dstpinname="Input">
    </LINK>
    <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="450">
-   <BOUNDS type="Node" left="24840" top="8130" width="100" height="100">
+   <BOUNDS type="Node" left="24945" top="8175" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -3661,5 +3657,101 @@
    <LINK srcnodeid="450" srcpinname="Output" dstnodeid="449" dstpinname="Select">
    </LINK>
    <LINK srcnodeid="449" srcpinname="Output" dstnodeid="440" dstpinname="Index">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Output String" dstnodeid="187" dstpinname="all_texts">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="451" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11415" top="14490" width="420" height="465">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11415" top="14490" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="331" srcpinname="Y Output Value" dstnodeid="451" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="452" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11790" top="15120" width="615" height="255">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11790" top="15120" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="339" srcpinname="Y Output Value" dstnodeid="452" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="453" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="11805" top="14130" width="1020" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11805" top="14130" width="1020" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ all enabled|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="454" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="12390" top="14730" width="1125" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12390" top="14730" width="1125" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ all progress|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="455" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="12405" top="15615" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="12405" top="15615" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="449" srcpinname="Output" dstnodeid="455" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="456" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="13020" top="15195" width="1095" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="13020" top="15195" width="1275" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ active indices|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="452" srcpinname="Y Output Value" dstnodeid="187" dstpinname="all_progress">
+   </LINK>
+   <LINK srcnodeid="451" srcpinname="Y Output Value" dstnodeid="187" dstpinname="all_enabled">
+   </LINK>
+   <LINK srcnodeid="455" srcpinname="Y Output Value" dstnodeid="187" dstpinname="active_indices">
    </LINK>
    </PATCH>
