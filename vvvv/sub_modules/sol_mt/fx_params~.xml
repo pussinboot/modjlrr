@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="195" scrolly="0">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="0" scrolly="0">
    <NODE systemname="RadioButton (GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\Gui2d.dll" nodename="RadioButton (GUI)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="6555" top="8325" width="100" height="100">
    </BOUNDS>
@@ -2093,21 +2093,17 @@
    <LINK srcnodeid="280" srcpinname="Touched" dstnodeid="283" dstpinname="Up">
    </LINK>
    <NODE systemname="Switch (Color Input)" nodename="Switch (Color Input)" componentmode="Hidden" id="284">
-   <BOUNDS type="Node" left="7830" top="8970" width="100" height="100">
+   <BOUNDS type="Node" left="7980" top="9090" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="12" values="|0.58178,0.58178,0.58178,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|0.58178,0.58178,0.58178,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|,|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
-   <PIN pinname="Switch" visible="1" slicecount="1" values="1">
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Color" dstnodeid="284" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="23" srcpinname="Input Value" dstnodeid="284" dstpinname="Input 2">
-   </LINK>
    <LINK srcnodeid="284" srcpinname="Output" dstnodeid="4" dstpinname="Color">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="285" systemname="IOBox (String)">
@@ -3246,22 +3242,6 @@
    </LINK>
    <LINK srcnodeid="381" srcpinname="Output" dstnodeid="379" dstpinname="Input 2">
    </LINK>
-   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="388">
-   <BOUNDS type="Node" left="8775" top="8430" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   <PIN pinname="Input 1" slicecount="1" values="0" visible="1">
-   </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="2">
-   </PIN>
-   <PIN pinname="Input 3" visible="1" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="388" srcpinname="Output" dstnodeid="284" dstpinname="Switch">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="389" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="24450" top="6030" width="795" height="825">
    </BOUNDS>
@@ -3351,7 +3331,7 @@
    <LINK srcnodeid="319" srcpinname="Y Output Value" dstnodeid="396" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Add (Value Spectral)" nodename="Add (Value Spectral)" componentmode="Hidden" id="398">
-   <BOUNDS type="Node" left="10290" top="9510" width="100" height="100">
+   <BOUNDS type="Node" left="24030" top="4875" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Bin Size" slicecount="1" values="4">
    </PIN>
@@ -3360,24 +3340,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="399" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="10320" top="10200" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="10320" top="10200" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="3">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="398" srcpinname="Output" dstnodeid="399" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="0" srcpinname="Hit" dstnodeid="398" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="398" srcpinname="Output" dstnodeid="378" dstpinname="Input 1">
@@ -3468,8 +3430,6 @@
    </LINK>
    <LINK srcnodeid="403" srcpinname="Output" dstnodeid="406" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="288" srcpinname="Y Output Value" dstnodeid="388" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="407">
    <BOUNDS type="Node" left="8775" top="6930" width="100" height="100">
    </BOUNDS>
@@ -3487,8 +3447,6 @@
    <LINK srcnodeid="404" srcpinname="Output" dstnodeid="407" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="406" srcpinname="Output" dstnodeid="407" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="407" srcpinname="Output" dstnodeid="388" dstpinname="Input 1">
    </LINK>
    <NODE id="287" nodename="IOBox (Value Advanced)" componentmode="InABox" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="12225" top="7740" width="1500" height="1290">
@@ -3595,13 +3553,11 @@
    <NODE systemname="NOT (Boolean)" nodename="NOT (Boolean)" componentmode="Hidden" id="418">
    <BOUNDS type="Node" left="4200" top="8235" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="388" srcpinname="Output" dstnodeid="418" dstpinname="Input">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="419" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="3645" top="7785" width="795" height="240">
    </BOUNDS>
@@ -3757,5 +3713,13 @@
    <LINK srcnodeid="428" srcpinname="Output" dstnodeid="430" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="430" srcpinname="Y Output Value" dstnodeid="402" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="407" srcpinname="Output" dstnodeid="418" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="416" srcpinname="Y Output Value" dstnodeid="284" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="23" srcpinname="Input Value" dstnodeid="284" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Input Value" dstnodeid="284" dstpinname="Input 2">
    </LINK>
    </PATCH>
