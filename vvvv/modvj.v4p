@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p" scrollx="0" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
-   <BOUNDS type="Window" left="525" top="615" width="22755" height="9210">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\modvj.v4p" scrollx="0" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
+   <BOUNDS type="Window" left="1080" top="2580" width="22755" height="9210">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2865" top="600" width="555" height="240">
@@ -115,7 +115,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="435" top="2460" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|CABLE Output (VB-Audio Virtual Cable)|">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|CABLE Output (VB-Audio Virtual |">
    </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Output Enum" dstnodeid="13" dstpinname="AudioDriver">
@@ -1328,12 +1328,12 @@
    </LINK>
    <LINK srcnodeid="177" srcpinname="Count" dstnodeid="175" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="layer_fx" filename="sub_modules\layer_fx.v4p" nodename="sub_modules\layer_fx.v4p" componentmode="Hidden" id="181">
+   <NODE systemname="layer_fx" filename="sub_modules\layer_fx.v4p" nodename="sub_modules\layer_fx.v4p" componentmode="InAWindow" id="181">
    <BOUNDS type="Node" left="5925" top="3990" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="4375" top="2200" width="3100" height="3580">
    </BOUNDS>
-   <BOUNDS type="Window" left="6915" top="11430" width="10500" height="8670">
+   <BOUNDS type="Window" left="36105" top="450" width="12450" height="10800">
    </BOUNDS>
    <PIN pinname="texture size" visible="1">
    </PIN>
@@ -1342,6 +1342,8 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="both">
    </PIN>
    <PIN pinname="osc_in" visible="1">
+   </PIN>
+   <PIN pinname="osc_addr" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Texture Out" dstnodeid="181" dstpinname="Texture In">
@@ -1593,5 +1595,7 @@
    <LINK srcnodeid="208" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="208" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="193" srcpinname="Output" dstnodeid="181" dstpinname="osc_addr">
    </LINK>
    </PATCH>

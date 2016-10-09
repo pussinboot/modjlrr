@@ -15,9 +15,9 @@
    </PIN>
    </NODE>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="3">
-   <BOUNDS type="Node" left="3360" top="390" width="100" height="100">
+   <BOUNDS type="Node" left="3465" top="180" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="3360" top="390" width="840" height="810">
+   <BOUNDS type="Box" left="3465" top="180" width="840" height="810">
    </BOUNDS>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
@@ -316,7 +316,7 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="Transform Out" dstnodeid="7" dstpinname="Transform">
    </LINK>
-   <BOUNDS type="Window" left="9930" top="3495" width="15915" height="13200">
+   <BOUNDS type="Window" left="26085" top="-600" width="15915" height="13200">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -933,7 +933,7 @@
    <LINK srcnodeid="90" srcpinname="Output" dstnodeid="93" dstpinname="Input 2">
    </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="94">
-   <BOUNDS type="Node" left="12015" top="3300" width="100" height="100">
+   <BOUNDS type="Node" left="12015" top="3285" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="1">
    </PIN>
@@ -988,8 +988,6 @@
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="97" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="94" srcpinname="Output" dstnodeid="97" dstpinname="Input 2">
    </LINK>
    <LINK srcnodeid="13" srcpinname="Input Value" dstnodeid="6" dstpinname="Color">
@@ -1068,4 +1066,16 @@
    </LINK>
    <PACK Name="opencv" Version="0.2.0">
    </PACK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="101">
+   <BOUNDS type="Node" left="3495" top="1080" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Y Output Value" dstnodeid="101" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="101" srcpinname="Output" dstnodeid="97" dstpinname="Input 1">
+   </LINK>
    </PATCH>
