@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\modvj.v4p" scrollx="3570" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\modvj.v4p" scrollx="0" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
    <BOUNDS type="Window" left="1080" top="2580" width="22755" height="9210">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
@@ -208,16 +208,6 @@
    </LINK>
    <LINK srcnodeid="25" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Enabled">
    </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="34">
-   <BOUNDS type="Node" left="5925" top="4635" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="5925" top="4635" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="4065" top="13485" width="6840" height="4530">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
-   </PIN>
-   </NODE>
    <NODE systemname="BeatDetector (Value)" filename="%VVVV%\lib\nodes\modules\Value\BeatDetector (Value).v4p" nodename="BeatDetector (Value)" componentmode="Hidden" id="35">
    <BOUNDS type="Node" left="720" top="3540" width="100" height="100">
    </BOUNDS>
@@ -1349,10 +1339,10 @@
    </PIN>
    <PIN pinname="osc_addr" visible="1">
    </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="18" srcpinname="Texture Out" dstnodeid="181" dstpinname="Texture In">
-   </LINK>
-   <LINK srcnodeid="181" srcpinname="Texture Out" dstnodeid="34" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="48" srcpinname="XY" dstnodeid="181" dstpinname="texture size">
    </LINK>
@@ -1576,30 +1566,6 @@
    </LINK>
    <LINK srcnodeid="206" srcpinname="Output" dstnodeid="184" dstpinname="Input">
    </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="208">
-   <BOUNDS type="Node" left="540" top="1125" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="209">
-   <BOUNDS type="Node" left="2640" top="1050" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="209" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="209" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="208" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="208" dstpinname="SpoutSenderName">
-   </LINK>
    <LINK srcnodeid="193" srcpinname="Output" dstnodeid="181" dstpinname="osc_addr">
    </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="216">
@@ -1715,5 +1681,41 @@
    <LINK srcnodeid="216" srcpinname="Output" dstnodeid="152" dstpinname="Input 4">
    </LINK>
    <LINK srcnodeid="218" srcpinname="Output" dstnodeid="154" dstpinname="Input 4">
+   </LINK>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="219">
+   <BOUNDS type="Node" left="450" top="1125" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="220">
+   <BOUNDS type="Node" left="2850" top="1140" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="220" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="220" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="219" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="219" dstpinname="SpoutSenderName">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="221">
+   <BOUNDS type="Node" left="6255" top="4530" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6255" top="4530" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="0" top="8640" width="6120" height="4860">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="181" srcpinname="Texture Out" dstnodeid="221" dstpinname="Texture In">
    </LINK>
    </PATCH>

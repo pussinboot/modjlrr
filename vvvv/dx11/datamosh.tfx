@@ -13,8 +13,8 @@ float4 colorToDiscard;
 SamplerState linearSampler : IMMUTABLE
 {
     Filter = MIN_MAG_MIP_LINEAR;
-    AddressU = Border; // Clamp or Wrap or Mirror
-    AddressV = Border;
+    AddressU = Wrap; // Clamp or Wrap or Mirror Border
+    AddressV = Mirror;
 };
 
 struct psInput

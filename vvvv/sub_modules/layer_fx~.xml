@@ -1,11 +1,11 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\layer_fx.v4p" systemname="layer_fx" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\layer_fx.v4p">
+   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\sub_modules\layer_fx.v4p" systemname="layer_fx" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\layer_fx.v4p">
    <NODE systemname="fftDistorgttt" filename="..\dx11\fftDistorgttt.v4p" nodename="dx11\fftDistorgttt.v4p" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1515" top="5940" width="100" height="100">
    </BOUNDS>
    <PIN pinname="enabled" slicecount="1" visible="1" values="1">
    </PIN>
-   <PIN pinname="Texture In" visible="1">
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -27,19 +27,19 @@
    </PIN>
    </NODE>
    <NODE systemname="datamosh" filename="..\dx11\datamosh.v4p" nodename="dx11\datamosh.v4p" componentmode="Hidden" id="1">
-   <BOUNDS type="Node" left="1500" top="2880" width="100" height="100">
+   <BOUNDS type="Node" left="2055" top="2760" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    <PIN pinname="window_size" slicecount="1" values="10">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="0" visible="1">
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="threshold" visible="1">
+   <PIN pinname="threshold" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="xy_in" visible="1">
+   <PIN pinname="xy_in" visible="1" slicecount="2" values="-1,1">
    </PIN>
    </NODE>
    <NODE id="2" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
@@ -49,11 +49,9 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1500" top="500" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="2" srcpinname="Output Node" dstnodeid="1" dstpinname="Texture In">
-   </LINK>
-   <LINK srcnodeid="1" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture In">
-   </LINK>
    <NODE id="3" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
    </PIN>
@@ -64,7 +62,7 @@
    </NODE>
    <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="3" dstpinname="Input Node">
    </LINK>
-   <BOUNDS type="Window" left="36105" top="450" width="12450" height="10800">
+   <BOUNDS type="Window" left="8880" top="3240" width="12450" height="10800">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -792,36 +790,78 @@
    </LINK>
    <LINK srcnodeid="77" srcpinname="Count" dstnodeid="61" dstpinname="Select">
    </LINK>
-   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="1" dstpinname="Enabled">
-   </LINK>
-   <LINK srcnodeid="67" srcpinname="Output" dstnodeid="1" dstpinname="threshold">
-   </LINK>
    <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="78">
-   <BOUNDS type="Node" left="8280" top="3555" width="100" height="100">
+   <BOUNDS type="Node" left="8115" top="3705" width="100" height="100">
    </BOUNDS>
    <PIN pinname="X" visible="1">
    </PIN>
-   <PIN pinname="Y" visible="1">
+   <PIN pinname="Y" visible="1" slicecount="1" values="0.5942">
    </PIN>
    <PIN pinname="XY" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="79">
-   <BOUNDS type="Node" left="9060" top="3570" width="100" height="100">
+   <BOUNDS type="Node" left="8355" top="4215" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values="0.5">
+   <PIN pinname="Input 2" slicecount="1" values="1">
    </PIN>
-   <PIN pinname="Input 1" visible="1">
+   <PIN pinname="Input 1" visible="1" slicecount="2" values="0.4997,0.4058">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="64" srcpinname="Output" dstnodeid="78" dstpinname="X">
    </LINK>
-   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="78" dstpinname="Y">
+   <NODE systemname="Subtract (Value)" nodename="Subtract (Value)" componentmode="Hidden" id="80">
+   <BOUNDS type="Node" left="8520" top="3360" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Output" dstnodeid="80" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="78" srcpinname="XY" dstnodeid="79" dstpinname="Input 1">
+   <LINK srcnodeid="80" srcpinname="Output" dstnodeid="78" dstpinname="Y">
    </LINK>
-   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="1" dstpinname="xy_in">
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="81">
+   <BOUNDS type="Node" left="8790" top="3855" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="78" srcpinname="XY" dstnodeid="81" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="81" srcpinname="Output" dstnodeid="79" dstpinname="Input 1">
+   </LINK>
+   <NODE systemname="datamosh_1" filename="..\datamosh_1.v4p" nodename="..\datamosh_1.v4p" componentmode="Hidden" id="82">
+   <BOUNDS type="Node" left="1545" top="3570" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="xy_in" slicecount="2" visible="1" values="0,0">
+   </PIN>
+   <PIN pinname="threshold" slicecount="1" visible="1" values="0.87">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" visible="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="70" srcpinname="Output" dstnodeid="82" dstpinname="Enabled">
+   </LINK>
+   <LINK srcnodeid="67" srcpinname="Output" dstnodeid="82" dstpinname="threshold">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="82" dstpinname="xy_in">
+   </LINK>
+   <LINK srcnodeid="2" srcpinname="Output Node" dstnodeid="82" dstpinname="Texture In">
    </LINK>
    </PATCH>
