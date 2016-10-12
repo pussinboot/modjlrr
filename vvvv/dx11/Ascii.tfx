@@ -1,0 +1,48 @@
+//@author: mcescherr
+//@help: dx11 rewrite of ascii filter
+//@tags: texture
+//@credits: whoever wrote the original
+
+Texture2D tex0 : PREVIOUS;
+Texture2D tex1 <string uiname="Texture In 2";>;
+float2 Size;
+bool Grayscale=false;
+
+SamplerState s0 : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+};
+
+float mx(float3 p){return max(p.x,max(p.y,p.z));}
+
+float4 PS(psInput input) : SV_Target
+{
+	float2 vp=input.uv*Size-.25;
+    float2 sz=float2(8,12);
+    float4 c=tex0.Sample(s0,floor(vp/sz)*sz/Size+.5/Size);
+    float grey=mx(c.rgb);
+    grey=pow(grey,5.);
+	float letter=tex1.Sample(s0,float2(frac(vp/sz)+float2(grey*176,0))/float2(176,1));
+    c.rgb=normalize(c.rgb)*sqrt(3)*letter;
+    if(Grayscale)c.rgb=letter;
+	return c;
+}
+
+technique10 Process
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,PS()));
+	}
+}
+
+
+
