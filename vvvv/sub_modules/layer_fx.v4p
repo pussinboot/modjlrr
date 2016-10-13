@@ -899,7 +899,7 @@
    </PIN>
    <PIN pinname="texture out" visible="1">
    </PIN>
-   <PIN pinname="enabled" slicecount="1" values="1">
+   <PIN pinname="enabled" slicecount="1" values="0">
    </PIN>
    <PIN pinname="gain" slicecount="1" values="0.59">
    </PIN>
@@ -975,7 +975,7 @@
    </PIN>
    <PIN pinname="x_offset" slicecount="1" values="1.06">
    </PIN>
-   <PIN pinname="Enabled" slicecount="1" values="1">
+   <PIN pinname="Enabled" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="91" srcpinname="XY" dstnodeid="93" dstpinname="whXY">
