@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\mt_or_mouse.v4p" systemname="mt_or_mouse" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\mt_or_mouse.v4p">
+   <PATCH nodename="C:\Code\modjlrr\vvvv\sub_modules\sol_mt\mt_or_mouse.v4p" systemname="mt_or_mouse" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\mt_or_mouse.v4p" scrollx="0" scrolly="1245">
    <NODE systemname="MouseStates (Mouse Join)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MouseStates (Mouse Join)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="8940" top="3435" width="100" height="100">
    </BOUNDS>
@@ -117,11 +117,11 @@
    </PIN>
    </NODE>
    <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="10">
-   <BOUNDS type="Node" left="4110" top="4905" width="100" height="100">
+   <BOUNDS type="Node" left="4080" top="5565" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Send String" slicecount="1" values="|mouse id|">
    </PIN>
-   <PIN pinname="Input Value" visible="1">
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
    </PIN>
    </NODE>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="11">
@@ -204,8 +204,6 @@
    </LINK>
    <LINK srcnodeid="5" srcpinname="PositionXY" dstnodeid="7" dstpinname="Position XY">
    </LINK>
-   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="10" dstpinname="Input Value">
-   </LINK>
    <NODE id="18" systemname="IOBox (Value Advanced)" componentmode="InABox" nodename="IOBox (Value Advanced)">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Test Switch|">
    </PIN>
@@ -230,8 +228,6 @@
    </LINK>
    <LINK srcnodeid="8" srcpinname="Output" dstnodeid="9" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="14" dstpinname="Input Value">
-   </LINK>
    <LINK srcnodeid="13" srcpinname="Output" dstnodeid="12" dstpinname="Input Value">
    </LINK>
    <LINK srcnodeid="18" srcpinname="Y Output Value" dstnodeid="13" dstpinname="Switch">
@@ -250,7 +246,7 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="Input Value" dstnodeid="2" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="4380" top="9210" width="11385" height="6495">
+   <BOUNDS type="Window" left="7140" top="9300" width="11385" height="6495">
    </BOUNDS>
    <NODE systemname="Cursor (DX9)" filename="%VVVV%\lib\nodes\modules\EX9\Cursor (DX9).v4p" nodename="Cursor (DX9)" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="1710" top="4335" width="100" height="100">
@@ -293,5 +289,33 @@
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <PACK Name="opencv" Version="0.2.0">
+   </PACK>
+   <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="5355" top="4410" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Default" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="24" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Output" dstnodeid="14" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="25">
+   <BOUNDS type="Node" left="6525" top="4290" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Output" dstnodeid="24" dstpinname="Default">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Output" dstnodeid="10" dstpinname="Input Value">
+   </LINK>
+   <PACK Name="Image" Version="0.2.0">
    </PACK>
    </PATCH>
