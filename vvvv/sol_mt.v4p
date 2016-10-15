@@ -31,7 +31,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="495" top="5190" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="10440" top="10140" width="13950" height="8790">
+   <BOUNDS type="Window" left="-16455" top="14040" width="13950" height="8790">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -1484,7 +1484,7 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="layer">
    </PIN>
    </NODE>
-   <NODE systemname="fx_params" filename="sub_modules\sol_mt\fx_params.v4p" nodename="sub_modules\sol_mt\fx_params.v4p" componentmode="Hidden" id="722">
+   <NODE systemname="fx_params" filename="sub_modules\sol_mt\fx_params.v4p" nodename="sub_modules\sol_mt\fx_params.v4p" componentmode="InAWindow" id="722">
    <BOUNDS type="Node" left="5565" top="7575" width="1515" height="270">
    </BOUNDS>
    <PIN pinname="Output Node" visible="1">

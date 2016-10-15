@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="2985" scrolly="14130">
+   <PATCH nodename="C:\Code\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="2775" scrolly="11145">
    <NODE systemname="RadioButton (GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\Gui2d.dll" nodename="RadioButton (GUI)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="6555" top="8325" width="100" height="100">
    </BOUNDS>
@@ -3908,60 +3908,6 @@
    </LINK>
    <LINK srcnodeid="471" srcpinname="Y Output Value" dstnodeid="187" dstpinname="layer_choice">
    </LINK>
-   <NODE systemname="fx_params_xy" filename="fx_params_xy.v4p" nodename="fx_params_xy.v4p" componentmode="Hidden" id="472">
-   <BOUNDS type="Node" left="14235" top="20430" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Descriptive Name" slicecount="1" values="databend">
-   </PIN>
-   <PIN pinname="Layer" visible="1">
-   </PIN>
-   <PIN pinname="all_texts" visible="1">
-   </PIN>
-   <PIN pinname="all_enabled" visible="1">
-   </PIN>
-   <PIN pinname="all_progress" visible="1">
-   </PIN>
-   <PIN pinname="active_indices" visible="1">
-   </PIN>
-   <PIN pinname="layer_choice" visible="1">
-   </PIN>
-   <PIN pinname="all_fx" visible="1">
-   </PIN>
-   <PIN pinname="layer duplicate transform" visible="1">
-   </PIN>
-   <PIN pinname="this_text" slicecount="1" values="databend">
-   </PIN>
-   <PIN pinname="Font" visible="1">
-   </PIN>
-   <PIN pinname="scales" slicecount="2" values="0,0">
-   </PIN>
-   <PIN pinname="values - both" visible="1">
-   </PIN>
-   <PIN pinname="values - layer 0" visible="1">
-   </PIN>
-   <PIN pinname="values - layer 1" visible="1">
-   </PIN>
-   <BOUNDS type="Window" left="735" top="1110" width="24765" height="15750">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="472" srcpinname="Layer" dstnodeid="173" dstpinname="Layer 3">
-   </LINK>
-   <LINK srcnodeid="470" srcpinname="Output String" dstnodeid="472" dstpinname="all_texts">
-   </LINK>
-   <LINK srcnodeid="451" srcpinname="Y Output Value" dstnodeid="472" dstpinname="all_enabled">
-   </LINK>
-   <LINK srcnodeid="452" srcpinname="Y Output Value" dstnodeid="472" dstpinname="all_progress">
-   </LINK>
-   <LINK srcnodeid="455" srcpinname="Y Output Value" dstnodeid="472" dstpinname="active_indices">
-   </LINK>
-   <LINK srcnodeid="471" srcpinname="Y Output Value" dstnodeid="472" dstpinname="layer_choice">
-   </LINK>
-   <LINK srcnodeid="469" srcpinname="Y Output Value" dstnodeid="472" dstpinname="all_fx">
-   </LINK>
-   <LINK srcnodeid="468" srcpinname="Output Node" dstnodeid="472" dstpinname="layer duplicate transform">
-   </LINK>
-   <LINK srcnodeid="467" srcpinname="Output Enum" dstnodeid="472" dstpinname="Font">
-   </LINK>
    <NODE systemname="UDP (Network Client)" nodename="UDP (Network Client)" componentmode="Hidden" id="488">
    <BOUNDS type="Node" left="19155" top="26715" width="1485" height="270">
    </BOUNDS>
@@ -4257,11 +4203,11 @@
    <NODE systemname="Vector (3d Join)" nodename="Vector (3d Join)" componentmode="Hidden" id="490">
    <BOUNDS type="Node" left="22635" top="23865" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="X" visible="1" slicecount="1" values="0">
+   <PIN pinname="X" visible="1" slicecount="4" values="0,0,1,0.549909162560106">
    </PIN>
-   <PIN pinname="Y" visible="1" slicecount="1" values="0">
+   <PIN pinname="Y" visible="1" slicecount="4" values="0,0,0,0">
    </PIN>
-   <PIN pinname="Z" visible="1" slicecount="1" values="0">
+   <PIN pinname="Z" visible="1" slicecount="4" values="0,0,0,0">
    </PIN>
    <PIN pinname="XYZ" visible="1">
    </PIN>
@@ -4270,12 +4216,66 @@
    </LINK>
    <LINK srcnodeid="490" srcpinname="XYZ" dstnodeid="479" dstpinname="Input">
    </LINK>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
+   <NODE systemname="fx_params_xy" filename="fx_params_xy.v4p" nodename="fx_params_xy.v4p" componentmode="Hidden" id="472" stayontop="0">
+   <BOUNDS type="Node" left="14235" top="20430" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Descriptive Name" slicecount="1" values="databend">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="all_texts" visible="1">
+   </PIN>
+   <PIN pinname="all_enabled" visible="1">
+   </PIN>
+   <PIN pinname="all_progress" visible="1">
+   </PIN>
+   <PIN pinname="active_indices" visible="1">
+   </PIN>
+   <PIN pinname="layer_choice" visible="1">
+   </PIN>
+   <PIN pinname="all_fx" visible="1">
+   </PIN>
+   <PIN pinname="layer duplicate transform" visible="1">
+   </PIN>
+   <PIN pinname="this_text" slicecount="1" values="databend">
+   </PIN>
+   <PIN pinname="Font" visible="1">
+   </PIN>
+   <PIN pinname="scales" slicecount="2" values="0,0">
+   </PIN>
+   <PIN pinname="values - both" visible="1">
+   </PIN>
+   <PIN pinname="values - layer 0" visible="1">
+   </PIN>
+   <PIN pinname="values - layer 1" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="0" top="450" width="23835" height="17670">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="472" srcpinname="Layer" dstnodeid="173" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="470" srcpinname="Output String" dstnodeid="472" dstpinname="all_texts">
+   </LINK>
+   <LINK srcnodeid="451" srcpinname="Y Output Value" dstnodeid="472" dstpinname="all_enabled">
+   </LINK>
+   <LINK srcnodeid="452" srcpinname="Y Output Value" dstnodeid="472" dstpinname="all_progress">
+   </LINK>
+   <LINK srcnodeid="455" srcpinname="Y Output Value" dstnodeid="472" dstpinname="active_indices">
+   </LINK>
+   <LINK srcnodeid="471" srcpinname="Y Output Value" dstnodeid="472" dstpinname="layer_choice">
+   </LINK>
+   <LINK srcnodeid="469" srcpinname="Y Output Value" dstnodeid="472" dstpinname="all_fx">
+   </LINK>
+   <LINK srcnodeid="468" srcpinname="Output Node" dstnodeid="472" dstpinname="layer duplicate transform">
+   </LINK>
+   <LINK srcnodeid="467" srcpinname="Output Enum" dstnodeid="472" dstpinname="Font">
+   </LINK>
    <LINK srcnodeid="472" srcpinname="values - both" dstnodeid="490" dstpinname="X">
    </LINK>
    <LINK srcnodeid="472" srcpinname="values - layer 0" dstnodeid="490" dstpinname="Y">
    </LINK>
    <LINK srcnodeid="472" srcpinname="values - layer 1" dstnodeid="490" dstpinname="Z">
    </LINK>
-   <PACK Name="Image" Version="0.2.0">
-   </PACK>
    </PATCH>

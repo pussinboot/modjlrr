@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="915" scrolly="12555">
+   <PATCH nodename="C:\Code\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="2985" scrolly="14130">
    <NODE systemname="RadioButton (GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\Gui2d.dll" nodename="RadioButton (GUI)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="6555" top="8325" width="100" height="100">
    </BOUNDS>
@@ -152,7 +152,7 @@
    </LINK>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Mouse">
    </LINK>
-   <BOUNDS type="Window" left="-420" top="4260" width="24180" height="13680">
+   <BOUNDS type="Window" left="990" top="2040" width="24180" height="13680">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -3941,7 +3941,7 @@
    </PIN>
    <PIN pinname="values - layer 1" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="2655" top="6720" width="21435" height="12930">
+   <BOUNDS type="Window" left="735" top="1110" width="24765" height="15750">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="472" srcpinname="Layer" dstnodeid="173" dstpinname="Layer 3">
@@ -4276,4 +4276,6 @@
    </LINK>
    <LINK srcnodeid="472" srcpinname="values - layer 1" dstnodeid="490" dstpinname="Z">
    </LINK>
+   <PACK Name="Image" Version="0.2.0">
+   </PACK>
    </PATCH>
