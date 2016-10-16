@@ -1,0 +1,353 @@
+//@author: mc escherr
+//@help: 
+//@tags: texture
+//@credits: 
+
+Texture2D texture2d : PREVIOUS;
+float2 center;
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+};
+
+SamplerState bbSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Border; 
+    AddressV = Border;
+};
+
+SamplerState bcSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Border; 
+    AddressV = Clamp;
+};
+
+SamplerState bmSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Border; 
+    AddressV = Mirror;
+};
+
+SamplerState bwSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Border; 
+    AddressV = Wrap;
+};
+
+SamplerState cbSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp; 
+    AddressV = Border;
+};
+
+SamplerState ccSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp; 
+    AddressV = Clamp;
+};
+
+SamplerState cmSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp; 
+    AddressV = Mirror;
+};
+
+SamplerState cwSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp; 
+    AddressV = Wrap;
+};
+
+SamplerState mbSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Mirror; 
+    AddressV = Border;
+};
+
+SamplerState mcSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Mirror; 
+    AddressV = Clamp;
+};
+
+SamplerState mmSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Mirror; 
+    AddressV = Mirror;
+};
+
+SamplerState mwSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Mirror; 
+    AddressV = Wrap;
+};
+
+SamplerState wbSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Wrap; 
+    AddressV = Border;
+};
+
+SamplerState wcSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Wrap; 
+    AddressV = Clamp;
+};
+
+SamplerState wmSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Wrap; 
+    AddressV = Mirror;
+};
+
+SamplerState wwSampler : IMMUTABLE
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Wrap; 
+    AddressV = Wrap;
+};
+
+// now that samplers are all accounted for
+float4 bbPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(bbSampler,input.uv - center);
+    return c;
+}
+
+technique10 bbProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,bbPS()));
+    }
+}
+
+float4 bcPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(bcSampler,input.uv - center);
+    return c;
+}
+
+technique10 bcProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,bcPS()));
+    }
+}
+
+float4 bmPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(bmSampler,input.uv - center);
+    return c;
+}
+
+technique10 bmProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,bmPS()));
+    }
+}
+
+float4 bwPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(bwSampler,input.uv - center);
+    return c;
+}
+
+technique10 bwProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,bwPS()));
+    }
+}
+
+float4 cbPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(cbSampler,input.uv - center);
+    return c;
+}
+
+technique10 cbProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,cbPS()));
+    }
+}
+
+float4 ccPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(ccSampler,input.uv - center);
+    return c;
+}
+
+technique10 ccProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,ccPS()));
+    }
+}
+
+float4 cmPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(cmSampler,input.uv - center);
+    return c;
+}
+
+technique10 cmProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,cmPS()));
+    }
+}
+
+float4 cwPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(cwSampler,input.uv - center);
+    return c;
+}
+
+technique10 cwProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,cwPS()));
+    }
+}
+
+float4 mbPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(mbSampler,input.uv - center);
+    return c;
+}
+
+technique10 mbProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,mbPS()));
+    }
+}
+
+float4 mcPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(mcSampler,input.uv - center);
+    return c;
+}
+
+technique10 mcProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,mcPS()));
+    }
+}
+
+float4 mmPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(mmSampler,input.uv - center);
+    return c;
+}
+
+technique10 mmProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,mmPS()));
+    }
+}
+
+float4 mwPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(mwSampler,input.uv - center);
+    return c;
+}
+
+technique10 mwProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,mwPS()));
+    }
+}
+
+float4 wbPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(wbSampler,input.uv - center);
+    return c;
+}
+
+technique10 wbProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,wbPS()));
+    }
+}
+
+float4 wcPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(wcSampler,input.uv - center);
+    return c;
+}
+
+technique10 wcProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,wcPS()));
+    }
+}
+
+float4 wmPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(wmSampler,input.uv - center);
+    return c;
+}
+
+technique10 wmProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,wmPS()));
+    }
+}
+
+float4 wwPS(psInput input) : SV_Target
+{
+    float4 c = texture2d.Sample(wwSampler,input.uv - center);
+    return c;
+}
+
+technique10 wwProcess
+{
+    pass P0
+    {
+        SetPixelShader(CompileShader(ps_4_0,wwPS()));
+    }
+}
+
+
+

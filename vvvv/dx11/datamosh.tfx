@@ -28,7 +28,7 @@ float4 PS(psInput input) : SV_Target
 {
 	
 	float4 color = Tex1.Sample(linearSampler, input.uv);
-	float4 colorDessus = Tex0.Sample(linearSampler,input.uv - center);
+	float4 colorDessus = Tex0.Sample(linearSampler,input.uv);
 	//uvs to pixels
 	if (length (colorDessus - colorToDiscard) < coef) {
 		color = colorDessus;
