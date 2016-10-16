@@ -4429,7 +4429,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Characters after Comma" slicecount="1" values="4">
+   <PIN pinname="Characters after Comma" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Characters before Comma" slicecount="1" values="2">
    </PIN>

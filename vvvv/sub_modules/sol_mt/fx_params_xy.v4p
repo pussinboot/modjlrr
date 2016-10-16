@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" systemname="fx_params_xy" filename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" scrollx="0" scrolly="12090">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" systemname="fx_params_xy" filename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" scrollx="4935" scrolly="1710">
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Node" left="12870" top="1965" width="660" height="270">
    </BOUNDS>
@@ -1032,30 +1032,14 @@
    </LINK>
    <LINK srcnodeid="102" srcpinname="Value Output XY" dstnodeid="50" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Scale (Transform)" nodename="Scale (Transform)" componentmode="Hidden" id="106">
-   <BOUNDS type="Node" left="18240" top="3435" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Transform In" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="X" slicecount="1" values="0.9">
-   </PIN>
-   <PIN pinname="Y" slicecount="1" values="0.9">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="11" srcpinname="Transform Out" dstnodeid="106" dstpinname="Transform In">
-   </LINK>
    <NODE systemname="GetMatrix (Transform)" nodename="GetMatrix (Transform)" componentmode="Hidden" id="108">
    <BOUNDS type="Node" left="19440" top="3690" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Transform" visible="1">
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Matrix Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="106" srcpinname="Transform Out" dstnodeid="108" dstpinname="Transform">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="109" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="19860" top="3030" width="1470" height="270">
    </BOUNDS>
@@ -1519,13 +1503,11 @@
    </BOUNDS>
    <PIN pinname="Input 2" slicecount="1" visible="1" values="2.1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="3" values="0.422279992103577,0.422279992103577,0.422279992103577">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="116" srcpinname="Y Output Value" dstnodeid="147" dstpinname="Input">
-   </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="148">
    <BOUNDS type="Node" left="23250" top="10950" width="100" height="100">
    </BOUNDS>
@@ -2767,7 +2749,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="21405" top="9510" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2.1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1.8">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -3561,15 +3543,15 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="0.76" visible="1">
+   <PIN pinname="TranslateX" slicecount="1" visible="1" values="0.76">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.13" visible="1">
+   <PIN pinname="TranslateY" slicecount="1" visible="1" values="-0.13">
    </PIN>
    <PIN pinname="Rotate" visible="1">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="0.23" visible="1">
+   <PIN pinname="ScaleX" slicecount="1" visible="1" values="0.23">
    </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="0.84" visible="1">
+   <PIN pinname="ScaleY" slicecount="1" visible="1" values="0.84">
    </PIN>
    </NODE>
    <NODE systemname="RadioButton (GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\Gui2d.dll" nodename="RadioButton (GUI)" componentmode="Hidden" id="391">
@@ -3673,13 +3655,13 @@
    </PIN>
    <PIN pinname="TranslateX" slicecount="1" visible="1" values="0.76">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.13" visible="1">
+   <PIN pinname="TranslateY" slicecount="1" visible="1" values="-0.13">
    </PIN>
    <PIN pinname="Rotate" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="0.23" visible="1">
+   <PIN pinname="ScaleX" slicecount="1" visible="1" values="0.23">
    </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="0.84" visible="1">
+   <PIN pinname="ScaleY" slicecount="1" visible="1" values="0.84">
    </PIN>
    </NODE>
    <LINK srcnodeid="394" srcpinname="Input Value" dstnodeid="400" dstpinname="Rotate">
@@ -3961,9 +3943,9 @@
    </PIN>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="0.23" visible="1">
+   <PIN pinname="ScaleX" slicecount="1" visible="1" values="0.23">
    </PIN>
-   <PIN pinname="ScaleY" slicecount="1" values="0.52" visible="1">
+   <PIN pinname="ScaleY" slicecount="1" visible="1" values="0.52">
    </PIN>
    <PIN pinname="TranslateX" visible="1">
    </PIN>
@@ -4387,5 +4369,37 @@
    <LINK srcnodeid="430" srcpinname="Value Output" dstnodeid="442" dstpinname="Y Input Value">
    </LINK>
    <LINK srcnodeid="428" srcpinname="Output" dstnodeid="429" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="443" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="12255" top="20025" width="1140" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="12255" top="20025" width="1140" height="270">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ offset on_off|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE systemname="Multiply (Value)" nodename="Multiply (Value)" componentmode="Hidden" id="444">
+   <BOUNDS type="Node" left="19800" top="9120" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="116" srcpinname="Y Output Value" dstnodeid="444" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="280" srcpinname="Y Output Value" dstnodeid="444" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="116" srcpinname="Y Output Value" dstnodeid="147" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="102" srcpinname="Transform Out" dstnodeid="108" dstpinname="Transform">
    </LINK>
    </PATCH>

@@ -4185,7 +4185,7 @@
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
    </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="3" values="15,7,0">
+   <PIN pinname="Y Input Value" visible="1" slicecount="3" values="0,0.375,0">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="offset_types">
    </PIN>
@@ -4386,18 +4386,6 @@
    </NODE>
    <LINK srcnodeid="430" srcpinname="Value Output" dstnodeid="442" dstpinname="Y Input Value">
    </LINK>
-   <NODE systemname="Divide (Value)" nodename="Divide (Value)" componentmode="Hidden" id="443">
-   <BOUNDS type="Node" left="9270" top="24540" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 2" slicecount="1" values="16">
-   </PIN>
-   <PIN pinname="Input" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="428" srcpinname="Output" dstnodeid="443" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="443" srcpinname="Output" dstnodeid="429" dstpinname="Y Input Value">
+   <LINK srcnodeid="428" srcpinname="Output" dstnodeid="429" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
