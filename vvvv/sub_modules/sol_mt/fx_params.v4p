@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="3780" scrolly="16275">
+   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="7800" scrolly="19290">
    <NODE systemname="RadioButton (GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\Gui2d.dll" nodename="RadioButton (GUI)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="6555" top="8325" width="100" height="100">
    </BOUNDS>
@@ -4253,6 +4253,14 @@
    </PIN>
    <PIN pinname="offset_types" visible="1">
    </PIN>
+   <PIN pinname="uniform_scale" visible="1">
+   </PIN>
+   <PIN pinname="x_scale" visible="1">
+   </PIN>
+   <PIN pinname="y_scale" visible="1">
+   </PIN>
+   <PIN pinname="rotate" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="472" srcpinname="Layer" dstnodeid="173" dstpinname="Layer 3">
    </LINK>
@@ -4429,7 +4437,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Characters after Comma" slicecount="1" values="0">
+   <PIN pinname="Characters after Comma" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Characters before Comma" slicecount="1" values="2">
    </PIN>
@@ -4523,7 +4531,7 @@
    <LINK srcnodeid="494" srcpinname="Output" dstnodeid="499" dstpinname="Input 4">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="508" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="17445" top="29025" width="9675" height="540">
+   <BOUNDS type="Box" left="17445" top="29025" width="9765" height="1470">
    </BOUNDS>
    <BOUNDS type="Node" left="17445" top="29025" width="0" height="0">
    </BOUNDS>
@@ -4535,17 +4543,17 @@
    </PIN>
    <PIN pinname="Columns" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
+   <PIN pinname="Rows" slicecount="1" values="6">
    </PIN>
    </NODE>
    <LINK srcnodeid="499" srcpinname="Output" dstnodeid="508" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="509" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="25485" top="21675" width="870" height="465">
+   <BOUNDS type="Box" left="25170" top="20760" width="1260" height="1815">
    </BOUNDS>
-   <BOUNDS type="Node" left="25485" top="21675" width="0" height="0">
+   <BOUNDS type="Node" left="25170" top="20760" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="2" visible="1" values="on_off,type">
+   <PIN pinname="Input String" slicecount="6" visible="1" values="on_off,type,uniform_scale,x_scale,y_scale,rotate">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -4555,7 +4563,7 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
+   <PIN pinname="Rows" slicecount="1" values="6">
    </PIN>
    <PIN pinname="Output String" visible="1">
    </PIN>
@@ -4571,6 +4579,16 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="Input 3" visible="1">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
+   </PIN>
+   <PIN pinname="Input 5" visible="1">
+   </PIN>
+   <PIN pinname="Input 6" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="472" srcpinname="offset_on_off" dstnodeid="510" dstpinname="Input 1">
    </LINK>
@@ -4579,5 +4597,13 @@
    <LINK srcnodeid="510" srcpinname="Output" dstnodeid="500" dstpinname="Input">
    </LINK>
    <LINK srcnodeid="510" srcpinname="Output" dstnodeid="497" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="472" srcpinname="uniform_scale" dstnodeid="510" dstpinname="Input 3">
+   </LINK>
+   <LINK srcnodeid="472" srcpinname="x_scale" dstnodeid="510" dstpinname="Input 4">
+   </LINK>
+   <LINK srcnodeid="472" srcpinname="y_scale" dstnodeid="510" dstpinname="Input 5">
+   </LINK>
+   <LINK srcnodeid="472" srcpinname="rotate" dstnodeid="510" dstpinname="Input 6">
    </LINK>
    </PATCH>

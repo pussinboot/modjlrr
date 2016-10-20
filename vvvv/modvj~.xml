@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\modvj.v4p" scrollx="6645" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
-   <BOUNDS type="Window" left="0" top="1245" width="22755" height="9210">
+   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\modvj.v4p" scrollx="0" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
+   <BOUNDS type="Window" left="3255" top="2130" width="22755" height="9210">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2865" top="600" width="555" height="240">
@@ -115,7 +115,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="435" top="2460" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|CABLE Output (VB-Audio Virtual |">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|CABLE Output (VB-Audio Virtual Cable)|">
    </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Output Enum" dstnodeid="13" dstpinname="AudioDriver">
@@ -1331,7 +1331,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4375" top="2200" width="3100" height="3580">
    </BOUNDS>
-   <BOUNDS type="Window" left="4020" top="4500" width="12450" height="10800">
+   <BOUNDS type="Window" left="4020" top="4500" width="16860" height="10800">
    </BOUNDS>
    <PIN pinname="texture size" visible="1">
    </PIN>
@@ -1693,7 +1693,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6255" top="4530" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="19680" top="8790" width="7755" height="5280">
+   <BOUNDS type="Window" left="24600" top="345" width="10815" height="6945">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -1701,32 +1701,6 @@
    <LINK srcnodeid="181" srcpinname="Texture Out" dstnodeid="221" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="13" srcpinname="FFT" dstnodeid="181" dstpinname="fft_in">
-   </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="230">
-   <BOUNDS type="Node" left="525" top="1170" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="231">
-   <BOUNDS type="Node" left="2865" top="1125" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="231" dstpinname="SpoutSenderName">
-   <LINKPOINT x="2940" y="1200">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="231" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="230" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
-   </LINK>
-   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="230" dstpinname="SpoutSenderName">
    </LINK>
    <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="237">
    <BOUNDS type="Node" left="27240" top="3000" width="100" height="100">
@@ -1841,5 +1815,29 @@
    <LINK srcnodeid="232" srcpinname="Count" dstnodeid="238" dstpinname="Select">
    </LINK>
    <LINK srcnodeid="238" srcpinname="Output" dstnodeid="154" dstpinname="Input 5">
+   </LINK>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="239">
+   <BOUNDS type="Node" left="390" top="1170" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="240">
+   <BOUNDS type="Node" left="2640" top="1185" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="240" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="240" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="239" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
+   </LINK>
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="239" dstpinname="SpoutSenderName">
    </LINK>
    </PATCH>
