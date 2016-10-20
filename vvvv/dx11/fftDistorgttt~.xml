@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\dx11\fftDistorgttt.v4p" systemname="fftDistorgttt" filename="C:\Users\shapil\Desktop\glitchpack\fftDistorgttt.v4p" scrollx="660" scrolly="810">
-   <BOUNDS type="Window" left="12855" top="6120" width="13920" height="10530">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\dx11\fftDistorgttt.v4p" systemname="fftDistorgttt" filename="C:\Users\shapil\Desktop\glitchpack\fftDistorgttt.v4p" scrollx="660" scrolly="810">
+   <BOUNDS type="Window" left="27075" top="2055" width="13920" height="10530">
    </BOUNDS>
    <PACK Name="vvvv.packs_" Version="0.2.0">
    </PACK>
@@ -263,7 +263,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5145" top="6660" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.62">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.780201704939827">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -384,8 +384,6 @@
    </LINK>
    <LINK srcnodeid="51" srcpinname="Output" dstnodeid="7" dstpinname="FilterTime">
    </LINK>
-   <LINK srcnodeid="13" srcpinname="Output" dstnodeid="36" dstpinname="Y Input Value">
-   </LINK>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="11" dstpinname="Y">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="62" systemname="IOBox (Node)">
@@ -502,4 +500,6 @@
    </LINK>
    <LINK srcnodeid="66" srcpinname="Y Output Value" dstnodeid="68" dstpinname="Switch">
    </LINK>
+   <PACK Name="opencv" Version="0.2.0">
+   </PACK>
    </PATCH>

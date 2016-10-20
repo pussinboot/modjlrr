@@ -5,7 +5,7 @@
 
 Texture2D tex0: PREVIOUS;
 Texture2D tex1 <string uiname="Texture In 2";>;
-SamplerState s0 <bool visible=false;string uiname="Sampler";> {Filter=MIN_MAG_MIP_LINEAR;AddressU=CLAMP;AddressV=CLAMP;};
+SamplerState s0 <bool visible=false;string uiname="Sampler";> {Filter=MIN_MAG_MIP_LINEAR;AddressU=WRAP;AddressV=MIRROR;};
 
 float2 R:TARGETSIZE;
 
@@ -16,7 +16,7 @@ cbuffer controls:register(b0){
 
 float4 pHorizontalGlitch(float4 PosWVP:SV_POSITION,float2 uv:TEXCOORD0):SV_Target{
 	
-	float offset = min(Fader+Fader*tex0.SampleLevel(s0, float2(uv.y, RandomSeed), 0).r, 1.0);
+	float offset = min(Fader*tex0.SampleLevel(s0, float2(uv.y, tex1.SampleLevel(s0, float2(uv.y, uv.x), 0).r), 0).r, 1.0);
 	uv.x -= offset;
 	if(uv.x > 0.0)
 	{
@@ -29,7 +29,7 @@ float4 pHorizontalGlitch(float4 PosWVP:SV_POSITION,float2 uv:TEXCOORD0):SV_Targe
 }
 float4 pHorizontalGlitchFlip(float4 PosWVP:SV_POSITION,float2 uv:TEXCOORD0):SV_Target{
 	
-	float offset = min(Fader+Fader*tex1.SampleLevel(s0, float2(uv.y, RandomSeed), 0).r, 1.0);
+	float offset = min(Fader*tex0.SampleLevel(s0, float2(uv.y, tex1.SampleLevel(s0, float2(uv.y, uv.x), 0).r), 0).r, 1.0);
 	uv.x += offset;
 	if(uv.x > 1.0)
 	{
@@ -43,7 +43,7 @@ float4 pHorizontalGlitchFlip(float4 PosWVP:SV_POSITION,float2 uv:TEXCOORD0):SV_T
 
 float4 pVerticalGlitch(float4 PosWVP:SV_POSITION,float2 uv:TEXCOORD0):SV_Target{
 	
-	float offset = min(Fader+Fader*tex0.SampleLevel(s0, float2(uv.x, RandomSeed), 0).r, 1.0);
+	float offset = min(Fader*tex0.SampleLevel(s0, float2(uv.x, tex1.SampleLevel(s0, float2(uv.x, uv.y), 0).r), 0).r, 1.0);
 	uv.y -= offset;
 	if(uv.y > 0.0)
 	{
@@ -58,7 +58,7 @@ float4 pVerticalGlitch(float4 PosWVP:SV_POSITION,float2 uv:TEXCOORD0):SV_Target{
 
 float4 pVerticalGlitchFlip(float4 PosWVP:SV_POSITION,float2 uv:TEXCOORD0):SV_Target{
 	
-	float offset = min(Fader+Fader*tex1.SampleLevel(s0, float2(uv.x, RandomSeed), 0).r, 1.0);
+	float offset = min(Fader*tex0.SampleLevel(s0, float2(uv.x, tex1.SampleLevel(s0, float2(uv.x, uv.y), 0).r), 0).r, 1.0);
 	uv.y += offset;
 	if(uv.y > 1.0)
 	{
