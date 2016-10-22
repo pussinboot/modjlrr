@@ -551,7 +551,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9750" top="855" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" values="192.168.0.148">
+   <PIN pinname="Input String" slicecount="1" values="192.168.2.10">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="192.168.1.1">
    </PIN>
@@ -921,7 +921,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="7095" top="645" width="1305" height="270">
    </BOUNDS>
-   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ mouse / touch|">
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|/ touch / mouse|">
    </PIN>
    <PIN pinname="Output String" visible="0">
    </PIN>
@@ -1053,7 +1053,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="2344" top="210" width="6625" height="5770">
    </BOUNDS>
-   <BOUNDS type="Window" left="6165" top="4710" width="8835" height="6405">
+   <BOUNDS type="Window" left="11230" top="3740" width="8830" height="6400">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>

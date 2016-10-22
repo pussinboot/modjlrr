@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\dx11\glitch_fft.v4p" systemname="glitch_fft" filename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\dx11\glitch_fft.v4p" scrollx="0" scrolly="0">
+   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\dx11\glitch_fft.v4p" systemname="glitch_fft" filename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\dx11\glitch_fft.v4p" scrollx="0" scrolly="-360">
    <BOUNDS type="Window" left="17655" top="12480" width="9000" height="6000">
    </BOUNDS>
    <NODE systemname="DynamicTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DynamicTexture (DX11.Texture 2d)" componentmode="Hidden" id="8">
@@ -67,7 +67,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="5625" top="1140" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.16">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.14">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -120,6 +120,8 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="enabled">
    </PIN>
    <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="1">
    </PIN>
    </NODE>
    <NODE systemname="Random (Value)" nodename="Random (Value)" componentmode="Hidden" id="20">

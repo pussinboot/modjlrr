@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\code\vj\modjlrr\vvvv\modvj.v4p" scrollx="4580" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
-   <BOUNDS type="Window" left="41120" top="540" width="22750" height="9210">
+   <PATCH nodename="C:\code\vj\modjlrr\vvvv\modvj.v4p" scrollx="0" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
+   <BOUNDS type="Window" left="40700" top="-3000" width="22750" height="9210">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2865" top="600" width="555" height="240">
@@ -165,9 +165,9 @@
    <LINK srcnodeid="10" srcpinname="Output Node" dstnodeid="18" dstpinname="Texture In Right">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="25" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="8310" top="180" width="480" height="480">
+   <BOUNDS type="Box" left="6990" top="150" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="8310" top="180" width="0" height="0">
+   <BOUNDS type="Node" left="6990" top="150" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
    </PIN>
@@ -933,13 +933,15 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="addr">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="5">
+   <PIN pinname="Input Count" slicecount="1" values="6">
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
    <PIN pinname="Input 4" visible="1">
    </PIN>
    <PIN pinname="Input 5" visible="1">
+   </PIN>
+   <PIN pinname="Input 6" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="142" srcpinname="Output String" dstnodeid="152" dstpinname="Input 1">
@@ -971,13 +973,15 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="defaults">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="5">
+   <PIN pinname="Input Count" slicecount="1" values="6">
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
    <PIN pinname="Input 4" visible="1">
    </PIN>
    <PIN pinname="Input 5" visible="1">
+   </PIN>
+   <PIN pinname="Input 6" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="145" srcpinname="Y Output Value" dstnodeid="154" dstpinname="Input 1">
@@ -1326,7 +1330,7 @@
    </LINK>
    <LINK srcnodeid="177" srcpinname="Count" dstnodeid="175" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="layer_fx" filename="sub_modules\layer_fx.v4p" nodename="sub_modules\layer_fx.v4p" componentmode="InAWindow" id="181">
+   <NODE systemname="layer_fx" filename="sub_modules\layer_fx.v4p" nodename="sub_modules\layer_fx.v4p" componentmode="Hidden" id="181">
    <BOUNDS type="Node" left="5925" top="3990" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="4375" top="2200" width="3100" height="3580">
@@ -1839,5 +1843,119 @@
    <LINK srcnodeid="247" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="247" dstpinname="SpoutSenderName">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="255">
+   <BOUNDS type="Node" left="31885" top="3175" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="text">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="3" values="both-layers/,layer0/,layer1/">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" visible="1" values="fx/fft_distort/">
+   </PIN>
+   <PIN pinname="Input 4" visible="1" slicecount="15" values="progress,progress,progress,hue,hue,hue,saturation,saturation,saturation,lightness,lightness,lightness,scale,scale,scale">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="254" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="31060" top="1555" width="1245" height="765">
+   </BOUNDS>
+   <BOUNDS type="Node" left="31060" top="1555" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="3" visible="1" values="/both-layers/,/layer0/,/layer1/">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="253">
+   <BOUNDS type="Node" left="33730" top="2320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="6" values="on_off,type,,,,on_off">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="254" srcpinname="Output String" dstnodeid="255" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="252" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="31915" top="2365" width="1170" height="495">
+   </BOUNDS>
+   <BOUNDS type="Node" left="31915" top="2365" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fx/glitch_fft/">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="252" srcpinname="Output String" dstnodeid="255" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="253" srcpinname="Output" dstnodeid="255" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="251">
+   <BOUNDS type="Node" left="32095" top="3775" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="255" srcpinname="Output" dstnodeid="251" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="250">
+   <BOUNDS type="Node" left="31105" top="4240" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="251" srcpinname="Count" dstnodeid="250" dstpinname="Select">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="249" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="33640" top="750" width="1210" height="1510">
+   </BOUNDS>
+   <BOUNDS type="Node" left="33640" top="750" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="5" visible="1" values="on_off,progress,gain,type,dir">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="5">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="249" srcpinname="Output String" dstnodeid="253" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="255" srcpinname="Output" dstnodeid="152" dstpinname="Input 6">
+   </LINK>
+   <LINK srcnodeid="250" srcpinname="Output" dstnodeid="154" dstpinname="Input 6">
    </LINK>
    </PATCH>
