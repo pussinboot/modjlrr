@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\modvj.v4p" scrollx="0" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
-   <BOUNDS type="Window" left="3255" top="2130" width="22755" height="9210">
+   <PATCH nodename="C:\code\vj\modjlrr\vvvv\modvj.v4p" scrollx="4580" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
+   <BOUNDS type="Window" left="41120" top="540" width="22750" height="9210">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2865" top="600" width="555" height="240">
@@ -115,7 +115,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="435" top="2460" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|CABLE Output (VB-Audio Virtual Cable)|">
+   <PIN pinname="Input Enum" slicecount="1" visible="1" values="|Microphone Array (Realtek High Definition Audio)|">
    </PIN>
    </NODE>
    <LINK srcnodeid="14" srcpinname="Output Enum" dstnodeid="13" dstpinname="AudioDriver">
@@ -139,7 +139,7 @@
    <NODE systemname="blend_fx" filename="sub_modules\blend_fx.v4p" nodename="sub_modules\blend_fx.v4p" componentmode="Hidden" id="18">
    <BOUNDS type="Node" left="6540" top="1890" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Window" left="11325" top="4230" width="15825" height="12225">
+   <BOUNDS type="Window" left="40720" top="-1900" width="15820" height="12220">
    </BOUNDS>
    <PIN pinname="Texture In Left" visible="1" slicecount="1" values="||">
    </PIN>
@@ -1331,7 +1331,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="4375" top="2200" width="3100" height="3580">
    </BOUNDS>
-   <BOUNDS type="Window" left="4020" top="4500" width="16860" height="10800">
+   <BOUNDS type="Window" left="42810" top="-3950" width="21250" height="16610">
    </BOUNDS>
    <PIN pinname="texture size" visible="1">
    </PIN>
@@ -1391,11 +1391,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="185" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="21075" top="345" width="1065" height="1230">
+   <BOUNDS type="Box" left="21235" top="15" width="1065" height="1230">
    </BOUNDS>
-   <BOUNDS type="Node" left="21075" top="345" width="0" height="0">
+   <BOUNDS type="Node" left="21235" top="15" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="5" visible="1" values="progress,hue,saturation,lightness,scale">
+   <PIN pinname="Input String" slicecount="6" visible="1" values="progress,hue,saturation,lightness,scale,hu_switch">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="text">
    </PIN>
@@ -1407,7 +1407,7 @@
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="5">
+   <PIN pinname="Rows" slicecount="1" values="6">
    </PIN>
    </NODE>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="184">
@@ -1693,7 +1693,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6255" top="4530" width="6000" height="4500">
    </BOUNDS>
-   <BOUNDS type="Window" left="24600" top="345" width="10815" height="6945">
+   <BOUNDS type="Window" left="56390" top="-5960" width="10810" height="6940">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1">
    </PIN>
@@ -1738,32 +1738,12 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="235" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="29115" top="1140" width="975" height="600">
-   </BOUNDS>
-   <BOUNDS type="Node" left="29115" top="1140" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input String" slicecount="2" visible="1" values="on_off,type">
-   </PIN>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Output String" visible="1">
-   </PIN>
-   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
-   </PIN>
-   </NODE>
    <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="234">
    <BOUNDS type="Node" left="29085" top="2145" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Select" slicecount="1" values="3">
    </PIN>
-   <PIN pinname="Input" visible="1" slicecount="6" values="on_off,progress,hue,saturation,lightness,scale">
+   <PIN pinname="Input" visible="1" slicecount="6" values="on_off,type,,,,on_off">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -1790,8 +1770,6 @@
    </LINK>
    <LINK srcnodeid="234" srcpinname="Output" dstnodeid="237" dstpinname="Input 3">
    </LINK>
-   <LINK srcnodeid="235" srcpinname="Output String" dstnodeid="234" dstpinname="Input">
-   </LINK>
    <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="232">
    <BOUNDS type="Node" left="27450" top="3600" width="100" height="100">
    </BOUNDS>
@@ -1816,28 +1794,50 @@
    </LINK>
    <LINK srcnodeid="238" srcpinname="Output" dstnodeid="154" dstpinname="Input 5">
    </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="239">
-   <BOUNDS type="Node" left="390" top="1170" width="100" height="100">
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="243" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="28965" top="225" width="1260" height="1815">
+   </BOUNDS>
+   <BOUNDS type="Node" left="28965" top="225" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="6" visible="1" values="on_off,type,uniform_scale,x_scale,y_scale,rotate">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="6">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="243" srcpinname="Output String" dstnodeid="234" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="247">
+   <BOUNDS type="Node" left="570" top="1160" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Texture" visible="1">
    </PIN>
    <PIN pinname="SpoutSenderName" visible="1">
    </PIN>
    </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="240">
-   <BOUNDS type="Node" left="2640" top="1185" width="100" height="100">
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="248">
+   <BOUNDS type="Node" left="2960" top="1070" width="100" height="100">
    </BOUNDS>
    <PIN pinname="SpoutSenderName" visible="1">
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="240" dstpinname="SpoutSenderName">
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="248" dstpinname="SpoutSenderName">
    </LINK>
-   <LINK srcnodeid="240" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
+   <LINK srcnodeid="248" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="239" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
+   <LINK srcnodeid="247" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="239" dstpinname="SpoutSenderName">
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="247" dstpinname="SpoutSenderName">
    </LINK>
    </PATCH>

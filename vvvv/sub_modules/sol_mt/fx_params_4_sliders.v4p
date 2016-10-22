@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_4_sliders.v4p" systemname="fx_params_4_sliders" filename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_4_sliders.v4p" scrollx="15" scrolly="0">
+   <PATCH nodename="C:\code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params_4_sliders.v4p" systemname="fx_params_4_sliders" filename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_4_sliders.v4p" scrollx="640" scrolly="220">
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Node" left="12870" top="1965" width="660" height="270">
    </BOUNDS>
@@ -31,7 +31,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="4">
-   <BOUNDS type="Node" left="7530" top="6420" width="100" height="100">
+   <BOUNDS type="Node" left="7510" top="6710" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
    </PIN>
@@ -39,11 +39,13 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Layer Template Count" slicecount="1" values="4">
+   <PIN pinname="Layer Template Count" slicecount="1" values="5">
    </PIN>
-   <PIN pinname="Layer 3" visible="1">
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="Layer 4" visible="1">
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="Slider (GUI Multitouch)" filename="%VVVV%\addonpack\lib\nodes\plugins\MTGui2d.dll" nodename="Slider (GUI Multitouch)" componentmode="Hidden" id="5">
@@ -298,10 +300,6 @@
    </LINK>
    <LINK srcnodeid="6" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 2">
    </LINK>
-   <LINK srcnodeid="20" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 3">
-   <LINKPOINT x="2190" y="6608">
-   </LINKPOINT>
-   </LINK>
    <NODE id="26" systemname="IOBox (Node)" componentmode="InABox" nodename="IOBox (Node)">
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
@@ -312,7 +310,7 @@
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="26" dstpinname="Input Node">
    </LINK>
-   <BOUNDS type="Window" left="26085" top="-600" width="15915" height="13200">
+   <BOUNDS type="Window" left="43080" top="-3700" width="15910" height="13200">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -1054,8 +1052,6 @@
    </LINK>
    <LINK srcnodeid="100" srcpinname="Transform Out" dstnodeid="99" dstpinname="Transform">
    </LINK>
-   <LINK srcnodeid="99" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 4">
-   </LINK>
    <LINK srcnodeid="86" srcpinname="Output String" dstnodeid="99" dstpinname="Text">
    </LINK>
    <LINK srcnodeid="24" srcpinname="Output Enum" dstnodeid="99" dstpinname="Font">
@@ -1077,5 +1073,127 @@
    <LINK srcnodeid="5" srcpinname="Transform Out" dstnodeid="7" dstpinname="Transform">
    </LINK>
    <LINK srcnodeid="5" srcpinname="Slider Transform" dstnodeid="6" dstpinname="Transform">
+   </LINK>
+   <NODE systemname="ToggleButton (GUI Multitouch)" filename="%VVVV%\addonpack\lib\nodes\plugins\MTGui2d.dll" nodename="ToggleButton (GUI Multitouch)" componentmode="Hidden" id="102">
+   <BOUNDS type="Node" left="13770" top="5970" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Touch Id" visible="1">
+   </PIN>
+   <PIN pinname="Touch PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Is new" visible="1">
+   </PIN>
+   <PIN pinname="Value Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="103">
+   <BOUNDS type="Node" left="12660" top="4550" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="-0.38">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="-0.375">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="0.14">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="0.14">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="11" srcpinname="Transform Out" dstnodeid="103" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="103" srcpinname="Transform Out" dstnodeid="102" dstpinname="Transform In">
+   </LINK>
+   <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="104">
+   <BOUNDS type="Node" left="13270" top="6900" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" visible="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Transform Out" dstnodeid="104" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="8" srcpinname="Input Value" dstnodeid="102" dstpinname="Touch Id">
+   </LINK>
+   <LINK srcnodeid="10" srcpinname="Input Value" dstnodeid="102" dstpinname="Touch PositionXY">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Input Value" dstnodeid="102" dstpinname="Is new">
+   </LINK>
+   <LINK srcnodeid="99" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 5">
+   </LINK>
+   <LINK srcnodeid="20" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 4">
+   </LINK>
+   <LINK srcnodeid="104" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 3">
+   </LINK>
+   <NODE systemname="Switch (Color Input)" nodename="Switch (Color Input)" componentmode="Hidden" id="105">
+   <BOUNDS type="Node" left="14080" top="6370" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="|0.28689,0.28689,0.28689,1.00000|">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="|0.58178,0.58178,0.58178,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Value Output" dstnodeid="105" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="105" srcpinname="Output" dstnodeid="104" dstpinname="Color">
+   </LINK>
+   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="106">
+   <BOUNDS type="Node" left="13740" top="8120" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="bg">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Blend (Color)" nodename="Blend (Color)" componentmode="Hidden" id="107">
+   <BOUNDS type="Node" left="12100" top="8100" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input1" visible="1">
+   </PIN>
+   <PIN pinname="Input2" visible="1">
+   </PIN>
+   <PIN pinname="Mix" visible="1">
+   </PIN>
+   <PIN pinname="Blend" slicecount="1" values="0.75">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="13" srcpinname="Input Value" dstnodeid="107" dstpinname="Input1">
+   </LINK>
+   <LINK srcnodeid="106" srcpinname="Input Value" dstnodeid="107" dstpinname="Input2">
+   </LINK>
+   <LINK srcnodeid="13" srcpinname="Input Value" dstnodeid="105" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="107" srcpinname="Mix" dstnodeid="105" dstpinname="Input 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="108" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="11460" top="11390" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="11460" top="11390" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="hue_switch">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="102" srcpinname="Value Output" dstnodeid="108" dstpinname="Y Input Value">
    </LINK>
    </PATCH>
