@@ -7615,7 +7615,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Characters after Comma" slicecount="1" values="0">
+   <PIN pinname="Characters after Comma" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Characters before Comma" slicecount="1" values="1">
    </PIN>
@@ -7751,7 +7751,7 @@
    <LINK srcnodeid="660" srcpinname="Output" dstnodeid="634" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="633" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="76405" top="30510" width="8740" height="850">
+   <BOUNDS type="Box" left="76405" top="30510" width="8760" height="1140">
    </BOUNDS>
    <BOUNDS type="Node" left="76405" top="30510" width="0" height="0">
    </BOUNDS>
@@ -7761,7 +7761,7 @@
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="2">
+   <PIN pinname="Rows" slicecount="1" values="3">
    </PIN>
    <PIN pinname="Columns" slicecount="1" values="3">
    </PIN>
