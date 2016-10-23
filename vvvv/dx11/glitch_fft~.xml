@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\dx11\glitch_fft.v4p" systemname="glitch_fft" filename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\dx11\glitch_fft.v4p" scrollx="0" scrolly="-360">
-   <BOUNDS type="Window" left="17655" top="12480" width="9000" height="6000">
+   <PATCH nodename="C:\code\vj\modjlrr\vvvv\dx11\glitch_fft.v4p" systemname="glitch_fft" filename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\dx11\glitch_fft.v4p" scrollx="0" scrolly="-360">
+   <BOUNDS type="Window" left="14320" top="6670" width="9000" height="6000">
    </BOUNDS>
    <NODE systemname="DynamicTexture (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="DynamicTexture (DX11.Texture 2d)" componentmode="Hidden" id="8">
    <BOUNDS type="Node" left="6405" top="2595" width="100" height="100">
@@ -152,22 +152,10 @@
    </NODE>
    <LINK srcnodeid="21" srcpinname="Y Output Value" dstnodeid="20" dstpinname="Enabled">
    </LINK>
-   <NODE nodename="IOBox (Enumerations)" componentmode="InABox" id="23" systemname="IOBox (Enumerations)">
-   <BOUNDS type="Box" left="6825" top="3105" width="1590" height="270">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6825" top="3105" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Enum" slicecount="1" visible="1" values="GlitchHorizontal">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Technique">
-   </PIN>
-   <PIN pinname="Output Enum" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Glitch_freq (DX11.TextureFX)" filename="Glitch_freq.tfx" nodename="Glitch_freq (DX11.TextureFX)" componentmode="Hidden" id="24">
    <BOUNDS type="Node" left="2640" top="3735" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Technique" visible="1">
+   <PIN pinname="Technique" visible="1" slicecount="1" values="GlitchHorizontal">
    </PIN>
    <PIN pinname="Enabled" visible="1">
    </PIN>
@@ -182,8 +170,6 @@
    <PIN pinname="Texture Out" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="23" srcpinname="Output Enum" dstnodeid="24" dstpinname="Technique">
-   </LINK>
    <LINK srcnodeid="19" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Enabled">
    </LINK>
    <LINK srcnodeid="20" srcpinname="Output" dstnodeid="24" dstpinname="Random Seed">
@@ -241,7 +227,7 @@
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
-   <PIN pinname="Switch" slicecount="1" values="0">
+   <PIN pinname="Switch" slicecount="1" values="0" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="25" srcpinname="Texture Out" dstnodeid="27" dstpinname="Input 2">
@@ -249,5 +235,67 @@
    <LINK srcnodeid="24" srcpinname="Texture Out" dstnodeid="27" dstpinname="Input 1">
    </LINK>
    <LINK srcnodeid="27" srcpinname="Output" dstnodeid="18" dstpinname="Input Node">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="28" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1260" top="780" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1260" top="780" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="type">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Y Output Value" dstnodeid="27" dstpinname="Switch">
+   </LINK>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="29">
+   <BOUNDS type="Node" left="5320" top="3330" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Ord2Enum (Enumerations)" nodename="Ord2Enum (Enumerations)" componentmode="Hidden" id="30">
+   <BOUNDS type="Node" left="5620" top="3630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Enum" visible="1">
+   </PIN>
+   <PIN pinname="Ord Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="29" srcpinname="Enum" dstnodeid="24" dstpinname="Technique">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Enum" dstnodeid="25" dstpinname="Technique">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="31" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="2200" top="940" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="2200" top="940" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="dir">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="31" srcpinname="Y Output Value" dstnodeid="29" dstpinname="Ord Value">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Y Output Value" dstnodeid="30" dstpinname="Ord Value">
    </LINK>
    </PATCH>

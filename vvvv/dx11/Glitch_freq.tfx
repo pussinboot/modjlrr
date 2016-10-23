@@ -16,7 +16,7 @@ cbuffer controls:register(b0){
 
 float4 pHorizontalGlitch(float4 PosWVP:SV_POSITION,float2 uv:TEXCOORD0):SV_Target{
 	
-	float offset = min(Fader*tex0.SampleLevel(s0, float2(uv.y, tex1.SampleLevel(s0, float2(uv.y, uv.x), 0).r), 0).r, 1.0);
+	float offset = min(Fader*tex0.SampleLevel(s0, float2(uv.y, tex1.SampleLevel(s0, float2(uv.x, uv.y), 0).r), 0).r, 1.0);
 	uv.x -= offset;
 	if(uv.x > 0.0)
 	{
@@ -29,7 +29,7 @@ float4 pHorizontalGlitch(float4 PosWVP:SV_POSITION,float2 uv:TEXCOORD0):SV_Targe
 }
 float4 pHorizontalGlitchFlip(float4 PosWVP:SV_POSITION,float2 uv:TEXCOORD0):SV_Target{
 	
-	float offset = min(Fader*tex0.SampleLevel(s0, float2(uv.y, tex1.SampleLevel(s0, float2(uv.y, uv.x), 0).r), 0).r, 1.0);
+	float offset = min(Fader*tex0.SampleLevel(s0, float2(uv.y, tex1.SampleLevel(s0, float2(uv.x, uv.y), 0).r), 0).r, 1.0);
 	uv.x += offset;
 	if(uv.x > 1.0)
 	{
