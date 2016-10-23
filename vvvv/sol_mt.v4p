@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sol_mt.v4p" scrollx="0" scrolly="0" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sol_mt.v4p" scrollx="135" scrolly="0" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
    <BOUNDS type="Window" left="855" top="3720" width="24180" height="13680">
    </BOUNDS>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="7">
@@ -2083,7 +2083,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1035" top="6495" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="8" visible="1" values="databend,fft_distort,glitch,none,edge_detect,ascii,pixelate,none">
+   <PIN pinname="Input String" slicecount="8" visible="1" values="glitch,fft_distort,none,databend,shine,edge_detect,pixelate,ascii">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="vvvv">
    </PIN>

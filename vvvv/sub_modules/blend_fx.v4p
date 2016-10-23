@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\blend_fx.v4p" systemname="transition_fx" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\transition_fx.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="11325" top="4230" width="15825" height="12225">
+   <BOUNDS type="Window" left="40720" top="-1900" width="15820" height="12220">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>

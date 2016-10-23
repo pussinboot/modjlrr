@@ -933,7 +933,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="addr">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="8">
+   <PIN pinname="Input Count" slicecount="1" values="9">
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
@@ -946,6 +946,8 @@
    <PIN pinname="Input 8" visible="1">
    </PIN>
    <PIN pinname="Input 7" visible="1">
+   </PIN>
+   <PIN pinname="Input 9" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="142" srcpinname="Output String" dstnodeid="152" dstpinname="Input 1">
@@ -977,7 +979,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="defaults">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="8">
+   <PIN pinname="Input Count" slicecount="1" values="9">
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
@@ -990,6 +992,8 @@
    <PIN pinname="Input 7" visible="1">
    </PIN>
    <PIN pinname="Input 8" visible="1">
+   </PIN>
+   <PIN pinname="Input 9" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="145" srcpinname="Y Output Value" dstnodeid="154" dstpinname="Input 1">
@@ -1338,7 +1342,7 @@
    </LINK>
    <LINK srcnodeid="177" srcpinname="Count" dstnodeid="175" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="layer_fx" filename="sub_modules\layer_fx.v4p" nodename="sub_modules\layer_fx.v4p" componentmode="InAWindow" id="181">
+   <NODE systemname="layer_fx" filename="sub_modules\layer_fx.v4p" nodename="sub_modules\layer_fx.v4p" componentmode="Hidden" id="181">
    <BOUNDS type="Node" left="5925" top="3990" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="4375" top="2200" width="3100" height="3580">
@@ -2243,5 +2247,121 @@
    <LINK srcnodeid="277" srcpinname="Output" dstnodeid="152" dstpinname="Input 8">
    </LINK>
    <LINK srcnodeid="270" srcpinname="Output" dstnodeid="152" dstpinname="Input 7">
+   </LINK>
+   <NODE systemname="Add (String)" nodename="Add (String)" componentmode="Hidden" id="285">
+   <BOUNDS type="Node" left="46930" top="3505" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" slicecount="1" visible="1" values="text">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="3" values="both-layers/,layer0/,layer1/">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input 3" slicecount="1" visible="1" values="fx/fft_distort/">
+   </PIN>
+   <PIN pinname="Input 4" visible="1" slicecount="15" values="progress,progress,progress,hue,hue,hue,saturation,saturation,saturation,lightness,lightness,lightness,scale,scale,scale">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="284" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="46090" top="1930" width="1245" height="765">
+   </BOUNDS>
+   <BOUNDS type="Node" left="46090" top="1930" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="3" visible="1" values="/both-layers/,/layer0/,/layer1/">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Select (String)" nodename="Select (String)" componentmode="Hidden" id="283">
+   <BOUNDS type="Node" left="48760" top="2695" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="2" values="on_off,progress">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="284" srcpinname="Output String" dstnodeid="285" dstpinname="Input 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="282" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="46940" top="2735" width="1425" height="495">
+   </BOUNDS>
+   <BOUNDS type="Node" left="46940" top="2735" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="fx/pixelate/">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="282" srcpinname="Output String" dstnodeid="285" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="283" srcpinname="Output" dstnodeid="285" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="Count (String)" nodename="Count (String)" componentmode="Hidden" id="281">
+   <BOUNDS type="Node" left="47140" top="4105" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Count" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="285" srcpinname="Output" dstnodeid="281" dstpinname="Input">
+   </LINK>
+   <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="280">
+   <BOUNDS type="Node" left="46150" top="4570" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Select" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="281" srcpinname="Count" dstnodeid="280" dstpinname="Select">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="286" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="48615" top="1350" width="1185" height="975">
+   </BOUNDS>
+   <BOUNDS type="Node" left="48615" top="1350" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="4" visible="1" values="on_off,progress,x_scale,y_scale">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="text">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="Output String" visible="1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="286" srcpinname="Output String" dstnodeid="283" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="285" srcpinname="Output" dstnodeid="152" dstpinname="Input 9">
+   </LINK>
+   <LINK srcnodeid="280" srcpinname="Output" dstnodeid="154" dstpinname="Input 9">
    </LINK>
    </PATCH>

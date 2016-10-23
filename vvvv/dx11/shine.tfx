@@ -1,0 +1,59 @@
+//@author: AKa
+//@help: Godrays Effect
+//@tags: texture, Rays, Shine
+//@credits: Nvidia, GPU gems 3 Chapter 13
+ 
+
+Texture2D tex0 : PREVIOUS;
+
+cbuffer controls:register(b0){
+	float2 Direction={.25,0};
+	float Density <float uimin=-0.0;float uimax=1.0;> =0.5;
+	int NUM_SAMPLES <float uimin=32.0;float uimax=256.0;float uistep=32.0;> ;
+	float Weight <float uimin=-0.0;float uimax=1.0;> =0.25;
+	float Exposure <float uimin=-0.5;float uimax=1.0;> =0.8;	
+	float Decay <float uimin=-0.5;float uimax=0.95;> =0.8;	
+};
+
+SamplerState s0
+{
+    Filter = MIN_MAG_MIP_LINEAR;
+    AddressU = Clamp;
+    AddressV = Clamp;
+};
+
+struct psInput
+{
+	float4 p : SV_Position;
+	float2 uv : TEXCOORD0;
+	
+};
+
+float4 PS(psInput input) : SV_Target
+{
+	float2 deltaTexCoord = (input.uv - Direction.xy);
+	deltaTexCoord *= 1.0f / NUM_SAMPLES * Density;
+	float4 col = tex0.Sample(s0, input.uv);
+	float illuminationDecay = 1.0f;
+	for (int i = 0; i < NUM_SAMPLES; i++) 
+	{
+	input.uv -= deltaTexCoord;
+	float4 sample = tex0.Sample(s0, input.uv);
+	sample *= illuminationDecay * Weight; 
+	col += sample;  
+	illuminationDecay *= Decay;  
+	}
+	
+	return ( col * Exposure  );
+}
+
+technique10 Shine
+{
+	pass P0
+	{
+		SetPixelShader(CompileShader(ps_4_0,PS()));
+	}
+}
+
+
+
