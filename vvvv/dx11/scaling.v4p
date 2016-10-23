@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\dx11\scaling.v4p" scrollx="0" scrolly="0" systemname="scaling" filename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\dx11\scaling.v4p">
-   <BOUNDS type="Window" left="0" top="1710" width="16335" height="12810">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\dx11\scaling.v4p" scrollx="0" scrolly="0" systemname="scaling" filename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\dx11\scaling.v4p">
+   <BOUNDS type="Window" left="3930" top="2760" width="16335" height="12810">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -47,7 +47,7 @@
    <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="21">
    <BOUNDS type="Node" left="3645" top="4380" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Rotate" slicecount="1" values="0" visible="1">
+   <PIN pinname="Rotate" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="TranslateY" slicecount="1" visible="1" values="0.25">
    </PIN>
@@ -281,9 +281,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="42" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="1650" top="1365" width="795" height="240">
+   <BOUNDS type="Box" left="6645" top="1425" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1650" top="1365" width="0" height="0">
+   <BOUNDS type="Node" left="6645" top="1425" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.5">
    </PIN>
@@ -323,11 +323,11 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="45" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="3735" top="2595" width="795" height="240">
+   <BOUNDS type="Box" left="3405" top="2490" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="3735" top="2595" width="0" height="0">
+   <BOUNDS type="Node" left="3405" top="2490" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-2">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -594,4 +594,6 @@
    </LINK>
    <LINK srcnodeid="62" srcpinname="Y Output Value" dstnodeid="56" dstpinname="Input 2">
    </LINK>
+   <PACK Name="opencv" Version="0.2.0">
+   </PACK>
    </PATCH>

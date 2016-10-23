@@ -50,7 +50,7 @@
    <PIN pinname="Bin Size" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="4335" top="900" width="21240" height="16605">
+   <BOUNDS type="Window" left="0" top="2415" width="21240" height="16605">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -967,9 +967,9 @@
    <LINK srcnodeid="102" srcpinname="Output" dstnodeid="106" dstpinname="Y Input Value">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="107" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="11980" top="3255" width="795" height="240">
+   <BOUNDS type="Box" left="9430" top="3090" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="11980" top="3255" width="0" height="0">
+   <BOUNDS type="Node" left="9430" top="3090" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -1109,7 +1109,7 @@
    </PIN>
    <PIN pinname="rotate" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="0" top="1710" width="16335" height="12810">
+   <BOUNDS type="Window" left="3930" top="2760" width="16335" height="12810">
    </BOUNDS>
    </NODE>
    <LINK srcnodeid="2" srcpinname="Output Node" dstnodeid="114" dstpinname="Texture_in">
@@ -1187,7 +1187,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="11530" top="935" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="x_scale">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="x/scale">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
@@ -1227,7 +1227,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="12880" top="965" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="1" visible="1" values="y_scale">
+   <PIN pinname="Input String" slicecount="1" visible="1" values="y/scale">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>

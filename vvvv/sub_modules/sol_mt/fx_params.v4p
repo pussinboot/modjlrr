@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="17980" scrolly="15480">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="15570" scrolly="19440">
    <NODE systemname="RadioButton (GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\Gui2d.dll" nodename="RadioButton (GUI)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="6555" top="8325" width="100" height="100">
    </BOUNDS>
@@ -152,7 +152,7 @@
    </LINK>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Mouse">
    </LINK>
-   <BOUNDS type="Window" left="40420" top="-5490" width="24180" height="13680">
+   <BOUNDS type="Window" left="855" top="3720" width="24180" height="13680">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -1387,7 +1387,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Input 3" slicecount="1" values="fx/fft_distort/" visible="1">
+   <PIN pinname="Input 3" slicecount="1" visible="1" values="fx/fft_distort/">
    </PIN>
    <PIN pinname="Input 4" visible="1" slicecount="1" values="text">
    </PIN>
@@ -4105,7 +4105,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Input 3" slicecount="1" values="fx/databend/" visible="1">
+   <PIN pinname="Input 3" slicecount="1" visible="1" values="fx/databend/">
    </PIN>
    <PIN pinname="Input 4" visible="1" slicecount="1" values="text">
    </PIN>
@@ -4295,7 +4295,7 @@
    </PIN>
    <PIN pinname="values - layer 1" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="40170" top="-6060" width="23830" height="17670">
+   <BOUNDS type="Window" left="0" top="585" width="23460" height="17670">
    </BOUNDS>
    <PIN pinname="offset_on_off" visible="1">
    </PIN>
@@ -4539,7 +4539,7 @@
    </PIN>
    <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
-   <PIN pinname="Input 3" slicecount="1" values="fx/offset/" visible="1">
+   <PIN pinname="Input 3" slicecount="1" visible="1" values="fx/offset/">
    </PIN>
    <PIN pinname="Input 4" visible="1" slicecount="1" values="text">
    </PIN>
@@ -4633,11 +4633,11 @@
    <LINK srcnodeid="499" srcpinname="Output" dstnodeid="508" dstpinname="Input String">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="509" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="25110" top="22540" width="1260" height="1815">
+   <BOUNDS type="Box" left="24900" top="22540" width="1260" height="1815">
    </BOUNDS>
-   <BOUNDS type="Node" left="25110" top="22540" width="0" height="0">
+   <BOUNDS type="Node" left="24900" top="22540" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="6" visible="1" values="on_off,type,uniform_scale,x_scale,y_scale,rotate">
+   <PIN pinname="Input String" slicecount="6" visible="1" values="on_off,type,uniform_scale,x/scale,y/scale,rotate">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="||">
    </PIN>
