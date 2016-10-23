@@ -31,7 +31,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="495" top="5190" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="0" top="7245" width="21585" height="10755">
+   <BOUNDS type="Window" left="-24060" top="4440" width="24120" height="13620">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -2083,7 +2083,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1035" top="6495" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="9" visible="1" values="databend,fft_distort,glitch,none,edge_detect,mirror,ascii,shine,none">
+   <PIN pinname="Input String" slicecount="8" visible="1" values="databend,fft_distort,glitch,none,edge_detect,ascii,pixelate,none">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="vvvv">
    </PIN>
@@ -2091,7 +2091,7 @@
    </PIN>
    <PIN pinname="Maximum Characters" slicecount="1" values="-1">
    </PIN>
-   <PIN pinname="Rows" slicecount="1" values="9">
+   <PIN pinname="Rows" slicecount="1" values="8">
    </PIN>
    <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
    </PIN>

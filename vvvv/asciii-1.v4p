@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\asciii-1.v4p">
+   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\asciii-1.v4p">
    <NODE systemname="Ascii (DX11.TextureFX)" filename="texture11\Ascii.tfx" nodename="Ascii (DX11.TextureFX)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="1155" top="4890" width="100" height="100">
    </BOUNDS>
@@ -69,13 +69,13 @@
    <NODE id="5" systemname="IOBox (Node)" componentmode="InABox">
    <PIN pinname="Descriptive Name" slicecount="1" values="|Texture Out|">
    </PIN>
-   <BOUNDS type="Box" left="1155" top="5490" width="750" height="240">
+   <BOUNDS type="Box" left="1185" top="6225" width="750" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1155" top="5490" width="750" height="240">
+   <BOUNDS type="Node" left="1185" top="6225" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="5" dstpinname="Input Node">
-   </LINK>
    <LINK srcnodeid="1" srcpinname="Texture Out" dstnodeid="0" dstpinname="Texture In 2">
    </LINK>
    <LINK srcnodeid="2" srcpinname="Buffer SizeXY" dstnodeid="0" dstpinname="SizeXY">
@@ -87,6 +87,8 @@
    </BOUNDS>
    <BOUNDS type="Node" left="255" top="290" width="750" height="240">
    </BOUNDS>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="3" dstpinname="Texture">
    </LINK>
@@ -148,6 +150,8 @@
    <PIN pinname="Behavior" slicecount="1" values="Toggle">
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="Enabled">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="0" dstpinname="Enabled">
@@ -254,4 +258,26 @@
    </LINK>
    <LINK srcnodeid="16" srcpinname="Y Output Value" dstnodeid="14" dstpinname="Input 2">
    </LINK>
+   <NODE systemname="Switch (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Switch (DX11.Texture 2d)" componentmode="Hidden" id="18">
+   <BOUNDS type="Node" left="1215" top="5580" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="18" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Texture Out" dstnodeid="18" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="9" srcpinname="Y Output Value" dstnodeid="18" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="18" srcpinname="Output" dstnodeid="5" dstpinname="Input Node">
+   </LINK>
+   <PACK Name="opencv" Version="0.2.0">
+   </PACK>
    </PATCH>
