@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\blend_fx.v4p" systemname="transition_fx" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\transition_fx.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="40720" top="-1900" width="15820" height="12220">
+   <PATCH nodename="C:\code\vj\modjlrr\vvvv\sub_modules\blend_fx.v4p" systemname="transition_fx" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\transition_fx.v4p" scrollx="0" scrolly="0">
+   <BOUNDS type="Window" left="8030" top="10570" width="15820" height="10570">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -226,8 +226,6 @@
    </LINK>
    <LINK srcnodeid="9" srcpinname="Texture Out" dstnodeid="6" dstpinname="Input 2">
    </LINK>
-   <LINK srcnodeid="15" srcpinname="Texture Out" dstnodeid="6" dstpinname="Input 3">
-   </LINK>
    <LINK srcnodeid="16" srcpinname="Texture Out" dstnodeid="6" dstpinname="Input 4">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="20" systemname="IOBox (Value Advanced)">
@@ -251,7 +249,7 @@
    </PIN>
    <PIN pinname="Slider Constraints" slicecount="1" values="scY">
    </PIN>
-   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.0497237569060773">
+   <PIN pinname="X Input Value" visible="1" pintype="Input" slicecount="1" values="0.011070110701107">
    </PIN>
    <PIN pinname="X Output Value" visible="1" pintype="Output">
    </PIN>
@@ -1224,4 +1222,70 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="on_top (DX11.TextureFX)" filename="..\dx11\on_top.tfx" nodename="on_top (DX11.TextureFX)" componentmode="Hidden" id="74">
+   <BOUNDS type="Node" left="2710" top="7170" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Tex1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Switch (DX11.Texture 2d)" componentmode="Hidden" id="76">
+   <BOUNDS type="Node" left="2870" top="6500" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="76" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="5" srcpinname="Output Node" dstnodeid="76" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="Switch (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Switch (DX11.Texture 2d)" componentmode="Hidden" id="77">
+   <BOUNDS type="Node" left="3600" top="6480" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Input 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Switch" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="5" srcpinname="Output Node" dstnodeid="77" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Output Node" dstnodeid="77" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="76" srcpinname="Output" dstnodeid="74" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="77" srcpinname="Output" dstnodeid="74" dstpinname="Tex1">
+   </LINK>
+   <LINK srcnodeid="74" srcpinname="Texture Out" dstnodeid="6" dstpinname="Input 3">
+   </LINK>
+   <NODE systemname="GT (Value)" nodename="GT (Value)" componentmode="Hidden" id="79">
+   <BOUNDS type="Node" left="2300" top="6200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 2" slicecount="1" values="0.5">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="20" srcpinname="X Output Value" dstnodeid="79" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="76" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="79" srcpinname="Output" dstnodeid="77" dstpinname="Switch">
+   </LINK>
    </PATCH>
