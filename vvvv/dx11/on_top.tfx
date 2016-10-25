@@ -5,6 +5,7 @@
 
 Texture2D Tex0 : PREVIOUS;
 Texture2D Tex1;
+float thresh <string uiname="thresh";>;
 
 SamplerState linearSampler : IMMUTABLE
 {
@@ -24,7 +25,7 @@ float4 PS(psInput input) : SV_Target
 {
 	float4 c0 = Tex0.Sample(linearSampler,input.uv);
 	float4 c1 = Tex1.Sample(linearSampler,input.uv);
-	if (c0.r < 0.001) {
+	if ((c0.r + c0.g + c0.b)/3 < thresh) {
 		c0 = c1;
 	}
 	return c0;
