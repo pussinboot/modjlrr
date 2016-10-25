@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\blend_choose.v4p" systemname="blend_choose" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\blend_choose.v4p">
+   <PATCH nodename="C:\code\vj\modjlrr\vvvv\sub_modules\sol_mt\blend_choose.v4p" systemname="blend_choose" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\blend_choose.v4p">
    <NODE systemname="RadioButton (GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\Gui2d.dll" nodename="RadioButton (GUI)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="2610" top="2310" width="100" height="100">
    </BOUNDS>
@@ -79,7 +79,7 @@
    </BOUNDS>
    <PIN pinname="TranslateX" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.09" visible="1">
+   <PIN pinname="TranslateY" slicecount="1" visible="1" values="-0.09">
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" visible="1" values="1">
    </PIN>
@@ -156,7 +156,7 @@
    </LINK>
    <LINK srcnodeid="8" srcpinname="Input Value" dstnodeid="4" dstpinname="Rotate">
    </LINK>
-   <BOUNDS type="Window" left="10305" top="12840" width="12960" height="5145">
+   <BOUNDS type="Window" left="4850" top="9050" width="18860" height="8880">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -231,9 +231,11 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Layer Template Count" slicecount="1" values="3">
+   <PIN pinname="Layer Template Count" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Layer 3" visible="1">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="16" srcpinname="Layer" dstnodeid="17" dstpinname="Layer 2">
@@ -285,7 +287,7 @@
    </PIN>
    <PIN pinname="ScaleY" slicecount="1" values="0.22">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="0.13" visible="1">
+   <PIN pinname="TranslateY" slicecount="1" visible="1" values="0.13">
    </PIN>
    </NODE>
    <LINK srcnodeid="21" srcpinname="Transform Out" dstnodeid="12" dstpinname="Transform In">
@@ -459,6 +461,8 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="font">
    </PIN>
+   <PIN pinname="Output Enum" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="28" srcpinname="Output Enum" dstnodeid="26" dstpinname="Font">
    </LINK>
@@ -483,7 +487,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="9750" top="135" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.12">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-0.01">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -497,5 +501,59 @@
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="21" dstpinname="TranslateY">
    </LINK>
    <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="4" dstpinname="TranslateY">
+   </LINK>
+   <NODE systemname="Text (EX9)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Text (EX9)" componentmode="Hidden" id="31">
+   <BOUNDS type="Node" left="12680" top="4630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Font" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|0.00000,0.00000,0.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Text" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="28" srcpinname="Output Enum" dstnodeid="31" dstpinname="Font">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="32">
+   <BOUNDS type="Node" left="9360" top="4940" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="0.26">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="0.44">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Transform Out" dstnodeid="32" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Transform Out" dstnodeid="31" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="31" srcpinname="Layer" dstnodeid="17" dstpinname="Layer 4">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="33" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="13500" top="2040" width="1270" height="1690">
+   </BOUNDS>
+   <BOUNDS type="Node" left="13500" top="2040" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="4" visible="1" values="basic,pixels,on-top,fft">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="vvvv">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="4">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Output String" dstnodeid="31" dstpinname="Text">
    </LINK>
    </PATCH>

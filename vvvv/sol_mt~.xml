@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sol_mt.v4p" scrollx="135" scrolly="0" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
+   <PATCH nodename="C:\code\vj\modjlrr\vvvv\sol_mt.v4p" scrollx="135" scrolly="0" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
    <BOUNDS type="Window" left="855" top="3720" width="24180" height="13680">
    </BOUNDS>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="7">
@@ -31,7 +31,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="495" top="5190" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="-24060" top="4440" width="24120" height="13620">
+   <BOUNDS type="Window" left="22540" top="11340" width="15610" height="9910">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -1031,7 +1031,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1006" top="135" width="6715" height="5665">
    </BOUNDS>
-   <BOUNDS type="Window" left="10305" top="12840" width="12960" height="5145">
+   <BOUNDS type="Window" left="4850" top="9050" width="18860" height="8880">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="||">
    </PIN>
@@ -2083,7 +2083,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="1035" top="6495" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Input String" slicecount="8" visible="1" values="glitch,fft_distort,none,databend,shine,edge_detect,pixelate,ascii">
+   <PIN pinname="Input String" slicecount="8" visible="1" values="glitch,fft_distort,rgb_shift,databend,shine,edge_detect,pixelate,ascii">
    </PIN>
    <PIN pinname="Default" slicecount="1" values="vvvv">
    </PIN>

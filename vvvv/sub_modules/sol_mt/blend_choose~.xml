@@ -79,7 +79,7 @@
    </BOUNDS>
    <PIN pinname="TranslateX" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.09">
+   <PIN pinname="TranslateY" slicecount="1" values="-0.09" visible="1">
    </PIN>
    <PIN pinname="ScaleX" slicecount="1" visible="1" values="1">
    </PIN>
@@ -156,7 +156,7 @@
    </LINK>
    <LINK srcnodeid="8" srcpinname="Input Value" dstnodeid="4" dstpinname="Rotate">
    </LINK>
-   <BOUNDS type="Window" left="16830" top="12540" width="12960" height="5145">
+   <BOUNDS type="Window" left="10305" top="12840" width="12960" height="5145">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -285,7 +285,7 @@
    </PIN>
    <PIN pinname="ScaleY" slicecount="1" values="0.22">
    </PIN>
-   <PIN pinname="TranslateY" slicecount="1" values="-0.1">
+   <PIN pinname="TranslateY" slicecount="1" values="0.13" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="21" srcpinname="Transform Out" dstnodeid="12" dstpinname="Transform In">
@@ -477,5 +477,25 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="29" srcpinname="Output String" dstnodeid="26" dstpinname="Text">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="30" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9750" top="135" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9750" top="135" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0.12">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|translate y|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="21" dstpinname="TranslateY">
+   </LINK>
+   <LINK srcnodeid="30" srcpinname="Y Output Value" dstnodeid="4" dstpinname="TranslateY">
    </LINK>
    </PATCH>

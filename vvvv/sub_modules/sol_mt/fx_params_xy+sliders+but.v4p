@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy+sliders+but.v4p" systemname="fx_params_xy" filename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" scrollx="15015" scrolly="20475">
+   <PATCH nodename="C:\code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy+sliders+but.v4p" systemname="fx_params_xy" filename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" scrollx="15015" scrolly="20475">
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Node" left="12870" top="1965" width="660" height="270">
    </BOUNDS>
@@ -3564,44 +3564,6 @@
    </LINK>
    <LINK srcnodeid="445" srcpinname="Output" dstnodeid="11" dstpinname="TranslateX">
    </LINK>
-   <NODE systemname="Slider (GUI Multitouch)" filename="%VVVV%\addonpack\lib\nodes\plugins\MTGui2d.dll" nodename="Slider (GUI Multitouch)" componentmode="Hidden" id="456">
-   <BOUNDS type="Node" left="19035" top="27690" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Size Y" visible="1" slicecount="1" values="0.63">
-   </PIN>
-   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Slider Transform" visible="1">
-   </PIN>
-   <PIN pinname="Transform Out" visible="1">
-   </PIN>
-   <PIN pinname="Size X" slicecount="1" visible="1" values="0.73">
-   </PIN>
-   <PIN pinname="Touch Id" visible="1">
-   </PIN>
-   <PIN pinname="Touch PositionXY" visible="1">
-   </PIN>
-   <PIN pinname="Is X Slider" visible="1" slicecount="1" values="0">
-   </PIN>
-   <PIN pinname="Is new" visible="1">
-   </PIN>
-   <PIN pinname="Set Value" visible="1" slicecount="3" values="0,0,0">
-   </PIN>
-   <PIN pinname="Value Input" visible="1" slicecount="1" values="0.5">
-   </PIN>
-   <PIN pinname="Value Output" visible="1">
-   </PIN>
-   <PIN pinname="Hit" visible="1">
-   </PIN>
-   <PIN pinname="Size Slider" slicecount="1" values="0.03">
-   </PIN>
-   <PIN pinname="Slider Speed" visible="1" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Count X" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Is Long Slider" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="455">
    <BOUNDS type="Node" left="17835" top="32460" width="100" height="100">
    </BOUNDS>
@@ -3623,7 +3585,7 @@
    <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="454">
    <BOUNDS type="Node" left="17685" top="28710" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Transform" visible="1">
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
@@ -3633,17 +3595,13 @@
    <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="453">
    <BOUNDS type="Node" left="19095" top="28740" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Transform" visible="1">
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
    <PIN pinname="Color" visible="1" slicecount="1" values="|0.58178,0.58178,0.58178,1.00000|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="456" srcpinname="Slider Transform" dstnodeid="454" dstpinname="Transform">
-   </LINK>
-   <LINK srcnodeid="456" srcpinname="Transform Out" dstnodeid="453" dstpinname="Transform">
-   </LINK>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="451">
    <BOUNDS type="Node" left="20115" top="26835" width="100" height="100">
    </BOUNDS>
@@ -3668,12 +3626,6 @@
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="451" srcpinname="Input Value" dstnodeid="456" dstpinname="Touch Id">
-   </LINK>
-   <LINK srcnodeid="449" srcpinname="Input Value" dstnodeid="456" dstpinname="Touch PositionXY">
-   </LINK>
-   <LINK srcnodeid="450" srcpinname="Input Value" dstnodeid="456" dstpinname="Is new">
-   </LINK>
    <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="448">
    <BOUNDS type="Node" left="18630" top="28230" width="100" height="100">
    </BOUNDS>
@@ -3704,8 +3656,6 @@
    <PIN pinname="ScaleX" slicecount="1" values="0.25">
    </PIN>
    </NODE>
-   <LINK srcnodeid="457" srcpinname="Transform Out" dstnodeid="456" dstpinname="Transform In">
-   </LINK>
    <LINK srcnodeid="455" srcpinname="Layer" dstnodeid="4" dstpinname="Layer 8">
    </LINK>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="458" systemname="IOBox (Node)">
@@ -3826,8 +3776,6 @@
    </NODE>
    <LINK srcnodeid="553" srcpinname="Output 1" dstnodeid="554" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="456" srcpinname="Hit" dstnodeid="553" dstpinname="Input 1">
-   </LINK>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="556">
    <BOUNDS type="Node" left="25005" top="32925" width="100" height="100">
    </BOUNDS>
@@ -3866,8 +3814,6 @@
    </LINK>
    <LINK srcnodeid="557" srcpinname="Layer" dstnodeid="455" dstpinname="Layer 2">
    </LINK>
-   <LINK srcnodeid="456" srcpinname="Transform Out" dstnodeid="531" dstpinname="Transform In">
-   </LINK>
    <LINK srcnodeid="531" srcpinname="Transform Out" dstnodeid="557" dstpinname="Transform">
    </LINK>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="567" systemname="IOBox (String)">
@@ -3904,8 +3850,6 @@
    <PIN pinname="ScaleY" slicecount="1" values="0.25">
    </PIN>
    </NODE>
-   <LINK srcnodeid="456" srcpinname="Transform Out" dstnodeid="568" dstpinname="Transform In">
-   </LINK>
    <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="569">
    <BOUNDS type="Node" left="27525" top="31440" width="100" height="100">
    </BOUNDS>
@@ -3998,8 +3942,64 @@
    </NODE>
    <LINK srcnodeid="571" srcpinname="Value Output" dstnodeid="575" dstpinname="Input 2">
    </LINK>
+   <LINK srcnodeid="575" srcpinname="Output" dstnodeid="538" dstpinname="Y Input Value">
+   </LINK>
+   <NODE id="456" systemname="Slider (GUI Multitouch)" filename="%VVVV%\addonpack\lib\nodes\plugins\MTGui2d.dll" nodename="Slider (GUI Multitouch)" componentmode="Hidden">
+   <BOUNDS type="Node" left="19035" top="27690" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Size Y" visible="1" slicecount="1" values="0.63">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Slider Transform" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Size X" slicecount="1" visible="1" values="0.73">
+   </PIN>
+   <PIN pinname="Touch Id" visible="1">
+   </PIN>
+   <PIN pinname="Touch PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Is X Slider" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Is new" visible="1">
+   </PIN>
+   <PIN pinname="Set Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Value Input" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Value Output" visible="1">
+   </PIN>
+   <PIN pinname="Hit" visible="1">
+   </PIN>
+   <PIN pinname="Size Slider" slicecount="1" values="0.03">
+   </PIN>
+   <PIN pinname="Slider Speed" visible="1" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Count X" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Is Long Slider" slicecount="1" values="1">
+   </PIN>
+   </NODE>
    <LINK srcnodeid="456" srcpinname="Value Output" dstnodeid="575" dstpinname="Input 1">
    </LINK>
-   <LINK srcnodeid="575" srcpinname="Output" dstnodeid="538" dstpinname="Y Input Value">
+   <LINK srcnodeid="456" srcpinname="Transform Out" dstnodeid="568" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="456" srcpinname="Transform Out" dstnodeid="531" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="456" srcpinname="Hit" dstnodeid="553" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="457" srcpinname="Transform Out" dstnodeid="456" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="450" srcpinname="Input Value" dstnodeid="456" dstpinname="Is new">
+   </LINK>
+   <LINK srcnodeid="449" srcpinname="Input Value" dstnodeid="456" dstpinname="Touch PositionXY">
+   </LINK>
+   <LINK srcnodeid="451" srcpinname="Input Value" dstnodeid="456" dstpinname="Touch Id">
+   </LINK>
+   <LINK srcnodeid="456" srcpinname="Transform Out" dstnodeid="453" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="456" srcpinname="Slider Transform" dstnodeid="454" dstpinname="Transform">
    </LINK>
    </PATCH>
