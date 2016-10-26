@@ -220,7 +220,7 @@
    </NODE>
    <LINK srcnodeid="4" srcpinname="Layer" dstnodeid="26" dstpinname="Input Node">
    </LINK>
-   <BOUNDS type="Window" left="0" top="585" width="23460" height="17670">
+   <BOUNDS type="Window" left="2970" top="570" width="23460" height="17670">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -4900,6 +4900,8 @@
    <PIN pinname="Value Input" visible="1">
    </PIN>
    <PIN pinname="Set Value" visible="1">
+   </PIN>
+   <PIN pinname="Slider Speed" slicecount="1" values="0.33">
    </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="486">

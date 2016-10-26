@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
    <PATCH nodename="C:\code\vj\modjlrr\vvvv\modvj.v4p" scrollx="0" scrolly="0" systemname="modvj" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\modvj.v4p">
-   <BOUNDS type="Window" left="0" top="710" width="17800" height="7700">
+   <BOUNDS type="Window" left="0" top="710" width="22540" height="10340">
    </BOUNDS>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="7" systemname="IOBox (String)">
    <BOUNDS type="Box" left="2865" top="600" width="555" height="240">
@@ -755,7 +755,7 @@
    </BOUNDS>
    <PIN pinname="Default Value(s)" visible="1" slicecount="8" values="0,0,1,0.09,1,5,0.33,0">
    </PIN>
-   <PIN pinname="reset" slicecount="1" values="0">
+   <PIN pinname="reset" slicecount="1" values="0" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="26" srcpinname="Y Output Value" dstnodeid="141" dstpinname="Port">
@@ -1753,18 +1753,6 @@
    </LINKPOINT>
    <LINKPOINT x="25060" y="8195">
    </LINKPOINT>
-   </LINK>
-   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="221">
-   <BOUNDS type="Node" left="13485" top="4690" width="100" height="100">
-   </BOUNDS>
-   <BOUNDS type="Box" left="13485" top="4690" width="6000" height="4500">
-   </BOUNDS>
-   <BOUNDS type="Window" left="25380" top="670" width="13020" height="7750">
-   </BOUNDS>
-   <PIN pinname="Texture In" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="181" srcpinname="Texture Out" dstnodeid="221" dstpinname="Texture In">
    </LINK>
    <LINK srcnodeid="13" srcpinname="FFT" dstnodeid="181" dstpinname="fft_in">
    </LINK>
@@ -2896,30 +2884,6 @@
    <LINKPOINT x="9090" y="7325">
    </LINKPOINT>
    </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="310">
-   <BOUNDS type="Node" left="520" top="1160" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="310" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="310" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
-   </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="311">
-   <BOUNDS type="Node" left="2730" top="1130" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="SpoutSenderName" visible="1" slicecount="1" values="|Spout Demo Sender 32bit|">
-   </PIN>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="311" dstpinname="SpoutSenderName">
-   </LINK>
-   <LINK srcnodeid="311" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
-   </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="312" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="12210" top="2890" width="1010" height="720">
    </BOUNDS>
@@ -2939,9 +2903,9 @@
    <LINK srcnodeid="312" srcpinname="Y Output Value" dstnodeid="49" dstpinname="Default 1">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="313" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="12420" top="3700" width="480" height="480">
+   <BOUNDS type="Box" left="15360" top="480" width="480" height="480">
    </BOUNDS>
-   <BOUNDS type="Node" left="12420" top="3700" width="0" height="0">
+   <BOUNDS type="Node" left="15360" top="480" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
@@ -2957,5 +2921,123 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="313" srcpinname="Y Output Value" dstnodeid="49" dstpinname="Initialize">
+   </LINK>
+   <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="314">
+   <BOUNDS type="Node" left="8760" top="5350" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="315">
+   <BOUNDS type="Node" left="8600" top="6620" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="8600" top="6620" width="4000" height="3000">
+   </BOUNDS>
+   <BOUNDS type="Window" left="24110" top="800" width="13030" height="7760">
+   </BOUNDS>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="316">
+   <BOUNDS type="Node" left="8640" top="6060" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer 1" visible="1">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="314" srcpinname="Layer" dstnodeid="316" dstpinname="Layer 1">
+   </LINK>
+   <LINK srcnodeid="181" srcpinname="Texture Out" dstnodeid="314" dstpinname="Texture">
+   </LINK>
+   <LINK srcnodeid="316" srcpinname="Layer Out" dstnodeid="315" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="track_info_overlay" filename="sub_modules\track_info_overlay.v4p" nodename="sub_modules\track_info_overlay.v4p" componentmode="Hidden" id="342">
+   <BOUNDS type="Node" left="10410" top="5710" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6035" top="2805" width="8750" height="5810">
+   </BOUNDS>
+   <BOUNDS type="Window" left="-1" top="-1" width="8750" height="5810">
+   </BOUNDS>
+   <PIN pinname="Font" slicecount="1" values="ProggyCleanTT">
+   </PIN>
+   <PIN pinname="beat in" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="342" srcpinname="Layer Out" dstnodeid="316" dstpinname="Layer 2">
+   </LINK>
+   <LINK srcnodeid="44" srcpinname="Output" dstnodeid="342" dstpinname="beat in">
+   </LINK>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="345">
+   <BOUNDS type="Node" left="560" top="1200" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="345" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="345" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="346">
+   <BOUNDS type="Node" left="2590" top="1230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1" slicecount="1" values="|Spout Demo Sender 32bit|">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="346" dstpinname="SpoutSenderName">
+   </LINK>
+   <LINK srcnodeid="346" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="347">
+   <BOUNDS type="Node" left="9700" top="540" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="9700" top="540" width="4000" height="3000">
+   </BOUNDS>
+   <BOUNDS type="Window" left="22680" top="8910" width="7800" height="5430">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="348">
+   <BOUNDS type="Node" left="14040" top="540" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="14040" top="540" width="4000" height="3000">
+   </BOUNDS>
+   <BOUNDS type="Window" left="30500" top="8860" width="7900" height="5590">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="308" srcpinname="Texture Out" dstnodeid="347" dstpinname="Texture In">
+   </LINK>
+   <LINK srcnodeid="309" srcpinname="Texture Out" dstnodeid="348" dstpinname="Texture In">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="349" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="18330" top="1140" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="18330" top="1140" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Bang">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="349" srcpinname="Y Output Value" dstnodeid="141" dstpinname="reset">
    </LINK>
    </PATCH>
