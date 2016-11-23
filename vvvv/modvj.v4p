@@ -544,7 +544,7 @@
    </NODE>
    <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="116" dstpinname="on beat or continuous">
    </LINK>
-   <NODE systemname="fft_ctrl" filename="sub_modules\fft_ctrl.v4p" nodename="sub_modules\fft_ctrl.v4p" componentmode="InAWindow" id="131">
+   <NODE systemname="fft_ctrl" filename="sub_modules\fft_ctrl.v4p" nodename="sub_modules\fft_ctrl.v4p" componentmode="Hidden" id="131">
    <BOUNDS type="Node" left="4065" top="6735" width="100" height="100">
    </BOUNDS>
    <PIN pinname="beats" visible="1" slicecount="1" values="0">
@@ -2973,5 +2973,7 @@
    <NODE systemname="Server (VVVV)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Server (VVVV)" componentmode="Hidden" id="354">
    <BOUNDS type="Node" left="5295" top="2430" width="100" height="100">
    </BOUNDS>
+   <PIN pinname="Exposed Pins" visible="1" pintype="Output">
+   </PIN>
    </NODE>
    </PATCH>
