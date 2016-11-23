@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="62115" scrolly="17430">
+   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="12060" scrolly="17880">
    <NODE systemname="RadioButton (GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\Gui2d.dll" nodename="RadioButton (GUI)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="6555" top="8325" width="100" height="100">
    </BOUNDS>
@@ -152,7 +152,7 @@
    </LINK>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Mouse">
    </LINK>
-   <BOUNDS type="Window" left="10575" top="5535" width="24180" height="13680">
+   <BOUNDS type="Window" left="5925" top="3195" width="24180" height="13680">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -4646,42 +4646,6 @@
    <PIN pinname="Output String" visible="1">
    </PIN>
    </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="634" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="64575" top="29160" width="8450" height="1560">
-   </BOUNDS>
-   <BOUNDS type="Node" left="64575" top="29160" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Columns" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Input String" slicecount="12" values="/modvj/both-layers/fx/shine/on_off,/modvj/layer0/fx/shine/on_off,/modvj/layer1/fx/shine/on_off,/modvj/both-layers/fx/shine/progress,/modvj/layer0/fx/shine/progress,/modvj/layer1/fx/shine/progress,/modvj/both-layers/fx/shine/x_val,/modvj/layer0/fx/shine/x_val,/modvj/layer1/fx/shine/x_val,/modvj/both-layers/fx/shine/y_val,/modvj/layer0/fx/shine/y_val,/modvj/layer1/fx/shine/y_val">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="633" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="64495" top="30855" width="8760" height="1140">
-   </BOUNDS>
-   <BOUNDS type="Node" left="64495" top="30855" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Columns" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Input String" slicecount="9" values="/modvj/both-layers/fx/shine/weight,/modvj/layer0/fx/shine/weight,/modvj/layer1/fx/shine/weight,/modvj/both-layers/fx/shine/expose,/modvj/layer0/fx/shine/expose,/modvj/layer1/fx/shine/expose,/modvj/both-layers/fx/shine/decay,/modvj/layer0/fx/shine/decay,/modvj/layer1/fx/shine/decay">
-   </PIN>
-   </NODE>
    <NODE systemname="fx_params_xy+sliders+but" filename="fx_params_xy+sliders+but.v4p" nodename="fx_params_xy+sliders+but.v4p" componentmode="Hidden" id="668">
    <BOUNDS type="Node" left="81315" top="21735" width="100" height="100">
    </BOUNDS>
@@ -4858,24 +4822,6 @@
    <PIN pinname="Rows" slicecount="1" values="2">
    </PIN>
    <PIN pinname="Output String" visible="1">
-   </PIN>
-   </NODE>
-   <NODE nodename="IOBox (String)" componentmode="InABox" id="670" systemname="IOBox (String)">
-   <BOUNDS type="Box" left="77725" top="30960" width="8760" height="1140">
-   </BOUNDS>
-   <BOUNDS type="Node" left="77725" top="30960" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Default" slicecount="1" values="text">
-   </PIN>
-   <PIN pinname="File Mask" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
-   </PIN>
-   <PIN pinname="Rows" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Columns" slicecount="1" values="3">
-   </PIN>
-   <PIN pinname="Input String" slicecount="6" values="/modvj/both-layers/fx/rgb_shift/hue,/modvj/layer0/fx/rgb_shift/hue,/modvj/layer1/fx/rgb_shift/hue,/modvj/both-layers/fx/rgb_shift/hu_switch,/modvj/layer0/fx/rgb_shift/hu_switch,/modvj/layer1/fx/rgb_shift/hu_switch">
    </PIN>
    </NODE>
    <NODE systemname="send_exposed_all_layers" filename="..\..\building_blocks\send_exposed_all_layers.v4p" nodename="..\..\building_blocks\send_exposed_all_layers.v4p" componentmode="Hidden" id="712">
