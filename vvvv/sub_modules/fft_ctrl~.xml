@@ -555,6 +555,8 @@
    </PIN>
    <PIN pinname="Value Type" slicecount="1" values="Integer">
    </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="node_id">
+   </PIN>
    </NODE>
    <LINK srcnodeid="45" srcpinname="ID in ParentPatch" dstnodeid="46" dstpinname="Y Input Value">
    </LINK>

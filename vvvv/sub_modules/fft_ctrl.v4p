@@ -384,7 +384,7 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="OnChange" dstnodeid="16" dstpinname="Input 2">
    </LINK>
-   <BOUNDS type="Window" left="4845" top="6015" width="16605" height="11625">
+   <BOUNDS type="Window" left="225" top="3300" width="16605" height="11625">
    </BOUNDS>
    <LINK srcnodeid="4" srcpinname="Output" dstnodeid="11" dstpinname="Input">
    </LINK>
@@ -415,7 +415,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="14700" top="765" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>

@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="17880" scrolly="18810">
+   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params.v4p" scrollx="38355" scrolly="21840">
    <NODE systemname="RadioButton (GUI)" filename="%VVVV%\addonpack\lib\nodes\plugins\Gui2d.dll" nodename="RadioButton (GUI)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="6555" top="8325" width="100" height="100">
    </BOUNDS>
@@ -152,7 +152,7 @@
    </LINK>
    <LINK srcnodeid="1" srcpinname="Output" dstnodeid="0" dstpinname="Mouse">
    </LINK>
-   <BOUNDS type="Window" left="855" top="3720" width="24180" height="13680">
+   <BOUNDS type="Window" left="13785" top="2565" width="24180" height="13680">
    </BOUNDS>
    <PACK Name="addonpack" Version="34.1.0">
    </PACK>
@@ -8489,5 +8489,41 @@
    <LINK srcnodeid="668" srcpinname="values - layer 0" dstnodeid="687" dstpinname="Y">
    </LINK>
    <LINK srcnodeid="668" srcpinname="values - layer 1" dstnodeid="687" dstpinname="Z">
+   </LINK>
+   <NODE systemname="send_exposed_all_layers" filename="..\..\building_blocks\send_exposed_all_layers.v4p" nodename="..\..\building_blocks\send_exposed_all_layers.v4p" componentmode="Hidden" id="712">
+   <BOUNDS type="Node" left="45385" top="31478" width="0" height="0">
+   </BOUNDS>
+   <BOUNDS type="Box" left="41740" top="29658" width="7290" height="3640">
+   </BOUNDS>
+   <BOUNDS type="Window" left="16005" top="11955" width="7290" height="3630">
+   </BOUNDS>
+   <PIN pinname="pin_nos" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="571" srcpinname="values - layer 0" dstnodeid="712" dstpinname="input_val 1">
+   </LINK>
+   <LINK srcnodeid="571" srcpinname="values - both" dstnodeid="712" dstpinname="input_val">
+   </LINK>
+   <LINK srcnodeid="571" srcpinname="values - layer 1" dstnodeid="712" dstpinname="input_val 2">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="713" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="43770" top="31065" width="885" height="660">
+   </BOUNDS>
+   <BOUNDS type="Node" left="43770" top="31065" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="2" visible="1" values="172,283">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="713" srcpinname="Y Output Value" dstnodeid="712" dstpinname="pin_nos">
    </LINK>
    </PATCH>

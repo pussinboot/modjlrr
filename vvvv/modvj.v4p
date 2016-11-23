@@ -544,7 +544,7 @@
    </NODE>
    <LINK srcnodeid="124" srcpinname="Y Output Value" dstnodeid="116" dstpinname="on beat or continuous">
    </LINK>
-   <NODE systemname="fft_ctrl" filename="sub_modules\fft_ctrl.v4p" nodename="sub_modules\fft_ctrl.v4p" componentmode="Hidden" id="131">
+   <NODE systemname="fft_ctrl" filename="sub_modules\fft_ctrl.v4p" nodename="sub_modules\fft_ctrl.v4p" componentmode="InAWindow" id="131">
    <BOUNDS type="Node" left="4065" top="6735" width="100" height="100">
    </BOUNDS>
    <PIN pinname="beats" visible="1" slicecount="1" values="0">
@@ -568,6 +568,8 @@
    <PIN pinname="on beat or continuous" slicecount="1" visible="1" values="0">
    </PIN>
    <BOUNDS type="Box" left="4065" top="6735">
+   </BOUNDS>
+   <BOUNDS type="Window" left="225" top="3300" width="16605" height="11625">
    </BOUNDS>
    </NODE>
    <NODE nodename="IOBox (String)" componentmode="InABox" id="129" systemname="IOBox (String)">
@@ -1277,7 +1279,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="7655" top="2660" width="3100" height="3580">
    </BOUNDS>
-   <BOUNDS type="Window" left="0" top="11115" width="15765" height="16605">
+   <BOUNDS type="Window" left="705" top="1185" width="15765" height="16605">
    </BOUNDS>
    <PIN pinname="texture size" visible="1">
    </PIN>
@@ -2665,7 +2667,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6525" top="0" width="3100" height="3580">
    </BOUNDS>
-   <BOUNDS type="Window" left="0" top="2415" width="21240" height="16605">
+   <BOUNDS type="Window" left="7260" top="1995" width="21240" height="16605">
    </BOUNDS>
    <PIN pinname="texture size" visible="1" slicecount="2" values="542,369">
    </PIN>
@@ -2689,7 +2691,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="9955" top="0" width="3100" height="3580">
    </BOUNDS>
-   <BOUNDS type="Window" left="0" top="2415" width="21240" height="16605">
+   <BOUNDS type="Window" left="5625" top="2265" width="21240" height="16605">
    </BOUNDS>
    <PIN pinname="texture size" visible="1" slicecount="2" values="542,369">
    </PIN>
@@ -2948,4 +2950,28 @@
    </LINK>
    <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="350" dstpinname="SpoutSenderName">
    </LINK>
+   <NODE systemname="Self (VVVV)" nodename="Self (VVVV)" componentmode="Hidden" id="352">
+   <BOUNDS type="Node" left="4920" top="435" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="ID in ParentPatch" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="353" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="6270" top="840" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="6270" top="840" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="352" srcpinname="ID in ParentPatch" dstnodeid="353" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Server (VVVV)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Server (VVVV)" componentmode="Hidden" id="354">
+   <BOUNDS type="Node" left="5295" top="2430" width="100" height="100">
+   </BOUNDS>
+   </NODE>
    </PATCH>
