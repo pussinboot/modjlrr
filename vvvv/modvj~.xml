@@ -1274,12 +1274,12 @@
    </LINK>
    <LINK srcnodeid="177" srcpinname="Count" dstnodeid="175" dstpinname="Input 1">
    </LINK>
-   <NODE systemname="layer_fx" filename="sub_modules\layer_fx.v4p" nodename="sub_modules\layer_fx.v4p" componentmode="Hidden" id="181" stayontop="0">
+   <NODE systemname="layer_fx" filename="sub_modules\layer_fx.v4p" nodename="sub_modules\layer_fx.v4p" componentmode="InAWindow" id="181" stayontop="0">
    <BOUNDS type="Node" left="9205" top="4450" width="0" height="0">
    </BOUNDS>
    <BOUNDS type="Box" left="7655" top="2660" width="3100" height="3580">
    </BOUNDS>
-   <BOUNDS type="Window" left="705" top="1185" width="15765" height="16605">
+   <BOUNDS type="Window" left="960" top="1785" width="15765" height="16605">
    </BOUNDS>
    <PIN pinname="texture size" visible="1">
    </PIN>
