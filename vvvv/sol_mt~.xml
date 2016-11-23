@@ -1221,7 +1221,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Window" left="510" top="1890" width="27135" height="17895">
+   <BOUNDS type="Window" left="5740" top="1780" width="27130" height="17890">
    </BOUNDS>
    <PIN pinname="osc_inputs" visible="1">
    </PIN>
