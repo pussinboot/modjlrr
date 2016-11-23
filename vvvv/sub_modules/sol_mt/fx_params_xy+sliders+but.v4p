@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy+sliders+but.v4p" systemname="fx_params_xy" filename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" scrollx="15015" scrolly="20475">
+   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy+sliders+but.v4p" systemname="fx_params_xy" filename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" scrollx="14355" scrolly="22515">
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Node" left="12870" top="1965" width="660" height="270">
    </BOUNDS>
@@ -3742,20 +3742,6 @@
    </NODE>
    <LINK srcnodeid="533" srcpinname="Output" dstnodeid="532" dstpinname="Color">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="538" systemname="IOBox (Value Advanced)">
-   <BOUNDS type="Box" left="19980" top="36135" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="19980" top="36135" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="more_values">
-   </PIN>
-   <PIN pinname="Y Input Value" visible="1" slicecount="3" values="0.476804857705129,0,0">
-   </PIN>
-   </NODE>
    <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="554">
    <BOUNDS type="Node" left="20820" top="25590" width="100" height="100">
    </BOUNDS>
@@ -3930,20 +3916,6 @@
    </LINK>
    <LINK srcnodeid="573" srcpinname="Input Value" dstnodeid="571" dstpinname="Is new">
    </LINK>
-   <NODE systemname="Cons (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Cons (Spreads)" componentmode="Hidden" id="575">
-   <BOUNDS type="Node" left="21675" top="35880" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="3" values="0.476804857705129,0,0">
-   </PIN>
-   <PIN pinname="Input 2" visible="1">
-   </PIN>
-   <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="571" srcpinname="Value Output" dstnodeid="575" dstpinname="Input 2">
-   </LINK>
-   <LINK srcnodeid="575" srcpinname="Output" dstnodeid="538" dstpinname="Y Input Value">
-   </LINK>
    <NODE id="456" systemname="Slider (GUI Multitouch)" filename="%VVVV%\addonpack\lib\nodes\plugins\MTGui2d.dll" nodename="Slider (GUI Multitouch)" componentmode="Hidden">
    <BOUNDS type="Node" left="19035" top="27690" width="100" height="100">
    </BOUNDS>
@@ -3982,8 +3954,6 @@
    <PIN pinname="Is Long Slider" slicecount="1" values="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="456" srcpinname="Value Output" dstnodeid="575" dstpinname="Input 1">
-   </LINK>
    <LINK srcnodeid="456" srcpinname="Transform Out" dstnodeid="568" dstpinname="Transform In">
    </LINK>
    <LINK srcnodeid="456" srcpinname="Transform Out" dstnodeid="531" dstpinname="Transform In">
@@ -4001,5 +3971,37 @@
    <LINK srcnodeid="456" srcpinname="Transform Out" dstnodeid="453" dstpinname="Transform">
    </LINK>
    <LINK srcnodeid="456" srcpinname="Slider Transform" dstnodeid="454" dstpinname="Transform">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="576" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="19650" top="34410" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="19650" top="34410" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="more_vals_hue">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="456" srcpinname="Value Output" dstnodeid="576" dstpinname="Y Input Value">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="577" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="24075" top="35040" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="24075" top="35040" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="more_vals_hu_switch">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="571" srcpinname="Value Output" dstnodeid="577" dstpinname="Y Input Value">
    </LINK>
    </PATCH>

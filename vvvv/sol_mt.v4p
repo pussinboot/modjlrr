@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\code\vj\modjlrr\vvvv\sol_mt.v4p" scrollx="135" scrolly="0" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
-   <BOUNDS type="Window" left="855" top="3720" width="24180" height="13680">
+   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\sol_mt.v4p" scrollx="0" scrolly="-360" systemname="sol_mt" filename="C:\Code\sol_mt\sol_mt.v4p">
+   <BOUNDS type="Window" left="1815" top="2415" width="24180" height="13680">
    </BOUNDS>
    <NODE systemname="Group (EX9)" nodename="Group (EX9)" componentmode="Hidden" id="7">
    <BOUNDS type="Node" left="480" top="4530" width="4140" height="270">
@@ -31,7 +31,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="495" top="5190" width="2400" height="1800">
    </BOUNDS>
-   <BOUNDS type="Window" left="0" top="11550" width="15610" height="9910">
+   <BOUNDS type="Window" left="13485" top="4125" width="15600" height="9900">
    </BOUNDS>
    <PIN pinname="Layers" visible="1">
    </PIN>
@@ -1221,7 +1221,7 @@
    </PIN>
    <PIN pinname="Descriptive Name" slicecount="1" values="0">
    </PIN>
-   <BOUNDS type="Window" left="5740" top="1780" width="27130" height="17890">
+   <BOUNDS type="Window" left="1680" top="6195" width="27120" height="17880">
    </BOUNDS>
    <PIN pinname="osc_inputs" visible="1">
    </PIN>
@@ -1497,7 +1497,7 @@
    </PIN>
    <PIN pinname="Font" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="855" top="3720" width="24180" height="13680">
+   <BOUNDS type="Window" left="1815" top="2415" width="24180" height="13680">
    </BOUNDS>
    <PIN pinname="translate y" visible="1">
    </PIN>
@@ -2592,4 +2592,28 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
+   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="844">
+   <BOUNDS type="Node" left="9825" top="2070" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="daddy">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="845" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="9840" top="1665" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="9840" top="1665" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="74">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="845" srcpinname="Y Output Value" dstnodeid="844" dstpinname="Input Value">
+   </LINK>
    </PATCH>

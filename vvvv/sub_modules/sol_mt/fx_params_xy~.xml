@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" systemname="fx_params_xy" filename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" scrollx="20625" scrolly="20970">
+   <PATCH nodename="C:\Users\leo\Documents\Code\vj\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" systemname="fx_params_xy" filename="C:\Code\vvvv\modjlrr\vvvv\sub_modules\sol_mt\fx_params_xy.v4p" scrollx="9375" scrolly="24765">
    <NODE nodename="IOBox (String)" componentmode="InABox" id="2" systemname="IOBox (String)">
    <BOUNDS type="Node" left="12870" top="1965" width="660" height="270">
    </BOUNDS>
@@ -4703,7 +4703,7 @@
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="1.07" visible="1">
+   <PIN pinname="TranslateX" slicecount="1" visible="1" values="1.07">
    </PIN>
    <PIN pinname="TranslateY" slicecount="1" values="-0.1">
    </PIN>
@@ -4847,7 +4847,7 @@
    </PIN>
    <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
    </PIN>
-   <PIN pinname="TranslateX" slicecount="1" values="1.07" visible="1">
+   <PIN pinname="TranslateX" slicecount="1" visible="1" values="1.07">
    </PIN>
    <PIN pinname="TranslateY" slicecount="1" values="-0.41">
    </PIN>
@@ -5049,11 +5049,11 @@
    </PIN>
    </NODE>
    <NODE systemname="AND (Boolean)" nodename="AND (Boolean)" componentmode="Hidden" id="509">
-   <BOUNDS type="Node" left="34170" top="35430" width="100" height="100">
+   <BOUNDS type="Node" left="34130" top="35460" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input 1" visible="1" slicecount="3" values="1,1,1">
+   <PIN pinname="Input 1" visible="1" slicecount="3" values="0,1,1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="3" values="0,0,0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -5062,8 +5062,6 @@
    <PIN pinname="Input 3" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="483" srcpinname="Hit" dstnodeid="509" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="510">
    <BOUNDS type="Node" left="31935" top="28245" width="100" height="100">
    </BOUNDS>
@@ -5089,7 +5087,7 @@
    <LINK srcnodeid="511" srcpinname="Output 1" dstnodeid="510" dstpinname="Switch">
    </LINK>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="512">
-   <BOUNDS type="Node" left="33495" top="34125" width="100" height="100">
+   <BOUNDS type="Node" left="31575" top="34525" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
@@ -5099,8 +5097,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="483" srcpinname="Value Output" dstnodeid="512" dstpinname="Input 1">
-   </LINK>
-   <LINK srcnodeid="512" srcpinname="Output" dstnodeid="509" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="513">
    <BOUNDS type="Node" left="34830" top="31260" width="100" height="100">
@@ -5136,8 +5132,6 @@
    <PIN pinname="Input 2" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="515" srcpinname="Output" dstnodeid="496" dstpinname="Insert">
-   </LINK>
    <LINK srcnodeid="483" srcpinname="Hit" dstnodeid="515" dstpinname="Input 1">
    </LINK>
    <NODE systemname="Change (Animation)" nodename="Change (Animation)" componentmode="Hidden" id="516">
@@ -5187,9 +5181,11 @@
    </PIN>
    <PIN pinname="Input 2" visible="1">
    </PIN>
-   <PIN pinname="Input Count" slicecount="1" values="3">
+   <PIN pinname="Input Count" slicecount="1" values="4">
    </PIN>
    <PIN pinname="Input 3" slicecount="3" visible="1" values="0,0,0">
+   </PIN>
+   <PIN pinname="Input 4" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="511" srcpinname="Output 1" dstnodeid="519" dstpinname="Input 1">
@@ -5213,7 +5209,7 @@
    </PIN>
    <PIN pinname="Input 3" visible="1">
    </PIN>
-   <PIN pinname="Input 2" visible="1">
+   <PIN pinname="Input 2" visible="1" slicecount="3" values="0,0,0">
    </PIN>
    <PIN pinname="Input 1" visible="1">
    </PIN>
@@ -5222,10 +5218,8 @@
    </NODE>
    <LINK srcnodeid="520" srcpinname="Output" dstnodeid="521" dstpinname="Input 3">
    </LINK>
-   <LINK srcnodeid="483" srcpinname="Hit" dstnodeid="521" dstpinname="Input 2">
-   </LINK>
    <NODE systemname="EQ (Value)" nodename="EQ (Value)" componentmode="Hidden" id="522">
-   <BOUNDS type="Node" left="34095" top="34350" width="100" height="100">
+   <BOUNDS type="Node" left="34425" top="34260" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
@@ -5723,6 +5717,10 @@
    </PIN>
    <PIN pinname="Layer 1" visible="1">
    </PIN>
+   <PIN pinname="Layer Template Count" slicecount="1" values="3">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1">
+   </PIN>
    </NODE>
    <LINK srcnodeid="556" srcpinname="Layer" dstnodeid="455" dstpinname="Layer 5">
    </LINK>
@@ -5781,5 +5779,127 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="559" srcpinname="Output String" dstnodeid="557" dstpinname="Text">
+   </LINK>
+   <NODE systemname="Add (Value Spectral)" nodename="Add (Value Spectral)" componentmode="Hidden" id="560">
+   <BOUNDS type="Node" left="33710" top="31730" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Add (Value Spectral)" nodename="Add (Value Spectral)" componentmode="Hidden" id="561">
+   <BOUNDS type="Node" left="33970" top="34720" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="561" srcpinname="Output" dstnodeid="509" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="483" srcpinname="Hit" dstnodeid="561" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="512" srcpinname="Output" dstnodeid="509" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="561" srcpinname="Output" dstnodeid="521" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="515" srcpinname="Output" dstnodeid="560" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="560" srcpinname="Output" dstnodeid="496" dstpinname="Insert">
+   </LINK>
+   <NODE systemname="Button (3d Quad Multitouch)" filename="%VVVV%\addonpack\lib\nodes\modules\3d\Button (3d Quad Multitouch).v4p" nodename="Button (3d Quad Multitouch)" componentmode="Hidden" id="565">
+   <BOUNDS type="Node" left="41555" top="30890" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="Transform Quad" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Touched" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="564">
+   <BOUNDS type="Node" left="41345" top="30155" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="|mouse xy|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="564" srcpinname="Input Value" dstnodeid="565" dstpinname="XY">
+   </LINK>
+   <NODE systemname="Transform (Transform 2d)" nodename="Transform (Transform 2d)" componentmode="Hidden" id="566">
+   <BOUNDS type="Node" left="40450" top="31805" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Transform In" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="TranslateX" slicecount="1" values="0.75">
+   </PIN>
+   <PIN pinname="TranslateY" slicecount="1" values="0.32">
+   </PIN>
+   <PIN pinname="ScaleX" slicecount="1" values="0.4">
+   </PIN>
+   <PIN pinname="ScaleY" slicecount="1" values="0.39">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="531" srcpinname="Transform Out" dstnodeid="566" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="566" srcpinname="Transform Out" dstnodeid="565" dstpinname="Transform Quad">
+   </LINK>
+   <NODE systemname="Quad (DX9)" nodename="Quad (DX9)" componentmode="Hidden" id="567">
+   <BOUNDS type="Node" left="40125" top="32585" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
+   </PIN>
+   </NODE>
+   <NODE systemname="Switch (Color Input)" nodename="Switch (Color Input)" componentmode="Hidden" id="570">
+   <BOUNDS type="Node" left="42380" top="32440" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Switch" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="569">
+   <BOUNDS type="Node" left="43220" top="31630" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="active">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="R (Color)" nodename="R (Color)" componentmode="Hidden" id="568">
+   <BOUNDS type="Node" left="41960" top="31660" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="inactive">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="568" srcpinname="Input Value" dstnodeid="570" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="569" srcpinname="Input Value" dstnodeid="570" dstpinname="Input 1">
+   <LINKPOINT x="43295" y="31825">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="565" srcpinname="Touched" dstnodeid="570" dstpinname="Switch">
+   </LINK>
+   <LINK srcnodeid="570" srcpinname="Output" dstnodeid="567" dstpinname="Color">
+   </LINK>
+   <LINK srcnodeid="566" srcpinname="Transform Out" dstnodeid="567" dstpinname="Transform">
+   </LINK>
+   <LINK srcnodeid="567" srcpinname="Layer" dstnodeid="556" dstpinname="Layer 3">
+   </LINK>
+   <LINK srcnodeid="565" srcpinname="Touched" dstnodeid="519" dstpinname="Input 4">
    </LINK>
    </PATCH>
