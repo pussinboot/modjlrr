@@ -105,7 +105,7 @@
    </BOUNDS>
    <PIN pinname="AudioDriver" slicecount="1" visible="1" values="|CABLE Output (VB-Audio Virtual Cable)|">
    </PIN>
-   <PIN pinname="Gain" slicecount="1" visible="1" values="2">
+   <PIN pinname="Gain" slicecount="1" visible="1" values="10">
    </PIN>
    <PIN pinname="Enabled" slicecount="1" values="1">
    </PIN>
@@ -717,7 +717,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="6035" top="2805" width="8750" height="5810">
    </BOUNDS>
-   <BOUNDS type="Window" left="-1" top="-1" width="8750" height="5810">
+   <BOUNDS type="Window" left="7050" top="6810" width="8745" height="5805">
    </BOUNDS>
    <PIN pinname="Font" slicecount="1" values="ProggyCleanTT">
    </PIN>
@@ -846,28 +846,28 @@
    </LINK>
    <LINK srcnodeid="141" srcpinname="Output" dstnodeid="18" dstpinname="osc_receive">
    </LINK>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="359">
-   <BOUNDS type="Node" left="480" top="1125" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Texture" visible="1">
-   </PIN>
-   <PIN pinname="SpoutSenderName" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="360">
-   <BOUNDS type="Node" left="2610" top="1170" width="100" height="100">
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="361">
+   <BOUNDS type="Node" left="540" top="1125" width="100" height="100">
    </BOUNDS>
    <PIN pinname="SpoutSenderName" visible="1">
    </PIN>
    <PIN pinname="Texture" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="360" dstpinname="SpoutSenderName">
+   <NODE systemname="Spout_Receiver_DX11" filename="spout\Spout_Receiver_DX11.v4p" nodename="spout\Spout_Receiver_DX11.v4p" componentmode="Hidden" id="362">
+   <BOUNDS type="Node" left="2550" top="1170" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="SpoutSenderName" visible="1">
+   </PIN>
+   <PIN pinname="Texture" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="7" srcpinname="Output String" dstnodeid="362" dstpinname="SpoutSenderName">
    </LINK>
-   <LINK srcnodeid="360" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
+   <LINK srcnodeid="362" srcpinname="Texture" dstnodeid="10" dstpinname="Input Node">
    </LINK>
-   <LINK srcnodeid="359" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
+   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="361" dstpinname="SpoutSenderName">
    </LINK>
-   <LINK srcnodeid="6" srcpinname="Output String" dstnodeid="359" dstpinname="SpoutSenderName">
+   <LINK srcnodeid="361" srcpinname="Texture" dstnodeid="9" dstpinname="Input Node">
    </LINK>
    </PATCH>
