@@ -1,5 +1,5 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
-   <PATCH nodename="C:\Code\modjlrr\vvvv\sub_modules\sol_mt\mt_or_mouse.v4p" systemname="mt_or_mouse" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\mt_or_mouse.v4p" scrollx="0" scrolly="1245">
+   <PATCH nodename="C:\code\vj\modjlrr\vvvv\sub_modules\sol_mt\mt_or_mouse.v4p" systemname="mt_or_mouse" filename="C:\Users\leo\Documents\Code\modjlrr\vvvv\sub_modules\sol_mt\mt_or_mouse.v4p" scrollx="0" scrolly="285">
    <NODE systemname="MouseStates (Mouse Join)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="MouseStates (Mouse Join)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="8940" top="3435" width="100" height="100">
    </BOUNDS>
@@ -105,7 +105,7 @@
    </PIN>
    </NODE>
    <NODE systemname="Switch (Value Input)" nodename="Switch (Value Input)" componentmode="Hidden" id="9">
-   <BOUNDS type="Node" left="6015" top="3900" width="100" height="100">
+   <BOUNDS type="Node" left="5505" top="3495" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -154,14 +154,6 @@
    <PIN pinname="Input 1" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
-   </PIN>
-   </NODE>
-   <NODE systemname="S (Value)" nodename="S (Value)" componentmode="Hidden" id="14">
-   <BOUNDS type="Node" left="6075" top="4815" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Send String" slicecount="1" values="|mouse xy|">
-   </PIN>
-   <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
    <NODE systemname="R (Value)" nodename="R (Value)" componentmode="Hidden" id="15">
@@ -246,7 +238,7 @@
    </LINK>
    <LINK srcnodeid="15" srcpinname="Input Value" dstnodeid="2" dstpinname="Input">
    </LINK>
-   <BOUNDS type="Window" left="7140" top="9300" width="11385" height="6495">
+   <BOUNDS type="Window" left="12490" top="4400" width="11380" height="6490">
    </BOUNDS>
    <NODE systemname="Cursor (DX9)" filename="%VVVV%\lib\nodes\modules\EX9\Cursor (DX9).v4p" nodename="Cursor (DX9)" componentmode="Hidden" id="20">
    <BOUNDS type="Node" left="1710" top="4335" width="100" height="100">
@@ -291,19 +283,15 @@
    <PACK Name="opencv" Version="0.2.0">
    </PACK>
    <NODE systemname="AvoidNIL (Spreads)" filename="%VVVV%\lib\nodes\modules\Spreads\AvoidNIL (Spreads).v4p" nodename="AvoidNIL (Spreads)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="5355" top="4410" width="100" height="100">
+   <BOUNDS type="Node" left="5415" top="3950" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    <PIN pinname="Default" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="24" dstpinname="Input">
-   </LINK>
-   <LINK srcnodeid="24" srcpinname="Output" dstnodeid="14" dstpinname="Input Value">
-   </LINK>
    <NODE systemname="Select (Value)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Select (Value)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="6525" top="4290" width="100" height="100">
    </BOUNDS>
@@ -318,4 +306,84 @@
    </LINK>
    <PACK Name="Image" Version="0.2.0">
    </PACK>
+   <NODE systemname="ApplyTransform (Transform)" nodename="ApplyTransform (Transform)" componentmode="Hidden" id="32">
+   <BOUNDS type="Node" left="5980" top="4840" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="X UnTransformed" visible="1">
+   </PIN>
+   <PIN pinname="Y UnTransformed" visible="1">
+   </PIN>
+   <PIN pinname="X Transformed" visible="1">
+   </PIN>
+   <PIN pinname="Y Transformed" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Output" dstnodeid="24" dstpinname="Input">
+   </LINK>
+   <NODE nodename="IOBox (Node)" componentmode="InABox" id="33" systemname="IOBox (Node)">
+   <BOUNDS type="Box" left="7790" top="600" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="7790" top="600" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|transform in|">
+   </PIN>
+   <PIN pinname="Output Node" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="34">
+   <BOUNDS type="Node" left="5680" top="4380" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="24" srcpinname="Output" dstnodeid="34" dstpinname="XY">
+   </LINK>
+   <NODE id="14" systemname="S (Value)" nodename="S (Value)" componentmode="Hidden">
+   <BOUNDS type="Node" left="5650" top="5760" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="|mouse xy|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="34" srcpinname="X" dstnodeid="32" dstpinname="X UnTransformed">
+   </LINK>
+   <LINK srcnodeid="34" srcpinname="Y" dstnodeid="32" dstpinname="Y UnTransformed">
+   </LINK>
+   <NODE systemname="Vector (2d Join)" nodename="Vector (2d Join)" componentmode="Hidden" id="35">
+   <BOUNDS type="Node" left="5850" top="5230" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="32" srcpinname="X Transformed" dstnodeid="35" dstpinname="X">
+   </LINK>
+   <LINK srcnodeid="32" srcpinname="Y Transformed" dstnodeid="35" dstpinname="Y">
+   </LINK>
+   <LINK srcnodeid="35" srcpinname="XY" dstnodeid="14" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="Inverse (Transform)" nodename="Inverse (Transform)" componentmode="Hidden" id="36">
+   <BOUNDS type="Node" left="7610" top="1250" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Transform In" visible="1">
+   </PIN>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="33" srcpinname="Output Node" dstnodeid="36" dstpinname="Transform In">
+   </LINK>
+   <LINK srcnodeid="36" srcpinname="Transform Out" dstnodeid="32" dstpinname="Transform">
+   </LINK>
    </PATCH>
